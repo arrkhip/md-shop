@@ -1,0 +1,232 @@
+.header-steps {
+  display: block; // из-за того что в классе .header display:none; для десктопной версии.
+  padding: 22px 0;
+  background-color: #231f20;
+
+  .header__menu {
+    @include min-width(1024px) {
+      display: none;
+    }
+
+    &-svg {
+      transform: rotate(180deg);
+      stroke: $white;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    @include max-width(1024px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 65px);
+    padding-right: 111px;
+    // counter-reset: step;
+    @include max-width(1024px) {
+      width: auto;
+      padding: 0 10px;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: $gray;
+
+    @include max-width(1024px) {
+      &:not(.header-steps__item--current) {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: attr(data-step);
+      // counter-increment: step;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid $gray;
+      margin-right: 16px;
+
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 171%;
+      color: $gray;
+    }
+
+    @include max-width(768px) {
+      font-size: 12px;
+
+      &::before {
+        box-sizing: border-box;
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__item--current {
+    color: #dfaf6c;
+
+    &::before {
+      color: #dfaf6c;
+      border-color: #dfaf6c;
+    }
+  }
+
+  &__item--ready {
+    color: #dfaf6c;
+
+    &::before {
+      color: transparent;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1336 1.5L5.10427 11.25L1 6.81818' stroke='%23231F20' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"),
+        linear-gradient(
+          224.53deg,
+          #ebba75 5.02%,
+          #c58f44 21.6%,
+          #ebba75 31.32%,
+          #ffffff 46.5%,
+          #ffe0b6 60.91%,
+          #b78f58 77.05%,
+          #f7d4a4 182.96%
+        ),
+        radial-gradient(
+          417.69% 2246.21% at 49.05% 50%,
+          #ebba75 0%,
+          #c58f44 10.5%,
+          #ffffff 19.08%,
+          #ffe0b6 23.53%,
+          #b78f58 30.78%,
+          #f7d4a4 41.63%,
+          #ebba75 100%
+        );
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 0px 7px 21px rgba(255, 216, 101, 0.41);
+    }
+  }
+
+  &__cart {
+    position: relative;
+    width: 100%;
+    max-width: 65px;
+    text-align: center;
+    @include trs(opacity, 0.3s, ease-in);
+
+    @include max-width(768px) {
+      max-width: 35px;
+    }
+
+    &:hover {
+      .header-steps__cart-counter {
+        box-shadow: 1px 1px 4px 2px rgba(255, 216, 101, 0.4);
+      }
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__cart-box {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+
+    @include max-width(768px) {
+      width: 31px;
+      height: 31px;
+    }
+  }
+
+  &__cart-icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__cart-counter {
+    position: absolute;
+    top: -4px;
+    right: -9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 14px;
+    color: #231f20;
+    background: linear-gradient(
+        224.53deg,
+        #ebba75 5.02%,
+        #c58f44 21.6%,
+        #ebba75 31.32%,
+        #ffffff 46.5%,
+        #ffe0b6 60.91%,
+        #b78f58 77.05%,
+        #f7d4a4 182.96%
+      ),
+      radial-gradient(
+        417.69% 2246.21% at 49.05% 50%,
+        #ebba75 0%,
+        #c58f44 10.5%,
+        #ffffff 19.08%,
+        #ffe0b6 23.53%,
+        #b78f58 30.78%,
+        #f7d4a4 41.63%,
+        #ebba75 100%
+      );
+    @include trs(box-shadow, 0.3s, ease-in);
+
+    @include max-width(768px) {
+      right: -4px;
+      width: 16px;
+      height: 16px;
+      font-size: 11px;
+    }
+  }
+
+  &__cart-text {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: $white;
+
+    @include max-width(768px) {
+      display: none;
+    }
+  }
+
+  &__cart-link {
+    &::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

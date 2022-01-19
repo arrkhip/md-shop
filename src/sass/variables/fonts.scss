@@ -1,0 +1,36 @@
+$fonts-path: '../fonts/';
+$sans-path: $fonts-path + 'PtSans/';
+$garamond-path: $fonts-path + 'GaramondPremrPro/';
+
+// Fonts
+$sans: 'PT Sans';
+$garamond: 'GaramondPremrPro';
+
+// GaramondPremrPro
+@font-face {
+  font-family: $garamond;
+  font-style: normal;
+  font-weight: 400;
+  src: url($garamond-path+'GaramondPremrPro.woff');
+  src: local('GaramondPremrPro'), local('GaramondPremrPro'), url($garamond-path+'GaramondPremrPro.woff') format('woff');
+  font-display: swap;
+}
+
+// PT Sans
+@font-face {
+  font-family: $sans;
+  font-style: normal;
+  font-weight: normal;
+  src: url($sans-path+'PtSans-Regular.woff');
+  src: local('PtSans-Regular'), local('PtSans-Regular'), url($sans-path+'PtSans-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $sans;
+  font-style: normal;
+  font-weight: 700;
+  src: url($sans-path+'PtSans-Bold.woff');
+  src: local('PtSans-Bold'), local('PtSans-Bold'), url($sans-path+'PtSans-Bold.woff') format('woff');
+  font-display: swap;
+}

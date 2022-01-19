@@ -1,0 +1,375 @@
+/* Buttons */
+button {
+  cursor: pointer;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: $button-min-width;
+  padding: $button-padding;
+  margin: $button-margin;
+  font-family: $button-font;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $second;
+  border-color: $second;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: $button-border-radius;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: color, background-color, border, box-shadow;
+
+  &:hover {
+    color: $second;
+    background-color: $white;
+  }
+
+  &:focus {
+    outline: transparent;
+    box-shadow: 0 0 2px 2px rgba($second, 0.5);
+  }
+
+  &:disabled {
+    color: $gray-light;
+    cursor: not-allowed;
+    background-color: $gray-extra-light;
+    border-color: $gray-extra-light;
+  }
+
+  &--empty {
+    background-color: transparent;
+    color: $second;
+
+    &:hover {
+      background-color: $second;
+      color: $white;
+    }
+  }
+
+  &--yellow {
+    background-color: $yellow;
+    border-color: $yellow;
+    color: $black;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  &--yellow-empty {
+    background-color: transparent;
+    border-color: $yellow;
+    color: $black;
+
+    &:hover {
+      background-color: $yellow;
+      color: $black;
+    }
+  }
+
+  &--gold {
+    height: 65px;
+    padding: 20px 49px;
+    border: none;
+    border-radius: 6px;
+    font: 600 1.125rem/1em $sans;
+    color: $black;
+    box-shadow: 0px 7px 21px rgba(255, 216, 101, 0.41);
+    background: linear-gradient(
+        244deg,
+        #ebba75 -0.66%,
+        #c58f44 18.49%,
+        #ebba75 29.71%,
+        #ffffff 45.22%,
+        #ffe0b6 55.11%,
+        #b78f58 72.25%,
+        #f7d4a4 94.41%
+      ),
+      radial-gradient(
+        417.69% 2246.21% at 49.05% 50%,
+        #ebba75 0%,
+        #c58f44 10.5%,
+        #ffffff 19.08%,
+        #ffe0b6 23.53%,
+        #b78f58 30.78%,
+        #f7d4a4 41.63%,
+        #ebba75 100%
+      );
+
+    &:hover {
+      color: $black;
+      box-shadow: none;
+    }
+  }
+
+  &--long {
+    height: 40px;
+    width: 100%;
+    max-width: 344px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #231f20;
+  }
+
+  &--black {
+    background: #231f20;
+    color: $white;
+    border: none;
+  }
+}
+
+.button--close {
+  min-width: initial;
+  padding: 0;
+  font-size: 28px;
+  background-color: transparent;
+  border: none;
+
+  &:hover svg {
+    fill: $second;
+    stroke: #f2f2f2;
+  }
+
+  &:focus {
+    box-shadow: none;
+
+    svg {
+      box-shadow: 0 0 2px 2px rgba($second, 0.5);
+    }
+  }
+
+  &:disabled {
+    svg {
+      fill: $gray-extra-light;
+      stroke: $gray-light;
+    }
+
+    background-color: transparent;
+  }
+
+  svg {
+    width: 1em;
+    min-width: 1em;
+    height: 1em;
+    min-height: 1em;
+    border-radius: 0.07142857em;
+    fill: #f2f2f2;
+    stroke: #899199;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: fill, stroke, box-shadow;
+  }
+}
+
+/* Inputs && Textareas */
+.input,
+.textarea {
+  padding: $input-padding;
+  margin: $input-margin;
+  overflow: hidden;
+  font-family: $input-font;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg-color;
+  border: $input-border;
+  border-radius: $input-border-radius;
+  outline: transparent;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: color, background-color, border, box-shadow;
+
+  @include placeholder() {
+    font-family: $input-font;
+    font-size: $input-font-size;
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color-placeholder;
+    opacity: 1;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: transform, opacity;
+  }
+
+  &:hover {
+    border-color: $second;
+  }
+
+  &:focus {
+    border-color: $second;
+    box-shadow: $input-focus;
+
+    @include placeholder() {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  &:disabled {
+    color: $gray-light;
+    cursor: not-allowed;
+    background-color: $gray-extra-light;
+    border-color: $gray-extra-light;
+  }
+}
+
+.textarea {
+  height: $textarea-height;
+  padding: $textarea-padding;
+  margin: $textarea-margin;
+  resize: none;
+}
+
+/* Checkboxes && Radios */
+.checkbox,
+.radio {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  margin: $checkbox-margin;
+  cursor: pointer;
+
+  &__input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -2;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+
+    &:checked + .checkbox__custom {
+      background-color: $checkbox-bg-color-active;
+
+      .checkbox__icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $checkbox-size;
+    min-width: $checkbox-size;
+    height: $checkbox-size;
+    min-height: $checkbox-size;
+    margin: $checkbox-custom-margin;
+    background-color: $checkbox-bg-color;
+    border: $checkbox-border;
+    border-radius: $checkbox-border-radius;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: background-color;
+  }
+
+  &__text {
+    display: block;
+    font-family: $checkbox-font;
+    font-size: $checkbox-font-size;
+    font-weight: $checkbox-font-weight;
+    line-height: $checkbox-line-height;
+    color: $checkbox-color;
+  }
+
+  &__link {
+    color: $checkbox-link-color;
+    text-decoration: $checkbox-link-text-decoration;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: color;
+
+    &:hover {
+      color: $checkbox-link-color-hover;
+      text-decoration: $checkbox-link-text-decoration-hover;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: $main;
+    background: none;
+    border: none;
+    border-bottom: 1px dashed $main;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: color, border-bottom;
+
+    &:hover {
+      color: darken($main, 20%);
+      border-bottom: 1px dashed darken($main, 20%);
+    }
+  }
+
+  &__icon {
+    width: $checkbox-icon-size;
+    height: $checkbox-icon-size;
+    opacity: 0;
+    fill: $red;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: opacity;
+  }
+}
+
+.checkbox--large {
+  .checkbox__text {
+    font-size: 0.875rem;
+  }
+}
+
+.radio {
+  margin: $radio-margin;
+
+  &__input {
+    &:checked + .radio__custom {
+      background-color: $radio-bg-color-active;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__custom {
+    position: relative;
+    width: $radio-size;
+    min-width: $radio-size;
+    height: $radio-size;
+    min-height: $radio-size;
+    margin: $radio-custom-margin;
+    background-color: $radio-bg-color;
+    border-radius: $radio-border-radius;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $radio-icon-size;
+      height: $radio-icon-size;
+      content: '';
+      background-color: $radio-icon-bg-color;
+      border-radius: $radio-border-radius;
+      opacity: 0;
+      transition-timing-function: $transition-timing-function;
+      transition-duration: $transition-duration;
+      transition-property: opacity;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

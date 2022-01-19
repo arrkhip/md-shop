@@ -1,0 +1,54 @@
+// Extensions - Расширения
+@import 'extensions/reset';
+
+// Libs - Библиотеки
+@import '~swiper/swiper-bundle.css';
+@import '~plyr/dist/plyr.css';
+
+// Variables - Переменные
+@import 'variables/fonts';
+@import 'variables/variables';
+@import 'variables/mixins';
+@import 'variables/global';
+@import 'variables/typography';
+@import 'variables/modals';
+@import 'variables/drawer';
+@import 'variables/UI';
+
+// Components - Компоненты
+// @import 'components/personal';
+// @import 'components/form';
+// @import 'components/form-order';
+// @import 'components/order-step';
+// @import 'components/card-order';
+// @import 'components/promo-code';
+// @import 'components/promo-property';
+// @import 'components/option';
+@import 'components/card-contact';
+@import 'components/form-question';
+
+// Sections - Разделы сайта
+// @import 'sections/header';
+// @import 'sections/header-steps';
+// @import 'sections/menu';
+// @import 'sections/footer';
+// @import 'sections/banner';
+// @import 'sections/content';
+// @import 'sections/info';
+// @import 'sections/aside';
+// @import 'sections/partner';
+// @import 'sections/video';
+// @import 'sections/terms';
+// @import 'sections/auth';
+// @import 'sections/mobile';
+@import 'sections/order';
+@import 'sections/social';
+@import 'sections/promo';
+@import 'sections/contacts';
+
+// Blocks - Блоки
+// @import 'blocks/main-block';
+// @import 'blocks/guarantees-block';
+// @import 'blocks/video-block';
+// @import 'blocks/partners-block';
+// @import 'blocks/banner-block';

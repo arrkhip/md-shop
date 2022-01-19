@@ -1,0 +1,238 @@
+.info {
+  .with-aside & {
+    margin: -56px 0 0 0;
+
+    @include max-width(1024px) {
+      margin: 0;
+    }
+  }
+}
+
+.info__tabs {
+  display: flex;
+  margin: 0 0 56px 0;
+
+  @include max-width(1024px) {
+    display: none;
+    margin: 0;
+  }
+}
+
+.info__tab {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.78;
+  color: $gray;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: color, background-color;
+
+  &:hover,
+  &.active {
+    color: $gray-extra-dark;
+    background-color: $white;
+  }
+}
+
+.info__contents {
+  position: relative;
+}
+
+.info__content {
+  display: none;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // visibility: hidden;
+  // opacity: 0;
+  // transition-timing-function: $transition-timing-function;
+  // transition-duration: $transition-duration;
+  // transition-property: opacity, visibility;
+
+  &.active {
+    display: block;
+    // position: static;
+    // visibility: visible;
+    // opacity: 1;
+  }
+
+  @include max-width(1024px) {
+    display: block;
+    // position: static;
+    // visibility: visible;
+    // opacity: 1;
+  }
+}
+
+.info__block {
+  font-size: 0.875rem;
+  line-height: 1.71;
+  color: $gray-dark;
+}
+
+.info__block + .info__block {
+  margin: 32px 0 0 0;
+}
+
+.info__block p + p {
+  margin: 16px 0 0 0;
+}
+
+.info__block q {
+  display: inline-block;
+  padding: 0 0 0 20px;
+  font-weight: 500;
+  color: $gray-extra-dark;
+  border-left: 2px solid $main-light;
+}
+
+.info__block table {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  tr + tr > td {
+    padding-top: 12px;
+  }
+
+  td:nth-child(1) {
+    width: 280px;
+
+    @include max-width(1024px) {
+      max-width: 140px;
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      color: $gray;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom;
+    }
+
+    span::after {
+      position: absolute;
+      bottom: 0.36em;
+      width: 100%;
+      content: '';
+      border-bottom: 1px dashed #e0e0e0;
+    }
+  }
+
+  td:nth-child(2) {
+    color: $black;
+  }
+}
+
+.info__title,
+.info__block h5 {
+  margin: 0 0 16px 0;
+  color: $gray-extra-dark;
+}
+
+.info__mobile {
+  @include min-width(1025px) {
+    display: none;
+  }
+
+  &-title {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: $gray-extra-dark;
+    text-align: center;
+  }
+
+  &-gap {
+    padding-bottom: 40px;
+  }
+}
+
+.info__accordion {
+  display: flex;
+  flex-direction: column;
+
+  $accordion: &;
+
+  @include max-width(1024px) {
+    padding: 0 15px;
+    margin: 0 -15px;
+    border-bottom: 1px solid #e1e1e1;
+
+    &--first {
+      border-top: 1px solid #e1e1e1;
+    }
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: $gray-extra-dark;
+    background: none;
+    border: none;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: color;
+
+    @include min-width(1025px) {
+      display: none;
+    }
+
+    &:hover {
+      color: $second;
+    }
+  }
+
+  &-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    color: currentColor;
+  }
+
+  &-icon {
+    margin: 0 0 0 12px;
+  }
+
+  &-svg {
+    display: block;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+    stroke: $second;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: transform;
+
+    #{$accordion}.active & {
+      transform: rotateX(180deg);
+    }
+  }
+
+  &-hidden {
+    @include max-width(1024px) {
+      max-height: 0;
+      overflow: hidden;
+      transition-timing-function: $transition-timing-function;
+      transition-duration: $transition-duration;
+      transition-property: max-height;
+    }
+  }
+
+  &-content {
+    @include max-width(1024px) {
+      padding: 0 0 8px 0;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+/* Colors */
+$white: #fff;
+$black: #000;
+$red: #e60000;
+$dark-gray: #888;
+$medium-gray: #d5d5d5;
+$light-gray: #f9fafc;
+$accent: #2d376a;
+$green: #008000;
+$yellow: #ffce59;
+
+$gray-extra-light: #f2f3f4;
+$gray-light: #bdbdbd;
+$gray: #828282;
+$gray-dark: #4f4f4f;
+$gray-extra-dark: #333;
+
+$main: #814724;
+$main-light: #b59858;
+
+$second: #ac003e;
+
+/* Global */
+// media
+$desktop-sm: 1200px;
+$tablet: 1024px;
+$touch: 900px;
+$phone: 600px;
+$phone-sm: 350px;
+
+// container
+$container-max-width: 1380px;
+$container-padding: 0 15px;
+
+/* Typography */
+// h1
+$h-one-font: $sans;
+$h-one-font-size: 3rem;
+$h-one-font-size-sm: 2.5rem;
+$h-one-font-weight: bold;
+$h-one-line-height: 1.33;
+$h-one-color: $gray-extra-dark;
+$h-one-margin: 20px 0;
+
+// h2
+$h-two-font: $sans;
+$h-two-font-size: 2.25rem;
+$h-two-font-size-sm: 1.75rem;
+$h-two-font-weight: bold;
+$h-two-line-height: 1.33;
+$h-two-color: $gray-extra-dark;
+$h-two-margin: 15px 0;
+
+// h3
+$h-three-font: $sans;
+$h-three-font-size: 2rem;
+$h-three-font-size-sm: 1.5rem;
+$h-three-font-weight: bold;
+$h-three-line-height: 1.33;
+$h-three-color: $gray-extra-dark;
+$h-three-margin: 10px 0;
+
+// h4
+$h-four-font: $sans;
+$h-four-font-size: 1.5rem;
+$h-four-font-size-sm: 1.25rem;
+$h-four-font-weight: bold;
+$h-four-line-height: 1.33;
+$h-four-color: $gray-extra-dark;
+$h-four-margin: 5px 0;
+
+// h5
+$h-five-font: $sans;
+$h-five-font-size: 1.125rem;
+$h-five-font-size-sm: 1.125rem;
+$h-five-font-weight: 600;
+$h-five-line-height: 1.33;
+$h-five-color: $gray-extra-dark;
+$h-five-margin: 5px 0;
+
+// h6
+$h-six-font: $sans;
+$h-six-font-size: 1rem;
+$h-six-font-size-sm: 1rem;
+$h-six-font-weight: 600;
+$h-six-line-height: 1.33;
+$h-six-color: $gray-extra-dark;
+$h-six-margin: 5px 0;
+
+/* UI */
+// button
+$button-font: $sans;
+$button-font-size: 0.875rem;
+$button-font-weight: bold;
+$button-line-height: 1.2;
+$button-border-radius: 4px;
+$button-padding: 1.358em 1.75em;
+$button-min-width: 220px;
+$button-margin: 0;
+
+// input
+$input-font: $sans;
+$input-font-size: 1rem;
+$input-font-weight: normal;
+$input-line-height: 1.25;
+$input-color: $gray-extra-dark;
+$input-color-placeholder: $gray-light;
+$input-border: 1px solid $gray-light;
+$input-border-radius: 4px;
+$input-padding: 0.5625em 0.75em;
+$input-bg-color: $white;
+$input-margin: 0;
+$input-focus: 0 0 2px 2px rgba($second, 0.5);
+
+// textarea
+$textarea-padding: 0.5625em 0.75em;
+$textarea-height: 200px;
+$textarea-margin: 0;
+
+// checkbox
+$checkbox-font: $sans;
+$checkbox-font-size: 10px;
+$checkbox-font-weight: normal;
+$checkbox-line-height: 1.4;
+$checkbox-color: $gray-dark;
+$checkbox-link-color: $main-light;
+$checkbox-link-color-hover: $main-light;
+$checkbox-link-text-decoration: underline;
+$checkbox-link-text-decoration-hover: none;
+$checkbox-bg-color: $white;
+$checkbox-bg-color-active: $white;
+$checkbox-size: 20px;
+$checkbox-icon-size: 16px;
+$checkbox-border: 1px solid $second;
+$checkbox-border-radius: 4px;
+$checkbox-margin: 0;
+$checkbox-custom-margin: 0 14px 0 0;
+
+// radio
+$radio-size: 20px;
+$radio-border-radius: 50%;
+$radio-margin: 0;
+$radio-custom-margin: 0 14px 0 0;
+$radio-bg-color: $white;
+$radio-bg-color-active: $white;
+$radio-icon-size: 10px;
+$radio-icon-bg-color: $second;
+
+// Transition
+$transition-duration: 0.3s;
+$transition-timing-function: ease;

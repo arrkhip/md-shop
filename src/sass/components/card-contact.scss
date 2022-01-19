@@ -1,0 +1,140 @@
+.card-contact {
+  padding: 55px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: $white;
+
+  &__header {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -55px;
+      width: 4px;
+      height: 48px;
+      background-color: #a87f45;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #a87f45;
+  }
+
+  &__body {
+    margin-top: 32px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    fill: $gray-extra-dark;
+    stroke: $gray-extra-dark;
+  }
+
+  &__sub-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 133%;
+  }
+
+  &__descr {
+    font-size: 18px;
+    line-height: 156%;
+    color: $gray-dark;
+
+    & + .card-contact__link {
+      margin-top: 16px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed #a87f45;
+    font-size: 16px;
+    line-height: 140%;
+    color: #a87f45;
+    @include trs(border-bottom-color, 0.3s, ease);
+
+    &:hover {
+      border-bottom-color: transparent;
+      text-decoration: none;
+    }
+  }
+
+  @include max-width($desktop-sm) {
+    padding: 40px;
+
+    &__header::before {
+      left: -40px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__sub-title {
+      font-size: 22px;
+    }
+  }
+
+  @include max-width($phone) {
+    padding: 36px;
+
+    &__header::before {
+      left: -36px;
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 125%;
+    }
+
+    &__body {
+      margin-top: 22px;
+    }
+
+    &__row:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+    }
+
+    &__sub-title {
+      margin-bottom: 0;
+      font-size: 20px;
+      line-height: 140%;
+    }
+
+    &__descr {
+      font-size: 16px;
+
+      & + .card-contact__link {
+        margin-top: 12px;
+      }
+    }
+  }
+}
