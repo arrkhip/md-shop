@@ -1,164 +1,416 @@
 .footer {
-  flex-shrink: 0;
-  padding: 48px 0 24px 0;
-  background: #231f20;
+  color: $white;
+  background-color: $black-2;
 
-  @include max-width(1024px) {
-    padding: 24px 0;
-  }
-
-  &--white {
-    background-color: $white;
-
-    .footer__bottom {
-      border-color: #e0e0e0;
-    }
-
-    .footer__copyright {
-      color: $gray-extra-dark;
-    }
+  .header-logo {
+    margin: 0;
   }
 }
 
-.footer__top {
+.footer__header {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 24px 0;
+  padding: 40px 0 20px;
 
-  @include max-width(1024px) {
+  @include max-width($touch) {
+    padding: 28px 0 14px;
+  }
+
+  @include max-width($phone) {
     flex-direction: column;
     align-items: center;
-    padding: 0 0 12px 0;
+    justify-content: unset;
+  }
 
-    &-block {
-      max-width: 300px;
+  .footer__left {
+    @include max-width($touch) {
+      margin-right: 20px;
+      margin-bottom: 0;
     }
 
-    &-block + &-block {
-      margin: 24px 0 0 0;
+    @include max-width($phone) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
     }
   }
-}
 
-.footer__info {
-  font-size: 0.75rem;
-  line-height: 1.33;
-  color: $white;
-
-  @include max-width(1024px) {
-    text-align: center;
-  }
-
-  p:nth-child(1) {
-    margin: 0 0 12px 0;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.29;
-  }
-}
-
-.footer__social {
-  display: flex;
-  align-items: center;
-  margin: 18px 0 0 0;
-
-  $social: &;
-
-  &-item {
-    display: block;
-  }
-
-  &-item + &-item {
-    margin: 0 0 0 16px;
-  }
-
-  &-svg {
-    display: block;
-    width: 36px;
-    min-width: 36px;
-    height: 36px;
-    min-height: 36px;
-    transition: transform $transition-timing-function $transition-duration / 4;
-
-    #{$social}-item:hover & {
-      transform: translateY(-4px);
+  .footer__right {
+    @include max-width($touch) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
     }
-  }
-}
 
-.footer__contacts {
-  &-item {
-    display: flex;
-    color: $white;
-  }
-
-  &-item + &-item {
-    margin: 8px 0 0 0;
-  }
-
-  &-icon {
-    width: 24px;
-    margin: 0 12px 0 0;
-  }
-
-  &-svg {
-    display: block;
-    width: 24px;
-    min-width: 24px;
-    height: 24px;
-    min-height: 24px;
-    stroke: $white;
-  }
-
-  &-link {
-    margin: 0 0 4px 0;
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.2;
-    color: inherit;
-  }
-
-  &-text {
-    font-size: 0.875rem;
-    line-height: 1.29;
-
-    a {
-      color: inherit;
-      text-decoration: underline;
-
-      &:hover {
-        text-decoration: none;
+    @include max-width($phone) {
+      .button {
+        width: 100%;
       }
     }
   }
 }
 
-.footer__bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 0 0 0;
-  margin: 18px 0 0 0;
-  border-top: 1px solid rgba($white, 0.1);
+.footer__left {
+  width: 100%;
+  max-width: 870px;
+  margin-right: 60px;
 
-  @include max-width(1024px) {
+  @include max-width($tablet) {
+    margin-right: 40px;
+  }
+
+  @include max-width($touch) {
+    max-width: none;
+    margin-right: 0;
+    margin-bottom: 28px;
+  }
+}
+
+.footer__right {
+  width: 100%;
+  max-width: 310px;
+
+  @include max-width($tablet) {
+    max-width: 250px;
+  }
+
+  @include max-width($touch) {
+    max-width: none;
+  }
+}
+
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 40px;
+
+  @include max-width($touch) {
     flex-direction: column;
     align-items: center;
-    padding: 24px 15px 0 15px;
-    margin: 12px -15px 0 -15px;
+    justify-content: unset;
+    padding: 14px 0 28px;
+  }
 
-    &-block {
-      max-width: 300px;
+  .footer__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-cards {
+    margin-top: auto;
+  }
+}
+
+.footer__cols {
+  display: flex;
+  justify-content: space-between;
+
+  @include max-width($touch) {
+    flex-direction: column;
+    justify-content: unset;
+    margin-bottom: 28px;
+  }
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+
+  @include max-width($touch) {
+    padding: 14px 0;
+    border-bottom: 1px solid $gray-extra-dark;
+  }
+
+  &:first-child {
+    @include max-width($touch) {
+      border-top: 1px solid $gray-extra-dark;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 32px;
+
+    @include max-width($touch) {
+      margin-right: 0;
+    }
+  }
+
+  .logo {
+    margin: 0 0 20px;
+
+    @include max-width($touch) {
+      max-width: 124px;
+      height: 36px;
+      margin: 0 0 16px;
+    }
+  }
+
+  .checkbox-switch {
+    margin-top: auto;
+
+    @include max-width($touch) {
+      display: none;
     }
 
-    &-block + &-block {
-      margin: 24px 0 0 0;
+    &__custom-wrapper {
+      background-color: var(--primary-active);
+    }
+
+    &__custom {
+      background-color: var(--bg-footer);
     }
   }
 }
 
-.footer__copyright {
-  font-size: 0.875rem;
-  line-height: 1.29;
-  color: $main-light;
+.footer-accordion {
+  &[data-accordion] {
+    .footer-accordion__button {
+      @include max-width($touch) {
+        margin-bottom: 0;
+      }
+    }
+
+    .footer-accordion__content {
+      @include max-width($touch) {
+        height: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+    }
+
+    .footer__link {
+      &:first-child {
+        @include max-width($touch) {
+          margin-top: 12px;
+        }
+      }
+    }
+
+    &.active {
+      .footer-accordion__arrow {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @include max-width($touch) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.375;
+    text-transform: uppercase;
+
+    @include max-width($touch) {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 20px;
+    transform: rotate(90deg);
+
+    @include min-width($touch + 1px) {
+      display: none;
+    }
+  }
+}
+
+.footer__contacts {
+  @include max-width($touch) {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  @include max-width($phone) {
+    max-width: none;
+  }
+}
+
+.footer__link {
+  display: flex;
+  align-items: baseline;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $white;
+  transition: color 0.2s ease;
+
+  @include max-width($touch) {
+    font-size: 13px;
+
+    .footer__contacts & {
+      font-size: 16px;
+    }
+  }
+
+  &--phone {
+    @include max-width($touch) {
+      font-size: 16px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+
+    @include max-width($touch) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &:not(.footer__link--text) {
+    &:hover {
+      color: $primary-hover;
+      text-decoration: none;
+    }
+  }
+
+  b {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.3636;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}
+
+.footer__icon {
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  margin-right: 12px;
+  font-size: 20px;
+  transform: translateY(5px);
+}
+
+.footer__info {
+  margin-top: 34px;
+  font-size: 16px;
+  line-height: 1.75;
+
+  @include max-width($touch) {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+.footer__name {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.footer__pictures {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.footer-social {
+  @include max-width($touch) {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  &__wrap {
+    overflow: hidden;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -6px;
+  }
+
+  &__link {
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin: 6px;
+    overflow: hidden;
+    font-size: 36px;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer-cards {
+  padding: 6px 0;
+  overflow: hidden;
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -2px;
+
+    @include max-width($touch) {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin: 2px;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 24px;
+    border-radius: 2px;
+    object-fit: contain;
+  }
+}
+
+.footer__footer {
+  padding: 27px 0;
+  text-align: center;
+  border-top: 1px solid rgba($white, 0.1);
+
+  @include max-width($touch) {
+    padding: 20px 0;
+  }
+}
+
+.copyright {
+  font-size: 16px;
+  line-height: 1.625;
+  color: $primary-hover;
+
+  @include max-width($touch) {
+    font-size: 14px;
+  }
 }
