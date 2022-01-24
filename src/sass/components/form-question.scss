@@ -1,18 +1,19 @@
 .form-question {
   &__wrapper {
     padding: 80px;
-    border-radius: 4px;
     background: $gray-extra-light;
+    border-radius: 4px;
 
     @include min-width($tablet) {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
     }
   }
 
   &__headline {
     width: 100%;
     margin-bottom: 50px;
+
     @include min-width($tablet) {
       max-width: 355px;
     }
@@ -58,7 +59,7 @@
     &:focus {
       border-bottom-color: #a87f45;
 
-      & + .form-question__label {
+      + .form-question__label {
         top: -20px;
         font-size: 16px;
         color: #a87f45;
@@ -73,17 +74,19 @@
     font-size: 24px;
     line-height: 133%;
     color: $gray-light;
+
     @include trs();
   }
 
   &__textarea {
+    box-sizing: border-box;
     width: 100%;
     height: 156px;
-    box-sizing: border-box;
     padding: 24px 12px 10px 24px;
+    background-color: transparent;
     border: 1px solid $gray-extra-dark;
     border-radius: 4px;
-    background-color: transparent;
+
     @include placeholder {
       font-size: 24px;
       line-height: 133%;
@@ -130,46 +133,47 @@
 
     input[type='checkbox'] {
       position: absolute;
-      left: -888px;
       top: -888px;
+      left: -888px;
+      pointer-events: none;
       visibility: hidden;
       opacity: 0;
-      pointer-events: none;
 
-      & + label {
+      + label {
         position: relative;
         padding-left: 32px;
         font-size: 12px;
         line-height: 117%;
 
         &::before {
-          content: '';
           position: absolute;
           top: 0;
           left: 0;
+          box-sizing: border-box;
           width: 20px;
           height: 20px;
-          border: 1px solid #231f20;
-          box-sizing: border-box;
-          border-radius: 4px;
+          content: '';
           background-color: $white;
+          border: 1px solid #231f20;
+          border-radius: 4px;
         }
 
         &::after {
-          content: '';
           position: absolute;
           top: 5px;
           left: 4px;
           width: 12px;
           height: 9px;
+          content: '';
           background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.3346 1L4.0013 8.33333L0.667969 5' stroke='%23814724' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
           opacity: 0;
+
           @include trs(opacity, 0.3s, ease);
         }
       }
 
       &:checked {
-        & + label::after {
+        + label::after {
           opacity: 1;
         }
       }
@@ -229,9 +233,9 @@
     }
 
     &__textarea {
+      box-sizing: border-box;
       width: 100%;
       height: 156px;
-      box-sizing: border-box;
       padding: 12px 12px 10px;
 
       @include placeholder {
