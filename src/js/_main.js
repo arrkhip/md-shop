@@ -10,6 +10,7 @@ import './modules/polyfills/closest';
 // modules
 import './modules/onLoad';
 import './modules/Menu';
+import './modules/MenuSlider';
 import './modules/Mask';
 import './modules/Swap';
 // import './modules/FormHiding';
