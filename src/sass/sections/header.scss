@@ -317,6 +317,12 @@
     }
   }
 
+  &--desktop {
+    @include max-width($touch) {
+      display: none;
+    }
+  }
+
   &:not(:last-child) {
     margin-right: 45px;
 

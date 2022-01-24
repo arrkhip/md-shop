@@ -60,6 +60,18 @@
     transition-duration: $transition-duration * 2;
     transition-property: transform, opacity;
     transform: scale(0.6);
+
+    // &--big {
+
+    // }
+
+    // &--medium {
+
+    // }
+
+    &--small {
+      padding: 44px 20px 20px;
+    }
   }
 
   .modal__close {
@@ -77,5 +89,23 @@
     font-size: 0.875rem;
     line-height: 1.43;
     color: $gray-dark;
+  }
+}
+
+.modal__heaer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .button--close {
+    position: static;
+    margin: 0 0 0 auto;
+  }
+}
+
+// search
+.modal-wrapper--search {
+  .header__search {
+    display: block;
   }
 }
