@@ -1,22 +1,177 @@
 <!-- header -->
 <header class="header">
-  <div class="container">
-    <!-- wrapper -->
-    <div class="header__wrapper">
-      <!-- logo -->
-      <a href="#" class="header__logo">
-        <img src="../img/mobile-logo.png">
-      </a>
-      <!-- ./ End of logo -->
-      <!-- menu -->
-      <button class="header__menu j_openMenu">
-        <svg class="header__menu-svg">
-          <use xlink:href="#icon-menu"></use>
-        </svg>
-      </button>
-      <!-- ./ End of menu -->
+  <!-- top -->
+  <div class="header__top">
+    <div class="container">
+      <!-- wrap -->
+      <div class="header__wrap">
+        <nav class="header__nav">
+          <a href="#" class="header__sublink"> О компании </a>
+          <a href="#" class="header__sublink"> Блог </a>
+          <a href="#" class="header__sublink"> Новости </a>
+          <a href="#" class="header__sublink"> Как купить </a>
+          <a href="#" class="header__sublink"> Доставка </a>
+          <a href="#" class="header__sublink"> Оплата </a>
+          <a href="#" class="header__sublink"> Гарантии </a>
+          <a href="#" class="header__sublink"> FAQ </a>
+          <a href="#" class="header__sublink"> Контакты </a>
+        </nav>
+
+        <div class="header__phones">
+          <div class="header-phone">
+            <a href="tel: +74959742977" class="header-phone__link">
+              <svg class="svg">
+                <use xlink:href="#icon-header-phone"></use>
+              </svg>
+
+              <span> +7 (495) 974-29-77 </span>
+            </a>
+
+            <time class="header-phone__time"> Пн-Вс 9.00-21.00 (МСК) </time>
+          </div>
+
+          <a href="#" class="header__order"> Заказать звонок </a>
+        </div>
+      </div>
+      <!-- ./ End of wrap -->
     </div>
-    <!-- ./ End of wrapper -->
   </div>
+  <!-- ./ End of top -->
+
+  <!-- body -->
+  <div class="header__body">
+    <div class="container">
+      <div class="header__wrap">
+        <button class="hamburger j_toggleMenu" type="button">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+
+        <a href="#" class="header-logo" title="ИМПЕРАТОРСКИЙ МОНЕТНЫЙ ДВОР">
+          <img src="../img/header-logo.svg" alt="ИМПЕРАТОРСКИЙ МОНЕТНЫЙ ДВОР" class="header-logo__img" />
+        </a>
+
+        <div class="header__search">
+          <div class="input-wrapper">
+            <input type="text" class="input" placeholder="Поиск по товарам" />
+
+            <button class="button button-icon input__clear" type="button">
+              <svg>
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="header__controls">
+          <button type="button" class="header__control header__control--mobile">
+            <div>
+              <svg class="svg">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </div>
+
+            <span> поиск </span>
+          </button>
+
+          <a href="#" class="header__control">
+            <div>
+              <svg class="svg">
+                <use xlink:href="#icon-profile"></use>
+              </svg>
+            </div>
+
+            <span> войти </span>
+          </a>
+
+          <a href="#" class="header__control">
+            <div>
+              <svg class="svg">
+                <use xlink:href="#icon-basket"></use>
+              </svg>
+
+              <em>
+                3
+              </em>
+            </div>
+
+            <span> корзина </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ./ End of body -->
+
+  <!-- footer -->
+  <div class="header__footer">
+    <div class="container">
+      <div class="header__wrap">
+        <nav class="header__navigation">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <svg class="svg">
+                  <use xlink:href="#icon-grid"></use>
+                </svg>
+
+                <span> каталог </span>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link selected">
+                <span> премиальные изделия </span>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span> золото </span>
+              </a>
+
+              <ul class="header__dropdown">
+                <li>
+                  <a href="#">
+                    Единичные
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Коллекции
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Наборы
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span> серебро </span>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span> другие металлы </span>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span> монеты </span>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span> аксессуары </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- ./ End of footer -->
 </header>
 <!-- ./ End of header -->
