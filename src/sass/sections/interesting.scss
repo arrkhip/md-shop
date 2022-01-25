@@ -1,0 +1,372 @@
+.#{$prefix}interesting-button {
+  --color: var(--white);
+  --color-hover: var(--white);
+  --color-disable: var(--white);
+  --color-focus: var(--white);
+  --bg-color: var(--primary-default);
+  --bg-color-hover: var(--primary-hover);
+  --bg-color-disable: var(--primary-disable);
+  --bg-color-focus: var(--primary-active);
+  --border-color: var(--primary-default);
+  --border-color-hover: var(--primary-hover);
+  --border-color-disable: var(--primary-disable);
+  --border-width: 1px;
+  --font-size: #{$button-font-size};
+  --padding: #{$button-padding};
+  --min-width: #{$button-min-width};
+  --ripple-color: var(--ripple-default);
+
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--min-width);
+  padding: var(--padding);
+  margin: $button-margin;
+  font-family: $button-font;
+  font-size: var(--font-size);
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  color: var(--color);
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  background-color: var(--bg-color);
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: var(--border-width);
+  border-radius: $button-border-radius;
+  outline: transparent;
+  box-shadow: none;
+  transition: color 0.3s, background-color 0.3s, border 0.3s, box-shadow 0.3s;
+  transition-timing-function: ease;
+  appearance: none;
+
+  @media (hover) {
+    &:hover {
+      color: var(--color-hover);
+      background-color: var(--bg-color-hover);
+      border-color: var(--border-color-hover);
+    }
+  }
+
+  &:focus {
+    color: var(--color-focus);
+    background-color: var(--bg-color-focus);
+    box-shadow: 0 0 0 2px var(--primary-disable);
+  }
+
+  &:disabled,
+  &.disabled {
+    color: var(--color-disable);
+    pointer-events: none;
+    cursor: default;
+    background-color: var(--bg-color-disable);
+    border-color: var(--border-color-disable);
+  }
+
+  svg {
+    display: block;
+    width: 1em;
+    min-width: 1em;
+    height: 1em;
+    min-height: 1em;
+    font-size: 20px;
+    fill: currentColor;
+    transition: fill 0.3s, transform 0.3s;
+  }
+
+  span,
+  svg {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-icon {
+    --size: 40px;
+    --padding: 5px;
+    --border-color: #e0e0e0;
+
+    width: var(--size);
+    min-width: var(--size);
+    height: var(--size);
+    min-height: var(--size);
+    border-radius: 4px;
+
+    &--prev {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    svg {
+      position: relative;
+      margin: 0;
+
+      &::before {
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        content: '';
+        background-color: #000;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &.button--flat {
+      --size: auto;
+    }
+  }
+}
+
+.#{$prefix}interesting-section {
+  padding: 80px 0;
+  overflow: hidden;
+
+  @include max-width($desktop-sm) {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    margin: 0 0 20px 0;
+    font-family: $corm-garamond;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+
+    @include max-width($touch) {
+      font-size: 28px;
+    }
+
+    @include max-width($phone) {
+      margin: 0 0 24px;
+    }
+
+    b {
+      color: #a87f45;
+    }
+  }
+}
+
+.#{$prefix}interesting__text {
+  margin: 0 0 40px;
+  font-size: 18px;
+  line-height: 1.3;
+
+  @include max-width($touch) {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.#{$prefix}interesting__wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @include max-width($desktop-sm) {
+    flex-direction: column;
+    justify-content: unset;
+  }
+}
+
+.#{$prefix}interesting__left {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 320px;
+  padding-right: 16px;
+
+  @include max-width($desktop-sm) {
+    max-width: none;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: -1;
+    width: 50vw;
+    height: 1000px;
+    content: '';
+    background-color: #fff;
+    transform: translateY(-50%);
+
+    @include max-width($desktop-sm) {
+      content: none;
+    }
+  }
+}
+
+.#{$prefix}interesting__right {
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+.#{$prefix}interesting-slider-wrapper {
+  width: 100%;
+}
+
+.#{$prefix}interesting-slider {
+  overflow: visible;
+
+  .swiper-wrapper {
+    width: 1px;
+  }
+}
+
+.#{$prefix}interesting-slide {
+  .#{$prefix}post {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.#{$prefix}post {
+  $p: &;
+
+  &--row {
+    display: flex;
+    width: 100%;
+    margin: 0;
+
+    @include max-width($phone) {
+      flex-direction: column;
+    }
+
+    #{$p}__img-wrapper {
+      margin: 0;
+
+      @include max-width($phone) {
+        max-width: 180px;
+        margin-bottom: 10px;
+      }
+    }
+
+    #{$p}__wrap {
+      display: flex;
+      flex: 0 1 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 0 20px 45px;
+
+      @include max-width($phone) {
+        padding: 0;
+      }
+    }
+
+    #{$p}__title {
+      font-family: $corm-garamond;
+      font-size: 24px;
+
+      @include max-width($touch) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &--large {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+
+    #{$p}__img-wrapper {
+      margin: 0;
+
+      @include max-width($phone) {
+        margin-bottom: 35px;
+      }
+    }
+
+    #{$p}__wrap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      max-width: 460px;
+      padding: 28px;
+      background-color: #fff;
+
+      // @include max-width($phone) {
+      //   position: static;
+      //   padding: 0;
+      //   background-color: transparent;
+      // }
+
+      @include max-width($phone) {
+        max-width: 70%;
+        padding: 12px;
+      }
+    }
+
+    #{$p}__title {
+      font-family: $corm-garamond;
+      font-size: 24px;
+
+      @include max-width($touch) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.#{$prefix}interesting__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 660px;
+  margin-top: 40px;
+
+  @include max-width($desktop-sm) {
+    margin-top: 20px;
+  }
+
+  @include max-width($touch) {
+    max-width: none;
+  }
+}
+
+.#{$prefix}interesting__navigation {
+  display: inline-flex;
+
+  .#{$prefix}interesting-button-icon {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+}
+
+.#{$prefix}interesting__pagination {
+  --swiper-pagination-color: #000;
+
+  position: static;
+  text-align: right;
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+
+      @include max-width($touch) {
+        margin-right: 12px;
+      }
+    }
+  }
+}
