@@ -1,15 +1,18 @@
 import Swiper from 'swiper/swiper-bundle.min';
 
-const sliderWrapper = document.querySelector('.banner__slider');
+const $slider = document.querySelector('.banners__slider');
 let slider;
 
-if (sliderWrapper) {
-  slider = new Swiper('.swiper', {
+if ($slider) {
+  const delay = +$slider.getAttribute('data-delay') || 5000;
+  const speed = +$slider.getAttribute('data-speed') || 800;
+
+  slider = new Swiper($slider, {
     loop: true,
     effect: 'fade',
-    speed: 800,
+    speed: speed,
     autoplay: {
-      delay: 5000,
+      delay: delay,
     },
     fadeEffect: {
       crossFade: true,
