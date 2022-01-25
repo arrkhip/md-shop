@@ -106,6 +106,7 @@
 .banner {
   position: relative;
   z-index: 1;
+  display: block;
   padding: 70px;
   overflow: hidden;
   color: $white;
@@ -251,8 +252,8 @@
     max-height: 390px;
     margin-bottom: -50px;
     margin-left: -64px;
-    object-fit: contain;
     pointer-events: none;
+    object-fit: contain;
 
     @include max-width($desktop-sm) {
       max-width: 350px;
