@@ -61,9 +61,9 @@
     transition-property: transform, opacity;
     transform: scale(0.6);
 
-    // &--big {
-
-    // }
+    &--big {
+      max-width: 1200px;
+    }
 
     // &--medium {
 
@@ -108,4 +108,19 @@
   .header__search {
     display: block;
   }
+}
+
+// player
+.modal-wrapper--player {
+  .modal {
+    padding: 0;
+
+    @include max-height(500px) {
+      max-width: 500px;
+    }
+  }
+}
+
+.modal-player {
+  position: relative;
 }

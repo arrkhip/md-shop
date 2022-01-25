@@ -9,10 +9,9 @@ export default class Modal extends ClassToggler {
     super(options);
 
     // Кастомные опции (свойства необходимые только для этого класса)
-    this.openOnLoad =
-      options.$el.hasAttribute('data-open-on-load') || options.openOnLoad;
-    this.openOnFocus =
-      options.$el.hasAttribute('data-open-on-focus') || options.openOnFocus;
+    this.openOnLoad = options.$el.hasAttribute('data-open-on-load') || options.openOnLoad;
+    this.openOnFocus = options.$el.hasAttribute('data-open-on-focus') || options.openOnFocus;
+    this.playOnLoad = options.$el.hasAttribute('data-play-on-open') || options.playOnLoad;
     this.$el = options.$el;
     this._zIndex = 10;
     this.init();
@@ -37,11 +36,25 @@ export default class Modal extends ClassToggler {
       setTimeout(() => this.$el.querySelector('.input').focus(), 100);
     }
 
+    if (this.playOnLoad) {
+      const $player = this.$el.querySelector('[data-player]');
+
+      if ($player && $player.player && $player.player.stopped) {
+        $player.player.play();
+      }
+    }
+
     this._incZIndex();
   }
 
   close() {
     super.close();
+
+    const $player = this.$el.querySelector('[data-player]');
+
+    if ($player && $player.player) {
+      $player.player.pause();
+    }
 
     this._normilizeZIndex();
   }
@@ -49,9 +62,7 @@ export default class Modal extends ClassToggler {
   _incZIndex() {
     const zIndexArray = [];
 
-    Object.keys(_instances).forEach(
-      (key, i) => (zIndexArray[i] = _instances[key]._zIndex)
-    );
+    Object.keys(_instances).forEach((key, i) => (zIndexArray[i] = _instances[key]._zIndex));
 
     const biggestZindex = Math.max.apply(null, zIndexArray);
 
@@ -69,9 +80,7 @@ export default class Modal extends ClassToggler {
 
     $modals.forEach(($modal) => {
       const id = $modal.getAttribute('id');
-      const $triggers = document.querySelectorAll(
-        `[data-modal-target="#${id}"]`
-      );
+      const $triggers = document.querySelectorAll(`[data-modal-target="#${id}"]`);
 
       // eslint-disable-next-line no-new
       new Modal({
@@ -110,6 +119,7 @@ const defaultOptions = {
   scrollLock: true,
   openOnLoad: false,
   openOnFocus: false,
+  playOnLoad: false,
 
   closeCallback: function() {},
 
