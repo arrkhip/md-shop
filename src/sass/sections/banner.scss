@@ -14,7 +14,7 @@
 
 .banners__wrapper {
   display: flex;
-  min-height: 480px;
+  min-height: 458px;
 
   @include max-width($desktop-sm) {
     min-height: 400px;
@@ -222,7 +222,9 @@
   }
 
   &__button {
-    margin: 40px 0 0;
+    height: 56px;
+    margin: 38px 0 0;
+    font-weight: normal;
 
     @include max-width(700px) {
       display: none;
@@ -250,7 +252,7 @@
     width: 100%;
     max-width: 430px;
     max-height: 390px;
-    margin-bottom: -50px;
+    margin-bottom: -60px;
     margin-left: -64px;
     pointer-events: none;
     object-fit: contain;
