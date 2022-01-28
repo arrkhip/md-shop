@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Main</title>
+  </head>
 
-<head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <title>Main</title>
-</head>
+  <body>
+    <div class="content">
+      ${require('./templates/header.html')}
+      <!--  -->
+      ${require('./templates/menu.html')}
 
-<body>
-  <main class="with-aside">
-    ${require('./templates/header.html')}
-    ${require('./templates/menu.html')}
-    ${require('./templates/banner.html')}
-    ${require('./templates/mobile-form.html')}
-    ${require('./templates/content.html')}
-    ${require('./templates/footer.html')}
-  </main>
-</body>
+      <main>
+        ${require('./templates/banner.html')}
+        <!--  -->
+        ${require('./templates/blog.html')}
+        <!--  -->
+        ${require('./templates/interesting.html')}
+        <!--  -->
 
+        <!-- desc -->
+        <section class="desc-section">
+          <div class="desc">
+            <div class="desc__wrap">
+              <div data-modal-target="#modal-player" class="desc__left">
+                <div class="desc__container">
+                  <div class="desc__inner">
+                    <img src="./img/desc_bg.jpg" alt="" class="desc__bg" />
+
+                    <div class="desc__play">
+                      <button type="button" class="plyr__control plyr__control--overlaid j_player-play">
+                        <svg>
+                          <use xlink:href="#icon-plyr-play"></use>
+                        </svg>
+                      </button>
+
+                      <span> Посмотрите короткий&#160;ролик о&#160;нас за 2&#160;минуты </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="desc__right">
+                <div class="desc__content">
+                  <img src="./img/desc_logo.svg" alt="" class="desc__logo" />
+
+                  <h2 class="desc__title">
+                    Императорский монетный двор — <b>ведущий дистрибьютор</b> РФ по реализации ценных монет и медалей
+                  </h2>
+
+                  <p class="desc__text">
+                    У нас вы можете приобрести золотые, серебряные медали и монеты, а также изделия, в изготовлении
+                    которых используются медные сплавы. В каталоге интернет-магазина серии медалей на любую тему, вкус и
+                    кошелёк, а также царские медали, монеты и другие тематические коллекции.
+                  </p>
+
+                  <p class="desc__text">
+                    Каждый коллекционер найдёт много интересного на страницах сайта и сможет пополнить своё собрание
+                    уникальными экспонатами, подлинность и качество которых гарантируется Императорским Монетным Двором
+                    и подтверждается оригинальными сертификатами подлинности.
+                  </p>
+
+                  <a href="#" class="pre_blog-link">
+                    подробнее
+                    <svg class="pre_svg">
+                      <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of desc -->
+
+        <!--  -->
+        ${require('./templates/card.html')}
+      </main>
+
+      ${require('./templates/footer.html')}
+    </div>
+
+    <!-- modals -->
+    ${require('./templates/modals/search.html')}
+    <!--  -->
+    ${require('./templates/modals/player.html')}
+  </body>
 </html>
-

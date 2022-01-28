@@ -1,0 +1,329 @@
+.#{$prefix}card-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  margin: 0;
+  cursor: pointer;
+
+  &__input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -2;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    appearance: none;
+
+    &:checked + .#{$prefix}card-checkbox__custom,
+    &:checked + .radio__custom {
+      background-color: $checkbox-bg-color-active;
+      border-color: #814724;
+
+      .#{$prefix}card-checkbox__icon {
+        opacity: 1;
+      }
+    }
+
+    &:disabled + .#{$prefix}card-checkbox__custom {
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        cursor: default;
+        content: '';
+      }
+
+      + .#{$prefix}card-checkbox__text {
+        opacity: 0.3;
+      }
+    }
+
+    &:disabled:checked + .checkbox__custom {
+      background-color: var(--primary-disable);
+      box-shadow: none;
+    }
+  }
+
+  &__custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $checkbox-size;
+    min-width: $checkbox-size;
+    height: $checkbox-size;
+    min-height: $checkbox-size;
+    margin: $checkbox-custom-margin;
+    background-color: $checkbox-bg-color;
+    border: $checkbox-border;
+    border: 1px solid #814724;
+    border-radius: $checkbox-border-radius;
+    transition: 0.2s ease;
+  }
+
+  &__text {
+    display: block;
+    overflow: hidden;
+    font-family: $checkbox-font;
+    font-size: 14px;
+    font-weight: $checkbox-font-weight;
+    line-height: $checkbox-line-height;
+    color: $checkbox-color;
+
+    @include max-width($desktop-sm) {
+      font-size: 14px;
+    }
+
+    b {
+      font-weight: bold;
+      color: var(--secondary-8);
+    }
+  }
+
+  &__link {
+    color: $checkbox-link-color;
+    text-decoration: $checkbox-link-text-decoration;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $checkbox-link-color-hover;
+      text-decoration: $checkbox-link-text-decoration-hover;
+    }
+  }
+
+  &__icon {
+    width: $checkbox-icon-size;
+    height: $checkbox-icon-size;
+    color: #814724;
+    opacity: 0;
+    transition: 0.3s;
+  }
+}
+
+.#{$prefix}card-input {
+  --color: var(--secondary-9);
+  --color-placeholder: var(--secondary-4);
+  --border-color: var(--secondary-4);
+  --border-color-hover: var(--primary-hover);
+  --border-color-focus: var(--primary-hover);
+  --background-color: var(--white);
+
+  padding: $input-padding;
+  margin: $input-margin;
+  overflow: hidden;
+  font-family: $input-font;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: var(--color);
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: $input-border-radius;
+  outline: transparent;
+  appearance: none;
+
+  @include max-width($desktop-sm) {
+    font-size: 14px;
+
+    @include placeholder() {
+      font-size: 14px;
+    }
+  }
+
+  @include placeholder() {
+    font-family: $input-font;
+    font-size: $input-font-size;
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: var(--color-placeholder);
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
+
+    @include max-width($desktop-sm) {
+      font-size: 14px;
+    }
+  }
+
+  @media (hover) {
+    &:hover {
+      border-color: var(--border-color-hover);
+    }
+  }
+
+  &:read-only {
+    cursor: default;
+    box-shadow: none;
+    opacity: 0.7;
+
+    @media (hover) {
+      &:hover {
+        border-color: var(--border-color);
+      }
+
+      &:focus {
+        border-color: var(--border-color);
+
+        @include placeholder() {
+          opacity: 1;
+          transform: unset;
+        }
+      }
+    }
+  }
+
+  &:not(:placeholder-shown) {
+    --border-color: var(--secondary-5);
+  }
+
+  &--square {
+    --size: 42px;
+
+    width: var(--size);
+    min-width: var(--size);
+    height: var(--size);
+    min-height: var(--size);
+    padding: 0.625em;
+    text-align: center;
+  }
+}
+
+.#{$prefix}card-section {
+  padding: 80px 0;
+
+  @include min-width($desktop-sm) {
+    padding: 40px 0;
+  }
+
+  @include max-width($touch) {
+    padding: 20px 0;
+  }
+}
+
+.#{$prefix}card {
+  width: 100%;
+  padding: 40px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fdf8ef;
+  border-radius: 8px;
+
+  @include max-width($touch) {
+    padding: 24px 20px 40px;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    @include max-width($phone) {
+      flex-direction: column;
+      justify-content: unset;
+    }
+  }
+
+  &__form {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 550px;
+
+    @include max-width($touch) {
+      flex-shrink: unset;
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px 0;
+    font-family: $corm-garamond;
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    @include max-width($touch) {
+      font-size: 28px;
+    }
+
+    @include max-width($phone) {
+      text-align: center;
+    }
+
+    b {
+      color: #a87f45;
+    }
+  }
+
+  &__text {
+    margin: 0 0 15px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #4f4f4f;
+
+    @include max-width($touch) {
+      font-size: 14px;
+    }
+
+    @include max-width($phone) {
+      margin: 0 0 20px;
+      text-align: center;
+    }
+  }
+
+  &__row {
+    display: flex;
+    padding: 4px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+
+    .#{$prefix}card-input {
+      flex-grow: 1;
+      margin: 0;
+      border: none;
+
+      @include placeholder() {
+        color: #828282;
+      }
+    }
+
+    .button--brown {
+      min-width: auto;
+
+      @include max-width($phone) {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .#{$prefix}card-checkbox {
+    &__text {
+      @include max-width($touch) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: 464px;
+    height: auto;
+    max-height: 100%;
+    margin-left: 60px;
+    object-fit: contain;
+
+    @include max-width($touch) {
+      max-width: 242px;
+      margin: 16px auto 0;
+    }
+  }
+}

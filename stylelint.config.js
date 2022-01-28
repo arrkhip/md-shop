@@ -1,9 +1,5 @@
 module.exports = {
-  extends: [
-    'stylelint-config-standard',
-    'stylelint-config-prettier',
-    'stylelint-config-recess-order',
-  ],
+  extends: ['stylelint-config-standard', 'stylelint-config-prettier', 'stylelint-config-recess-order'],
   plugins: ['stylelint-scss'],
   rules: {
     indentation: 2,
@@ -29,7 +25,7 @@ module.exports = {
     'scss/dollar-variable-colon-space-after': 'always',
     'scss/dollar-variable-colon-space-before': 'never',
     'scss/dollar-variable-no-missing-interpolation': true,
-    'scss/dollar-variable-pattern': /^[a-z-]+$/,
+    'scss/dollar-variable-pattern': /^[a-z-1-9]+$/,
     'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/operator-no-newline-before': true,
     'scss/operator-no-unspaced': true,

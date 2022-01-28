@@ -1,10 +1,25 @@
 $fonts-path: '../fonts/';
 $sans-path: $fonts-path + 'PtSans/';
 $garamond-path: $fonts-path + 'GaramondPremrPro/';
+$corm-garamond-path: $fonts-path + 'CormorantGaramond/';
 
 // Fonts
 $sans: 'PT Sans';
 $garamond: 'GaramondPremrPro';
+$corm-garamond: 'Cormorant Garamond';
+
+// stylelint-disable scss/operator-no-unspaced
+
+// CormorantGaramond
+@font-face {
+  font-family: $corm-garamond;
+  font-style: normal;
+  font-weight: bold;
+  src: url($corm-garamond-path+'CormorantGaramond-Bold.woff');
+  src: local('CormorantGaramond-Bold'), local('CormorantGaramond-Bold'),
+    url($corm-garamond-path+'CormorantGaramond-Bold.woff') format('woff');
+  font-display: swap;
+}
 
 // GaramondPremrPro
 @font-face {

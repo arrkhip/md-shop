@@ -31,11 +31,15 @@
 @import 'components/pagination';
 
 // Sections - Разделы сайта
-// @import 'sections/header';
+@import 'sections/header';
 // @import 'sections/header-steps';
-// @import 'sections/menu';
-// @import 'sections/footer';
-// @import 'sections/banner';
+@import 'sections/menu';
+@import 'sections/footer';
+@import 'sections/blog';
+@import 'sections/interesting';
+@import 'sections/card';
+@import 'sections/desc';
+@import 'sections/banner';
 // @import 'sections/content';
 // @import 'sections/info';
 // @import 'sections/aside';
@@ -57,3 +61,4 @@
 // @import 'blocks/video-block';
 // @import 'blocks/partners-block';
 // @import 'blocks/banner-block';
+@import 'blocks/menu-slider';

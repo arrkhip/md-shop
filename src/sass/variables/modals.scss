@@ -60,6 +60,18 @@
     transition-duration: $transition-duration * 2;
     transition-property: transform, opacity;
     transform: scale(0.6);
+
+    &--big {
+      max-width: 1200px;
+    }
+
+    // &--medium {
+
+    // }
+
+    &--small {
+      padding: 44px 20px 20px;
+    }
   }
 
   .modal__close {
@@ -78,4 +90,37 @@
     line-height: 1.43;
     color: $gray-dark;
   }
+}
+
+.modal__heaer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .button--close {
+    position: static;
+    margin: 0 0 0 auto;
+  }
+}
+
+// search
+.modal-wrapper--search {
+  .header__search {
+    display: block;
+  }
+}
+
+// player
+.modal-wrapper--player {
+  .modal {
+    padding: 0;
+
+    @include max-height(500px) {
+      max-width: 500px;
+    }
+  }
+}
+
+.modal-player {
+  position: relative;
 }

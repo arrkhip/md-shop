@@ -50,6 +50,7 @@ const config = {
   // pages
   entry: {
     main: './src/js/_main.js',
+    index: './src/js/_index.js',
     'order-steps': './src/js/_order-steps.js',
     'all-steps': './src/js/_order-steps.js',
   },

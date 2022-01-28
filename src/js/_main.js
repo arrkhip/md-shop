@@ -8,7 +8,9 @@ import './modules/polyfills/forEach';
 import './modules/polyfills/closest';
 
 // modules
+import './modules/onLoad';
 import './modules/Menu';
+import './modules/MenuSlider';
 import './modules/Mask';
 import './modules/Swap';
 // import './modules/FormHiding';
@@ -23,16 +25,14 @@ import './modules/Scroll';
 import './modules/sliders/banner';
 import './modules/sliders/promo';
 
-
-// Перенести в отдельный файл. 
+// Перенести в отдельный файл.
 // Перемещение формы на главной.
 const $modalCard = document.querySelector('.js_aside__form');
 const $modalContainer = document.querySelector('.mobile-form__wrapper');
 const $modalAside = document.querySelector('.aside__wrapper');
 const mobileWidth = window.matchMedia('(max-width: 992px)');
 
-
-if($modalCard) {
+if ($modalCard) {
   window.addEventListener('resize', function() {
     if (mobileWidth.matches) {
       $modalCard.remove();
