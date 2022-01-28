@@ -29,6 +29,9 @@
 @import 'components/card-news';
 @import 'components/tags';
 @import 'components/pagination';
+@import 'components/aside-menu';
+@import 'components/form-faq';
+@import 'components/aside-blog';
 
 // Sections - Разделы сайта
 @import 'sections/header';
@@ -54,6 +57,7 @@
 @import 'sections/contacts';
 @import 'sections/news';
 @import 'sections/article';
+@import 'sections/faq';
 
 // Blocks - Блоки
 // @import 'blocks/main-block';

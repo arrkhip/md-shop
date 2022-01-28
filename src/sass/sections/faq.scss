@@ -1,0 +1,135 @@
+.faq {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__aside {
+    flex: 0 0 245px;
+    margin-right: 40px;
+  }
+
+  &__headline {
+    margin-bottom: 48px;
+
+    p {
+      font-size: 18px;
+      line-height: 156%;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__tab {
+    flex-shrink: 0;
+    padding: 0 20px 16px 20px;
+    border: none;
+    border-bottom: 4px solid transparent;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: $gray-extra-dark;
+    background-color: transparent;
+    @include trs();
+
+    &.active {
+      border-bottom-color: $main-light;
+      color: $main-light;
+    }
+
+    &:not(.news__tab.active):hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__contents {
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__accordion {
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+
+    &.active {
+      .faq__accordion-hidden {
+        display: block;
+      }
+
+      .faq__accordion-svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__accordion-button {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+  }
+
+  &__accordion-title {
+    width: 100%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: left;
+    @include trs(color, 0.3s, ease);
+
+    &:hover {
+      color: $primary-active;
+    }
+  }
+
+  &__accordion-icon {
+    flex-shrink: 0;
+    padding: 10px;
+  }
+
+  &__accordion-svg {
+    width: 15px;
+    height: 15px;
+    fill: $black-2;
+    @include trs(transform, 0.3s, ease);
+  }
+
+  &__accordion-hidden {
+    display: none;
+  }
+
+  &__accordion-content {
+    p {
+      font-size: 18px;
+      line-height: 156%;
+    }
+  }
+
+  @include max-width($tablet) {
+    &__wrapper {
+      display: block;
+    }
+
+    &__aside {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

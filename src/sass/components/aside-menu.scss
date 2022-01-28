@@ -1,0 +1,39 @@
+.aside-menu {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 28px;
+
+  &--sm {
+    .aside-menu__item {
+      padding: 15px 20px;
+    }
+  }
+
+  &__item {
+    padding: 17px 24px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 140%;
+    color: $gray-extra-dark;
+    @include trs(opacity, 0.3s, ease);
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    vertical-align: middle;
+    stroke: #231f20;
+  }
+}
