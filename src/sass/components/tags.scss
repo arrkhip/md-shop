@@ -1,0 +1,54 @@
+.tags {
+  &__title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -6px;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    padding: 6px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin: 6px;
+
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #231f20;
+    @include trs(opacity);
+
+    &--active {
+      border-color: #231f20;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:not(.tags__item--active):hover {
+      opacity: 0.8;
+    }
+  }
+
+  @include max-width($phone) {
+    &__title {
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 171%;
+    }
+
+    &__item {
+      box-sizing: border-box;
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+}
