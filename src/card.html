@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Card</title>
+  </head>
+
+  <body>
+    <div class="content">
+      ${require('./templates/header.html')}
+      <!--  -->
+      ${require('./templates/menu.html')}
+
+      <main>
+        <!-- product -->
+        <section class="product-section">
+          <div class="container">
+            <div class="product-wrap">
+              <div class="product__header">
+                <h1 class="product__title">
+                  Святые покровители и заступники
+
+                  <b>
+                    Матрона Московская
+                  </b>
+                </h1>
+
+                <div class="product-share j_product-share">
+                  <button class="button button-icon product-share__button" type="button">
+                    <svg class="svg">
+                      <use xlink:href="#icon-share"></use>
+                    </svg>
+                  </button>
+
+                  <div class="product-share__hidden">
+                    <span> Поделиться </span>
+
+                    <div class="product-share__inner">
+                      <div class="product-share__list">
+                        <a href="#" class="product-share__link">
+                          <svg class="svg">
+                            <use xlink:href="#icon-soc-vk"></use>
+                          </svg>
+                        </a>
+                        <a href="#" class="product-share__link">
+                          <svg class="svg">
+                            <use xlink:href="#icon-soc-ok"></use>
+                          </svg>
+                        </a>
+                        <a href="#" class="product-share__link">
+                          <svg class="svg">
+                            <use xlink:href="#icon-soc-f"></use>
+                          </svg>
+                        </a>
+                        <a href="#" class="product-share__link">
+                          <svg class="svg">
+                            <use xlink:href="#icon-soc-tw"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product__body">
+                <div class="product-inner">
+                  <!-- left -->
+                  <div class="product-left">
+                    <div class="product-preview">
+                      <div class="product-thumbs-wrap">
+                        <div class="product-thumbs-slider-wrapper">
+                          <div class="product-thumbs-slider swiper">
+                            <div class="swiper-wrapper">
+                              <div class="product-thumbs-slide swiper-slide">
+                                <div class="product">
+                                  <picture class="product__pic">
+                                    <source type="image/png" srcset="images/product-card_img1.jpg" />
+                                    <img src="img/product-card_img1.jpg" />
+                                  </picture>
+                                </div>
+                              </div>
+                              <div class="product-thumbs-slide swiper-slide">
+                                <div class="product">
+                                  <picture class="product__pic">
+                                    <source type="image/jpg" srcset="images/product-card_img2.jpg" />
+                                    <img src="img/product-card_img2.jpg" />
+                                  </picture>
+                                </div>
+                              </div>
+                              <div class="product-thumbs-slide swiper-slide">
+                                <div class="product product--video">
+                                  <picture class="product__pic">
+                                    <source type="image/png" srcset="images/product-card_img1.jpg" />
+                                    <img src="img/product-card_img1.jpg" />
+                                  </picture>
+                                </div>
+                              </div>
+                              <div class="product-thumbs-slide swiper-slide">
+                                <div class="product">
+                                  <picture class="product__pic">
+                                    <source type="image/jpg" srcset="images/product-card_img2.jpg" />
+                                    <img src="img/product-card_img2.jpg" />
+                                  </picture>
+                                </div>
+                              </div>
+                              <div class="product-thumbs-slide swiper-slide">
+                                <div class="product">
+                                  <picture class="product__pic">
+                                    <source type="image/png" srcset="images/product-card_img1.jpg" />
+                                    <img src="img/product-card_img1.jpg" />
+                                  </picture>
+                                </div>
+                              </div>
+                              <div class="product-thumbs-slide swiper-slide">
+                                <div class="product">
+                                  <picture class="product__pic">
+                                    <source type="image/jpg" srcset="images/product-card_img2.jpg" />
+                                    <img src="img/product-card_img2.jpg" />
+                                  </picture>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- navigation -->
+                          <div class="slider-navigation product-thumbs-slider-navigation">
+                            <button class="button button-icon button-icon--prev" type="button">
+                              <svg>
+                                <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                            </button>
+
+                            <button class="button button-icon button-icon--next" type="button">
+                              <svg>
+                                <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <!-- ./ End of navigation -->
+                        </div>
+                      </div>
+
+                      <div class="product-preview-wrap">
+                        <div class="product-preview-slider-wrapper">
+                          <div class="product-preview-slider__container">
+                            <div class="product-preview-slider__inner">
+                              <div class="product-preview-slider swiper">
+                                <div class="swiper-wrapper">
+                                  <div class="product-preview-slide swiper-slide">
+                                    <div class="product">
+                                      <picture class="product__pic">
+                                        <source type="image/png" srcset="images/product-card_img1.jpg" />
+                                        <img src="img/product-card_img1.jpg" />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                  <div class="product-preview-slide swiper-slide">
+                                    <div class="product">
+                                      <picture class="product__pic">
+                                        <source type="image/jpg" srcset="images/product-card_img2.jpg" />
+                                        <img src="img/product-card_img2.jpg" />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                  <div class="product-preview-slide swiper-slide">
+                                    <div class="product product--video">
+                                      <picture class="product__pic">
+                                        <source type="image/png" srcset="images/product-card_img1.jpg" />
+                                        <img src="img/product-card_img1.jpg" />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                  <div class="product-preview-slide swiper-slide">
+                                    <div class="product">
+                                      <picture class="product__pic">
+                                        <source type="image/jpg" srcset="images/product-card_img2.jpg" />
+                                        <img src="img/product-card_img2.jpg" />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                  <div class="product-preview-slide swiper-slide">
+                                    <div class="product">
+                                      <picture class="product__pic">
+                                        <source type="image/png" srcset="images/product-card_img1.jpg" />
+                                        <img src="img/product-card_img1.jpg" />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                  <div class="product-preview-slide swiper-slide">
+                                    <div class="product">
+                                      <picture class="product__pic">
+                                        <source type="image/jpg" srcset="images/product-card_img2.jpg" />
+                                        <img src="img/product-card_img2.jpg" />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="product-preview__header">
+                                <div class="product-preview__tags">
+                                  <span class="product-preview__tag product-preview__tag--red">
+                                    -30%
+                                  </span>
+
+                                  <span class="product-preview__tag">
+                                    серия
+                                  </span>
+                                </div>
+
+                                <div class="product-preview__zoom">
+                                  <button data-modal-target="#modal-zoom" class="button button-icon" type="button">
+                                    <svg class="svg">
+                                      <use xlink:href="#icon-search"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <div class="product-preview__footer">
+                                <div class="product-preview__info">
+                                  <div>
+                                    <svg class="svg">
+                                      <use xlink:href="#icon-scale"></use>
+                                    </svg>
+
+                                    12 гр
+                                  </div>
+
+                                  <div>
+                                    <svg class="svg">
+                                      <use xlink:href="#icon-maximize"></use>
+                                    </svg>
+
+                                    30х30 мм
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ./ End of left -->
+
+                  <!-- right -->
+                  <div class="product-right">
+                    <div class="product__desc">
+                      <span class="product__subtitle">
+                        ТОВАРА ВРЕМЕННО НЕТ В НАЛИЧИИ
+                      </span>
+
+                      <dl class="product__sublist">
+                        <div class="product__subitem">
+                          <dt class="product__subkey">Тип: </dt>
+                          <dd class="product__subvalue"> релиигия </dd>
+                        </div>
+                        <div class="product__subitem">
+                          <dt class="product__subkey">Серия: </dt>
+                          <dd class="product__subvalue"> «Святые покровители и заступники» </dd>
+                        </div>
+                      </dl>
+
+                      <div class="product-subslider-container">
+                        <div class="product-subslider-header">
+                          <h6 class="product-subslider-title">
+                            Серия «Святые покровители и заступники»
+                          </h6>
+
+                          <div class="product-subslider-navigation pre_interesting__navigation">
+                            <button
+                              class="pre_interesting-button pre_interesting-button-icon pre_interesting-button-icon--prev"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                            </button>
+                            <button
+                              class="pre_interesting-button pre_interesting-button-icon pre_interesting-button-icon--next"
+                              type="button"
+                            >
+                              <svg class="svg">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="product-subslider-wrapper">
+                          <div class="product-subslider swiper">
+                            <div class="swiper-wrapper">
+                              <div class="product-subslide swiper-slide">
+                                <a href="#" class="product-subcard">
+                                  <div class="product-subcard__img-wrapper">
+                                    <img src="./img/product-card_img1.jpg" alt="" class="product-subcard__img" />
+                                  </div>
+
+                                  <p class="product-subcard__title">
+                                    Матрона Московская
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="product-subslide swiper-slide">
+                                <a href="#" class="product-subcard">
+                                  <div class="product-subcard__img-wrapper">
+                                    <img src="./img/product-card_img1.jpg" alt="" class="product-subcard__img" />
+                                  </div>
+
+                                  <p class="product-subcard__title">
+                                    Матрона Московская
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="product-subslide swiper-slide">
+                                <a href="#" class="product-subcard">
+                                  <div class="product-subcard__img-wrapper">
+                                    <img src="./img/product-card_img1.jpg" alt="" class="product-subcard__img" />
+                                  </div>
+
+                                  <p class="product-subcard__title">
+                                    Матрона Московская
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="product-subslide swiper-slide">
+                                <a href="#" class="product-subcard">
+                                  <div class="product-subcard__img-wrapper">
+                                    <img src="./img/product-card_img1.jpg" alt="" class="product-subcard__img" />
+                                  </div>
+
+                                  <p class="product-subcard__title">
+                                    Матрона Московская
+                                  </p>
+                                </a>
+                              </div>
+                              <div class="product-subslide swiper-slide">
+                                <a href="#" class="product-subcard">
+                                  <div class="product-subcard__img-wrapper">
+                                    <img src="./img/product-card_img1.jpg" alt="" class="product-subcard__img" />
+                                  </div>
+
+                                  <p class="product-subcard__title">
+                                    Матрона Московская
+                                  </p>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <ul class="product__list">
+                        <li class="product__item">
+                          <p>
+                            Качество чеканки «Пруф-лайк»
+
+                            <svg class="svg">
+                              <use xlink:href="#icon-info"></use>
+                            </svg>
+                          </p>
+                        </li>
+                        <li class="product__item">
+                          <p>
+                            Можно оплатить после получения
+
+                            <svg class="svg">
+                              <use xlink:href="#icon-info"></use>
+                            </svg>
+                          </p>
+                        </li>
+                        <li class="product__item">
+                          <p>
+                            Убедитесь, что медаль вам нравится или верните за 14 дней
+                          </p>
+                        </li>
+                      </ul>
+
+                      <div class="product__prices">
+                        <span class="product__price product__price--prev">
+                          <em>
+                            2 990руб
+                          </em>
+
+                          Обычная цена
+                        </span>
+
+                        <span class="product__price">
+                          <em>
+                            2 093 руб
+                          </em>
+
+                          Специальная цена первой медали!
+                        </span>
+                      </div>
+
+                      <a href="#" class="button button--black product__buy">
+                        добавить в корзину
+                      </a>
+                    </div>
+                  </div>
+                  <!-- ./ End of right -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of product -->
+      </main>
+
+      ${require('./templates/footer.html')}
+    </div>
+
+    <!-- modals -->
+    ${require('./templates/modals/search.html')}
+    <!--  -->
+    ${require('./templates/modals/zoom.html')}
+  </body>
+</html>
