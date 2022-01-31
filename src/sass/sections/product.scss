@@ -716,11 +716,14 @@
   margin: 32px 0 0;
   font-weight: normal;
   border: 1px solid $black;
+  transition: border 0.2s ease, color 0.2s ease, background-color 0.2s ease;
 
   &:hover {
     color: $black;
     text-decoration: none;
+    background-color: transparent;
     border-color: $black;
+    transition: border 0.2s ease, color 0.2s ease, background-color 0.2s ease;
   }
 
   &:focus {
