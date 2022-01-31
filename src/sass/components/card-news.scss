@@ -4,9 +4,10 @@
     width: 100%;
     max-width: 310px;
     height: 215px;
-    border-radius: 4px;
     overflow: hidden;
     line-height: 0;
+    border-radius: 4px;
+
     @include trs(opacity, 0.3s, ease);
 
     @include max-width(768px) {
@@ -44,27 +45,28 @@
     span {
       font-size: 14px;
       line-height: 1;
-      text-transform: uppercase;
       color: $gray;
+      text-transform: uppercase;
     }
   }
 
   &__title {
     display: block;
+    display: -webkit-box;
     margin-bottom: 12px;
+    overflow: hidden;
     font-size: 18px;
     line-height: 133%;
-    overflow: hidden;
+    color: $gray-extra-dark;
     text-overflow: ellipsis;
-    display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
-    color: $gray-extra-dark;
+
     @include trs(opacity, 0.3s, ease);
 
     &:hover {
-      opacity: 0.8;
       text-decoration: none;
+      opacity: 0.8;
     }
   }
 
@@ -78,8 +80,8 @@
     padding: 0 8px 8px;
     font-size: 14px;
     line-height: 140%;
-    text-transform: uppercase;
     color: #a87f45;
+    text-transform: uppercase;
   }
 
   &--filled {
@@ -91,19 +93,19 @@
 
     .card-news__banner {
       position: absolute;
-      left: 0;
       bottom: 0;
+      left: 0;
       max-width: 100%;
       height: 100%;
 
       &::before {
-        content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        content: '';
+        background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
       }
     }
 
@@ -152,12 +154,46 @@
     }
 
     &--filled {
-      min-height: 226px;
       height: auto;
+      min-height: 226px;
 
       .card-news__content {
         padding: 24px;
       }
+    }
+  }
+
+  &--row {
+    display: flex;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+
+    .card-news__banner {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 122px;
+      max-height: 86px;
+    }
+
+    .card-news__content {
+      flex-grow: 1;
+      padding-top: 0;
+      padding-left: 16px;
+
+      .card-news__date {
+        width: 1px;
+        min-width: 100%;
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .card-news__title {
+      margin-bottom: 4px;
+      font-size: 14px;
+      line-height: 1.2857;
     }
   }
 }
