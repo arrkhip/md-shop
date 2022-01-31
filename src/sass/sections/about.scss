@@ -25,9 +25,15 @@
 
 .about__wrap {
   display: flex;
+  min-height: 800px;
+
+  @include max-width(1500px) {
+    min-height: 400px;
+  }
 
   @include max-width($desktop-sm) {
     flex-direction: column;
+    min-height: auto;
   }
 }
 
@@ -237,8 +243,14 @@
   font-size: 20px;
   line-height: 36px;
 
-  @include max-width($touch) {
-    font-size: 14px;
+  @include max-width(1024px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  @include max-width(640px) {
+    font-size: 16px;
+    line-height: 25px;
   }
 
   &:not(:last-of-type) {

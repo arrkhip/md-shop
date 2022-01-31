@@ -1,5 +1,7 @@
 .advantages-section {
   position: relative;
+  height: 100%;
+  max-height: 211px;
   padding-bottom: 48px;
   margin-top: 160px;
   background-color: $main-light;
@@ -21,8 +23,10 @@
 }
 
 .advantages__card {
-  width: calc(100% / 3 - 16px);
+  width: calc(100% / 3 - 8px);
   max-width: 438px;
+  height: 100%;
+  max-height: 220px;
   padding: 32px 57px;
   margin: 8px;
   margin-top: -48px;
@@ -30,6 +34,12 @@
   background-color: $white;
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  &:nth-child(1) {
+    margin-left: 0;
+  }
+  &:nth-child(3) {
+    margin-right: 0;
+  }
 
   @include max-width($desktop-sm) {
     padding: 20px 30px;
@@ -59,15 +69,22 @@
 }
 
 .advantages__title {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 24px;
-  color: $gray-extra-dark;
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    color: $gray-extra-dark;
+  }
 }
 
 .advantages__text {
   font-size: 18px;
   line-height: 24px;
+
+  @include max-width(640px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .button__up {
