@@ -1,0 +1,163 @@
+.card-news {
+  &__banner {
+    display: block;
+    width: 100%;
+    max-width: 310px;
+    height: 215px;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 0;
+    @include trs(opacity, 0.3s, ease);
+
+    @include max-width(768px) {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      opacity: 0.95;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding-top: 20px;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+
+    svg {
+      flex: 0 0 20px;
+      height: 20px;
+      margin-right: 6px;
+      stroke: $gray;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 1;
+      text-transform: uppercase;
+      color: $gray;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 133%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    color: $gray-extra-dark;
+    @include trs(opacity, 0.3s, ease);
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: none;
+    }
+  }
+
+  &__tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px -8px;
+  }
+
+  &__tag {
+    padding: 0 8px 8px;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #a87f45;
+  }
+
+  &--filled {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 460px;
+
+    .card-news__banner {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      max-width: 100%;
+      height: 100%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      }
+    }
+
+    .card-news__content {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+    }
+
+    .card-news__date {
+      svg {
+        stroke: $white;
+      }
+
+      span {
+        color: $white;
+      }
+    }
+
+    .card-news__title {
+      color: $white;
+    }
+  }
+
+  @include max-width($phone) {
+    &__content {
+      padding-top: 16px;
+    }
+
+    &__date {
+      margin-bottom: 10px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 129%;
+    }
+
+    &__tag {
+      font-size: 12px;
+    }
+
+    &--filled {
+      min-height: 226px;
+      height: auto;
+
+      .card-news__content {
+        padding: 24px;
+      }
+    }
+  }
+}

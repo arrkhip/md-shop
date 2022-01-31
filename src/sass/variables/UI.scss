@@ -125,6 +125,28 @@ button {
     color: $white;
     background: #231f20;
     border: none;
+
+    &:hover {
+      background: #231f20;
+      text-decoration: none;
+      color: $white;
+      opacity: 0.9;
+      @include trs(opacity);
+
+      .button__arrow {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &__arrow {
+    display: inline-block;
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+    stroke: $white;
+    fill: $white;
+    @include trs(transform, 0.3s, ease);
   }
 
   &--brown {
@@ -535,4 +557,49 @@ button {
       transform: translate(-50%, -50%);
     }
   }
+}
+
+.blockquote {
+  border-left: 4px solid #a87f45;
+  border-radius: 4px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  background-color: $white;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 35px 50px 40px 35px;
+  }
+
+  &__icon {
+    flex: 0 0 64px;
+    height: 64px;
+    margin-right: 36px;
+  }
+
+  &__info {
+    color: $gray-extra-dark;
+
+    p {
+      margin-bottom: 12px;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 160%;
+    }
+
+    b {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 133%;
+    }
+  }
+}
+
+.blockquote-simple {
+  border-left: 2px solid #b59858;
+  padding-left: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #4f4f4f;
 }

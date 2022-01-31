@@ -1,0 +1,284 @@
+.#{$prefix}certificate-button {
+  --color: var(--white);
+  --color-hover: var(--white);
+  --color-disable: var(--white);
+  --color-focus: var(--white);
+  --bg-color: var(--primary-default);
+  --bg-color-hover: var(--primary-hover);
+  --bg-color-disable: var(--primary-disable);
+  --bg-color-focus: var(--primary-active);
+  --border-color: var(--primary-default);
+  --border-color-hover: var(--primary-hover);
+  --border-color-disable: var(--primary-disable);
+  --border-width: 1px;
+  --font-size: #{$button-font-size};
+  --padding: #{$button-padding};
+  --min-width: #{$button-min-width};
+  --ripple-color: var(--ripple-default);
+
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--min-width);
+  padding: var(--padding);
+  margin: $button-margin;
+  font-family: $button-font;
+  font-size: var(--font-size);
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  color: var(--color);
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  background-color: var(--bg-color);
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: var(--border-width);
+  border-radius: $button-border-radius;
+  outline: transparent;
+  box-shadow: none;
+  transition: color 0.3s, background-color 0.3s, border 0.3s, box-shadow 0.3s;
+  transition-timing-function: ease;
+  appearance: none;
+
+  @media (hover) {
+    &:hover {
+      color: var(--color-hover);
+      background-color: var(--bg-color-hover);
+      border-color: var(--border-color-hover);
+    }
+  }
+
+  &:focus {
+    color: var(--color-focus);
+    background-color: var(--bg-color-focus);
+    box-shadow: 0 0 0 2px var(--primary-disable);
+  }
+
+  &:disabled,
+  &.disabled {
+    color: var(--color-disable);
+    pointer-events: none;
+    cursor: default;
+    background-color: var(--bg-color-disable);
+    border-color: var(--border-color-disable);
+  }
+
+  svg {
+    display: block;
+    width: 1em;
+    min-width: 1em;
+    height: 1em;
+    min-height: 1em;
+    font-size: 20px;
+    fill: currentColor;
+    transition: fill 0.3s, transform 0.3s;
+  }
+
+  span,
+  svg {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-icon {
+    --size: 40px;
+    --padding: 5px;
+    --border-color: #e0e0e0;
+
+    width: var(--size);
+    min-width: var(--size);
+    height: var(--size);
+    min-height: var(--size);
+    border-radius: 4px;
+
+    &--prev {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    svg {
+      position: relative;
+      margin: 0;
+
+      &::before {
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        content: '';
+        background-color: #000;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &.button--flat {
+      --size: auto;
+    }
+  }
+}
+
+.#{$prefix}certificate-section {
+  padding: 80px 0;
+  overflow: hidden;
+
+  @include max-width($desktop-sm) {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    margin: 0 0 20px 0;
+    font-family: $corm-garamond;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+
+    @include max-width($touch) {
+      font-size: 28px;
+    }
+
+    @include max-width($phone) {
+      margin: 0 0 24px;
+    }
+
+    b {
+      color: #a87f45;
+    }
+  }
+  h2 {
+    margin: 0;
+  }
+}
+
+.#{$prefix}certificate__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include max-width($desktop-sm) {
+    flex-direction: column;
+    justify-content: unset;
+  }
+}
+
+.#{$prefix}certificate__left {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 527px;
+  padding-right: 169px;
+
+  @include max-width($desktop-sm) {
+    max-width: none;
+    padding-right: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: -1;
+    width: 50vw;
+    height: 1000px;
+    content: '';
+    background-color: #fff;
+    transform: translateY(-50%);
+
+    @include max-width($desktop-sm) {
+      content: none;
+    }
+  }
+}
+
+.#{$prefix}certificate__right {
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  margin-right: -66px;
+
+  @include max-width($desktop-sm) {
+    width: 100%;
+  }
+}
+
+.#{$prefix}certificate-slider-wrapper {
+  width: 100%;
+  // padding-right: 80px;
+}
+
+.#{$prefix}certificate-slider {
+  overflow: visible;
+
+  .swiper-wrapper {
+    width: 1px;
+  }
+}
+
+.#{$prefix}certificate-slide {
+  &:not(.swiper-slide-visible) {
+    filter: grayscale(1);
+  }
+}
+
+.#{$prefix}certificate-pict {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.#{$prefix}certificate__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 660px;
+  margin-top: 40px;
+
+  @include max-width($desktop-sm) {
+    margin-top: 20px;
+  }
+
+  @include max-width($touch) {
+    max-width: none;
+  }
+}
+
+.#{$prefix}certificate__navigation {
+  display: inline-flex;
+
+  .#{$prefix}certificate-button-icon {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+}
+
+.#{$prefix}certificate__pagination {
+  --swiper-pagination-color: #000;
+
+  position: static;
+  text-align: right;
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+
+      @include max-width($touch) {
+        margin-right: 12px;
+      }
+    }
+  }
+}

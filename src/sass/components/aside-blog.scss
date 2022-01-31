@@ -1,0 +1,13 @@
+.aside-blog {
+  position: relative;
+  max-width: 245px;
+
+  &__slider {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .swiper-pagination {
+    bottom: -20px;
+  }
+}

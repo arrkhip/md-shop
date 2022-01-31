@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О компании</title>
+  </head>
+  <body>
+    <div class="content">
+      <!-- header start -->
+      ${require('./templates/header.html')}
+      <!-- header end -->
+
+      <!-- menu start -->
+      ${require('./templates/menu.html')}
+      <!-- menu end -->
+      <main>
+        <!-- about start -->
+        <section class="about-section">
+          <!-- container start -->
+          <div class="about">
+            <div class="container"
+              ><div class="about__breadcrumbs"> <a href="#">Главная</a> / <span>О компании</span> </div>
+            </div>
+            <div class="about__wrap">
+              <div data-modal-target="#modal-player" class="about__left">
+                <div class="about__container">
+                  <div class="about__inner">
+                    <h2 class="about__left-title">О компании</h2>
+                    <div class="about__play">
+                      <button type="button" class="plyr__control plyr__control--overlaid j_player-play">
+                        <svg>
+                          <use xlink:href="#icon-plyr-play"></use>
+                        </svg>
+                      </button>
+                      <span> Посмотрите короткий&#160;ролик о&#160;нас за 2&#160;минуты </span>
+                    </div>
+                    <div class="about__img-left"><img src="./img/about-map.png" alt="" class="about__bg"/></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about__right">
+                <div class="about__content">
+                  <h2 class="about__title"> <b>Величие России</b> в блеске монет и медалей </h2>
+
+                  <p class="about__text">
+                    Россия — наша Родина, страна с богатейшей историей и культурой. Это уникальное наследие, которым мы
+                    гордимся и в котором черпаем вдохновение, предлагая уникальные монеты и медали. Таким образом мы
+                    сохраняем и передаем будущим поколениям память о прошедших веках и гордость за величие нашей страны.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__wrap about__wrap-reverse">
+              <div class="about__right">
+                <div class="about__content">
+                  <h2 class="about__title">Наша <b>философия</b></h2>
+
+                  <p class="about__text">
+                    Мы предлагаем уникальные и искусно отчеканенные монеты и медали, сохраняя историю нашей страны и
+                    стремимся увлечь этим всех желающих. Наши изделия сочетают в себе самые современные технологии и
+                    опыт профессионалов.
+                  </p>
+                </div>
+
+                <div class="about__content">
+                  <h2 class="about__title">Наша <b>миссия</b></h2>
+
+                  <p class="about__text">
+                    Мы оберегаем вечные ценности, передаваемые из поколения в поколение. Мы уверены, что память прошлого
+                    – залог лучшего будущего
+                  </p>
+                </div>
+              </div>
+
+              <div class="about__left">
+                <div class="about__container">
+                  <div class="about__inner">
+                    <img src="./img/about-man.png" alt="" class="about__img-right" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- about end -->
+
+        <!-- dignities start -->
+        <section class="dignities-section">
+          <div class="dignites-img">
+            <img src="./img/coin-half.png" alt="" />
+          </div>
+          <div class="container">
+            <div class="history">
+              <div class="dignities__title-wrap">
+                <h2 class="dignities__title history__title">ИСТОРИЯ</h2>
+                <img class="history__title-img" src="./img/history.jpg" alt="" />
+              </div>
+
+              <div class="dignities__inner history__inner">
+                <div class="history__inner-img">
+                  <img class="history__inner-pict" src="./img/water-pict.jpg" alt="" />
+                </div>
+                <div class="dignities__inner-text history__inner-text">
+                  <p>
+                    Мы хотим, чтобы у наших клиентов было больше поводов соприкасаться с настоящей историей России,
+                    узнавать о ней как можно больше и гордиться своей страной
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="quality">
+              <div class="quality__title-wrap">
+                <h2 class=" dignities__title quality__title">качество</h2>
+                <img class="quality__title-img" src="./img/piter.jpg" alt="" />
+              </div>
+
+              <div class="dignities__inner quality__inner">
+                <div class="quality__inner-img">
+                  <img class="quality__inner-pict" src="./img/coin.jpg" alt="" />
+                </div>
+                <div class="dignities__inner-text quality__inner-text">
+                  <p>
+                    Наш главный приоритет при выборе и продаже монет и медалей, все они чеканятся по технологии
+                    наивысшего качества
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="authenticity">
+              <div class="authenticity__title-wrap">
+                <h2 class=" dignities__title authenticity__title">ПОДЛИННОСТЬ</h2>
+                <img class="authenticity__title-img" src="./img/watch.png" alt="" />
+              </div>
+
+              <div class="dignities__inner authenticity__inner">
+                <div class="authenticity__inner-img">
+                  <img class="authenticity__inner-pict" src="./img/certificate.jpg" alt="" />
+                </div>
+                <div class="dignities__inner-text authenticity__inner-text">
+                  <p>
+                    Мы гарантируем подлинность всех монет и медалей, которые предлагаем нашим клиентам: каждая из них
+                    сопровождается специальным Сертификатом и имеет знак монетного двора
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- dignities end -->
+
+        <!-- professionals start -->
+        <section class="professionals-section">
+          <!-- container start -->
+          <div class="container">
+            <div class="professionals">
+              <div class="professionals__wrap">
+                <div class="professionals__left">
+                  <h2 class="professionals__left-title">c <span>2012</span></h2>
+                </div>
+                <div class="professionals__right">
+                  <h3 class="professionals__right-title">Профессионалы своего дела</h3>
+                  <div class="professionals__right-text">
+                    <p>
+                      «Императорский Монетный Двор» начал свою деятельность на рынке монет и медалей в России в 2012
+                      году. В своей работе компания использует передовые мировые практики, привлекает лучших мастеров
+                      медальерного искусства, а также сотрудничает в вопросах исторической достоверности с российскими
+                      музеями и другими авторитетными организациями. Иностранные компании и монетные дворы мира доверяют
+                      профессионализму и признают «Императорский Монетный Двор» своим официальным партнером на
+                      территории России. Все представленные в ассортименте продукты обладают высочайшим качеством и
+                      имеют Сертификаты подлинности.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- container end -->
+        </section>
+        <!-- professionals end -->
+
+        <!-- person start -->
+        <div class="person-section">
+          <div class="person">
+            <div class="professionals__wrap"> </div>
+          </div>
+        </div>
+        <!-- person end -->
+
+        <!-- certificate start -->
+        <section class="pre_certificate-section">
+          <!-- container start -->
+          <div class="container">
+            <div class="pre_certificate">
+              <div class="pre_certificate__wrap">
+                <div class="pre_certificate__left">
+                  <h2 class="section-title"><b>Сертифицированный производитель</b> монет и медалей</h2>
+                </div>
+
+                <div class="pre_certificate__right">
+                  <div class="pre_certificate-slider-wrapper">
+                    <div class="pre_certificate-slider swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="pre_certificate-slide swiper-slide">
+                          <div class="pre_certificate-img">
+                            <img
+                              src="https://via.placeholder.com/288x406.png/0000FF/"
+                              alt=""
+                              class="pre_certificate-pict"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="pre_certificate-slide swiper-slide">
+                          <div class="pre_certificate-img">
+                            <img
+                              src="https://via.placeholder.com/288x406.png/FF0000/"
+                              alt=""
+                              class="pre_certificate-pict"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="pre_certificate-slide swiper-slide">
+                          <div class="pre_certificate-img">
+                            <img
+                              src="https://via.placeholder.com/288x406.png/000/"
+                              alt=""
+                              class="pre_certificate-pict"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="pre_certificate-slide swiper-slide">
+                          <div class="pre_certificate-img">
+                            <img src="https://via.placeholder.com/288x406.png" alt="" class="pre_certificate-pict" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pre_certificate__footer">
+                    <div class="pre_certificate__navigation">
+                      <button
+                        class="pre_certificate-button pre_certificate-button-icon pre_certificate-button-icon--prev"
+                        type="button"
+                      >
+                        <svg class="svg">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </button>
+                      <button
+                        class="pre_certificate-button pre_certificate-button-icon pre_certificate-button-icon--next"
+                        type="button"
+                      >
+                        <svg class="svg">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="pre_certificate__pagination swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- container end -->
+        </section>
+        <!-- certificate end -->
+
+        <!-- advantages start -->
+        <div class="advantages-section">
+          <!-- container start -->
+          <div class="container">
+            <div class="advantages">
+              <div class="cards">
+                <div class="advantages__card">
+                  <div class="advantages__img">
+                    <img src="./img/guarantees-img-1.png" alt="" class="advantages__pict" />
+                  </div>
+                  <div class="advantages__title"><h3>Подлинность</h3></div>
+                  <div class="advantages__text">Наши эксперты гарантируют подлинность каждого товара</div>
+                </div>
+
+                <div class="advantages__card">
+                  <div class="advantages__img">
+                    <img src="./img/guarantees-img-2.png" alt="" class="advantages__pict" />
+                  </div>
+                  <div class="advantages__title"><h3>Удовлетворенность</h3></div>
+                  <div class="advantages__text">Убедитесь, что медаль вам нравится или верните за 14 дней</div>
+                </div>
+
+                <div class="advantages__card">
+                  <div class="advantages__img">
+                    <img src="./img/guarantees-img-3.png" alt="" class="advantages__pict" />
+                  </div>
+                  <div class="advantages__title"><h3>100% качество</h3></div>
+                  <div class="advantages__text">Каждая медаль проходит строгий контроль качества</div>
+                </div>
+
+                <div class="button__up"> </div>
+              </div>
+            </div>
+          </div>
+          <!-- container end -->
+        </div>
+        <!-- guarantee end -->
+      </main>
+
+      <!-- footer start -->
+      ${require('./templates/footer.html')}
+      <!-- footer end -->
+    </div>
+    <!-- modals -->
+    ${require('./templates/modals/search.html')}
+  </body>
+</html>
