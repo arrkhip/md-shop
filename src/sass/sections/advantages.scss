@@ -1,12 +1,23 @@
 .advantages-section {
+  position: relative;
   padding-bottom: 48px;
   margin-top: 160px;
   background-color: $main-light;
+
+  @include max-width(768px) {
+    padding-bottom: 0;
+    margin-top: 40px;
+  }
 }
 
 .cards {
   display: flex;
   justify-content: center;
+
+  @include max-width(1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .advantages__card {
@@ -19,6 +30,22 @@
   background-color: $white;
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  @include max-width($desktop-sm) {
+    padding: 20px 30px;
+  }
+
+  @include max-width(1024px) {
+    width: 100%;
+    padding: 20px;
+    margin: 8px 0;
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+  }
 }
 
 .advantages__img {
@@ -44,7 +71,27 @@
 }
 
 .button__up {
+  position: absolute;
+  right: 76px;
+  bottom: 64px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
   background: $white;
-  border-radius: 100px;
+  border-radius: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 6px;
+    height: 100%;
+    height: 16px;
+    transform: translate(-50%, -50%);
+  }
+
+  @include max-width(1600px) {
+    right: 15px;
+  }
 }
