@@ -1,0 +1,69 @@
+.form-faq {
+  background-color: $white;
+  border: 1px solid #e0e0e0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 35px;
+  }
+
+  &__icon {
+    flex: 0 0 80px;
+    height: 80px;
+    margin-right: 24px;
+    line-height: 0;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-family: $corm-garamond;
+
+    span {
+      color: $primary-hover;
+    }
+  }
+
+  &__descr {
+    font-size: 18px;
+    line-height: 156%;
+  }
+
+  &__button {
+    align-self: flex-end;
+    height: 40px;
+    padding: 0;
+    margin-left: auto;
+    font-weight: 400;
+    background: #a87f45;
+    border-color: $primary-active;
+    border-radius: 4px;
+
+    &:hover {
+      color: $primary-active;
+    }
+  }
+
+  @include max-width($desktop-sm) {
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__button {
+      margin-top: 15px;
+      margin-left: 104px;
+    }
+  }
+
+  @include max-width(768px) {
+    &__wrapper {
+      display: block;
+      padding: 24px 16px;
+      text-align: center;
+    }
+    &__button {
+      margin-left: 0;
+    }
+  }
+}

@@ -29,6 +29,9 @@
 @import 'components/card-news';
 @import 'components/tags';
 @import 'components/pagination';
+@import 'components/aside-menu';
+@import 'components/form-faq';
+@import 'components/aside-blog';
 
 // Sections - Разделы сайта
 @import 'sections/header';
@@ -59,6 +62,8 @@
 @import 'sections/professionals';
 @import 'sections/certificate';
 @import 'sections/advantages.scss';
+@import 'sections/faq';
+
 // Blocks - Блоки
 // @import 'blocks/main-block';
 // @import 'blocks/guarantees-block';

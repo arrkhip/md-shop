@@ -25,6 +25,8 @@ import './modules/Scroll';
 import './modules/sliders/banner';
 import './modules/sliders/promo';
 import './modules/sliders/certificate';
+import './modules/sliders/aside-blog';
+
 // Перенести в отдельный файл.
 // Перемещение формы на главной.
 const $modalCard = document.querySelector('.js_aside__form');
