@@ -20,12 +20,14 @@ import './modules/Drawer';
 import './modules/Modal';
 import './modules/Accordion';
 import './modules/Scroll';
+import './modules/upPage';
 
 // sliders
 import './modules/sliders/banner';
 import './modules/sliders/promo';
 import './modules/sliders/certificate';
 import './modules/sliders/aside-blog';
+import './modules/sliders/person';
 
 // Перенести в отдельный файл.
 // Перемещение формы на главной.

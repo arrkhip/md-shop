@@ -13,7 +13,6 @@ if ($sliders.length) {
       speed: 600,
       spaceBetween: 16,
       resizeObserver: true,
-      loop: true,
       watchSlidesProgress: true,
       navigation: {
         prevEl: $prev,
@@ -26,13 +25,24 @@ if ($sliders.length) {
         el: '.pre_certificate__pagination',
       },
 
-      // breakpoints: {
-      //   901: {
-      //     slidesPerView: 1.51,
-      //     spaceBetween: 40,
-      //     autoHeight: false,
-      //   },
-      // },
+      breakpoints: {
+        1500: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
+        1201: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+      },
     });
   });
 }
