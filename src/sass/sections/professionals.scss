@@ -1,0 +1,117 @@
+.professionals-section {
+  position: relative;
+  padding: 144px 0;
+  h2 {
+    margin: 0;
+  }
+
+  @include max-width(1024px) {
+    padding: 70px 0;
+  }
+
+  @include max-width(768px) {
+    padding: 40px 0;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 100%;
+    max-width: 780px;
+    height: 100%;
+    max-height: 558px;
+    pointer-events: none;
+    content: '';
+    background-image: url(../img/gerb.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.professionals__wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @include max-width(1024px) {
+    flex-direction: column;
+  }
+}
+
+.professionals__left {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+
+  @include max-width(1024px) {
+    width: 100%;
+  }
+}
+
+.professionals__left-title {
+  font-family: $corm-garamond;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 33px;
+  color: $primary-active;
+  text-transform: uppercase;
+  span {
+    margin-left: 26px;
+    font-size: 315px;
+    line-height: 487px;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px $primary-active;
+
+    @include max-width(1366px) {
+      font-size: 250px;
+      line-height: 100px;
+    }
+
+    @include max-width(1024px) {
+      margin-left: 0;
+    }
+
+    @include max-width(768px) {
+      font-size: 125px;
+      line-height: 75px;
+    }
+  }
+}
+
+.professionals__right {
+  width: 50%;
+
+  @include max-width(1024px) {
+    width: 100%;
+  }
+}
+
+.professionals__right-title {
+  margin-bottom: 32px;
+  font-family: $corm-garamond;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 48px;
+  color: $gray-extra-dark;
+
+  @include max-width(900px) {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 25px;
+  }
+}
+
+.professionals__right-text {
+  font-size: 20px;
+  line-height: 36px;
+  color: $gray-dark;
+
+  @include max-width(900px) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}

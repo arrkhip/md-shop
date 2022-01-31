@@ -1,0 +1,257 @@
+.about-section {
+  overflow: hidden;
+}
+
+.about-section .container {
+  position: relative;
+}
+
+.about__breadcrumbs {
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 140%;
+  color: $yellow;
+  a {
+    color: $gray;
+  }
+  span {
+    color: $gray;
+    opacity: 0.5;
+  }
+}
+
+.about__wrap {
+  display: flex;
+
+  @include max-width($desktop-sm) {
+    flex-direction: column;
+  }
+}
+
+.about__wrap-reverse {
+  @include max-width($desktop-sm) {
+    flex-direction: column-reverse;
+  }
+}
+
+.about__left {
+  position: relative;
+  width: 50%;
+  cursor: pointer;
+
+  @include max-width($desktop-sm) {
+    width: 100%;
+  }
+}
+
+.about__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  background: $beige;
+}
+
+.about__img-left {
+  padding: 0 84px 104px 84px;
+  margin-top: -55px;
+
+  @include max-width($touch) {
+    padding: 0 50px 50px 50px;
+    margin-top: 0;
+  }
+}
+
+.about__left-title {
+  margin-top: 117px;
+  margin-bottom: 50px;
+  font-family: $corm-garamond;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 140%;
+
+  @include max-width($touch) {
+    margin-top: 80px;
+    margin-bottom: 35px;
+    font-size: 35px;
+    line-height: 120%;
+  }
+}
+
+.about__play {
+  z-index: 1;
+  width: 100%;
+  max-width: 160px;
+  text-align: center;
+
+  .plyr__control--overlaid {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin: 0 auto;
+    color: $beige;
+    background-color: rgba($primary-active, 1);
+    border: 1px solid $primary-active;
+    opacity: 1;
+    transform: none;
+
+    @include min-width($touch + 1) {
+      --plyr-control-spacing: 9px;
+      --plyr-control-icon-size: 16px;
+    }
+
+    @include max-width($touch) {
+      --plyr-control-spacing: 9px;
+      --plyr-control-icon-size: 16px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      content: '';
+      background-color: transparent;
+      border: 1px solid $primary-active;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      animation: scaleBorder 3s ease-out 0s infinite;
+    }
+
+    &::after {
+      animation: scaleBorder 3s ease-out 1s infinite;
+    }
+
+    &:hover {
+      color: $primary-active;
+      background-color: $beige;
+      border: 1px solid $primary-active;
+      transform: scale(1.1);
+    }
+  }
+
+  span {
+    display: block;
+    max-width: 160px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: $gray-dark;
+
+    @include max-width($touch) {
+      font-size: 12px;
+    }
+  }
+}
+
+@keyframes scaleBorder {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+.about__bg {
+  display: block;
+  width: 100%;
+  max-width: 791px;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.about__right {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 80px;
+
+  @include max-width(1400px) {
+    padding: 40px;
+  }
+
+  @include max-width($desktop-sm) {
+    width: 100%;
+    padding: 40px 0;
+  }
+}
+
+.about__content {
+  width: 100%;
+  max-width: 664px;
+  margin-bottom: 64px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include max-width($desktop-sm) {
+    max-width: none;
+    padding: 0 18px;
+  }
+}
+
+.about__title {
+  margin: 0 0 32px;
+  font-family: $corm-garamond;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 48px;
+  b {
+    color: $main-light;
+  }
+
+  @include max-width($touch) {
+    margin: 0 0 24px;
+    font-size: 28px;
+  }
+}
+
+.about__text {
+  font-size: 20px;
+  line-height: 36px;
+
+  @include max-width($touch) {
+    font-size: 14px;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 1em;
+  }
+}
+
+.about__img-right {
+  width: 100%;
+  max-width: 960px;
+  object-fit: contain;
+
+  @include max-width($desktop-sm) {
+    max-width: 100%;
+  }
+}
