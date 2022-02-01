@@ -26,6 +26,7 @@ import './modules/sliders/banner';
 import './modules/sliders/promo';
 import './modules/sliders/certificate';
 import './modules/sliders/aside-blog';
+import './modules/sliders/similar';
 
 // Перенести в отдельный файл.
 // Перемещение формы на главной.
