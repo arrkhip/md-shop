@@ -196,8 +196,50 @@
           </div><!-- End of .article-controls__wrapper -->
         </div><!-- End of .container -->
       </div><!-- End of .article__controls -->
+    </section>
 
+    ${require('./templates/similar.html')}
 
+    <section class="pre_card-section pre_card-section--yellow">
+      <div class="container">
+        <div class="pre_card pre_card--new">
+          <div class="pre_card__wrap">
+            <form class="pre_card__form">
+              <h2 class="pre_card__title"> Будьте <b>в курсе</b> </h2>
+
+              <p class="pre_card__text">
+                Подпишитесь и узнавайте о самых важных новостях из мира фалеристики и нумизматики первыми
+              </p>
+
+              <div class="pre_card__row">
+                <input type="text" class="pre_card-input" placeholder="Укажите e-mail">
+                <button class="button button--brown" type="button">
+                  Подписаться
+                </button>
+              </div>
+
+              <label class="pre_card-checkbox">
+                <input class="pre_card-checkbox__input" type="checkbox">
+                <div class="pre_card-checkbox__custom">
+                  <svg class="pre_card-checkbox__icon">
+                    <use xlink:href="#icon-done"></use>
+                  </svg>
+                </div>
+                <span class="pre_card-checkbox__text">
+                  Я согласен с
+                  <a class="pre_card-checkbox__link" href="#">условиями</a> заказа медали, в том числе с
+                  <a class="pre_card-checkbox__link" href="#">Соглашением об условиях заказа</a>
+                  и с
+                  <a class="pre_card-checkbox__link" href="#">Политикой обработки персональных данных</a>
+                </span>
+              </label>
+            </form>
+
+            <img src="img/card_img.png" alt="" class="pre_card__img">
+          </div>
+        </div>
+      </div>
+      <!-- ./ End of pre_container -->
     </section>
 
     <!-- DELETE -->
