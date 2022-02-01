@@ -1,5 +1,7 @@
 import Swiper from 'swiper/swiper-bundle.min';
 
+const isMobile = window.matchMedia('(max-width: 900px)');
+
 const $containers = document.querySelectorAll('.product-preview');
 
 if ($containers.length) {
@@ -54,21 +56,28 @@ if ($containers.length) {
     const $slider = $container.querySelector('.product-preview-slider');
 
     if ($slider) {
+      const $pagination = $container.querySelector('.product-preview-slider-pagination');
+
       const swiper = new Swiper($slider, {
         slidesPerView: 1,
-        speed: 0,
+        speed: isMobile.matches ? 300 : 0,
         spaceBetween: 20,
         watchOverflow: true,
         loop: isLoop,
         // loopAdditionalSlides: 5,
 
-        followFinger: false,
-        shortSwipes: false,
-        longSwipes: false,
-        allowTouchMove: false,
+        followFinger: isMobile.matches,
+        shortSwipes: isMobile.matches,
+        longSwipes: isMobile.matches,
+        allowTouchMove: isMobile.matches,
 
         thumbs: {
           swiper: thumbsSlider,
+        },
+
+        pagination: {
+          el: $pagination,
+          clickable: true,
         },
 
         on: {

@@ -10,7 +10,7 @@ if ($sliders.length) {
     const $next = $navigation.querySelector('.pre_interesting-button-icon--next') || null;
 
     const slider = new Swiper($slider, {
-      slidesPerView: 4,
+      slidesPerView: 3,
       speed: 600,
       spaceBetween: 16,
       watchOverflow: true,
@@ -20,7 +20,11 @@ if ($sliders.length) {
         nextEl: $next,
       },
 
-      breakpoints: {},
+      breakpoints: {
+        1201: {
+          slidesPerView: 4,
+        },
+      },
     });
   });
 }
