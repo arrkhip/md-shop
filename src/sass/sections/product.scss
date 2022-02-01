@@ -450,6 +450,12 @@
     background-color: #ac003e;
     border-color: #ac003e;
   }
+
+  &--gray {
+    color: $white;
+    background-color: $gray;
+    border-color: $gray;
+  }
 }
 
 .product-preview__zoom {

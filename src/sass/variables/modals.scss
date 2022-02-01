@@ -138,7 +138,44 @@
     transition-duration: 0.3s;
 
     @include max-width(1400px) {
-      padding: 40px 32px;
+      padding: 44px 32px;
+    }
+
+    @include max-width($touch) {
+      height: 100%;
+      padding: 44px 0 0;
+    }
+
+    .product-preview-slider__container {
+      @include max-width($desktop-sm) {
+        padding-bottom: 56.25%;
+      }
+    }
+
+    .product-thumbs-wrap {
+      @include max-width($touch) {
+        display: none;
+      }
+    }
+  }
+
+  .modal__wrap {
+    @include max-width($touch) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  .modal__body {
+    @include max-width($touch) {
+      width: 100%;
+      margin: auto 0;
+
+      @include max-height(500px) {
+        max-width: calc((100vh * 1.7) - 60px);
+        margin: auto;
+      }
     }
   }
 
@@ -171,6 +208,11 @@
   @include max-width(1400px) {
     margin-right: 40px;
   }
+
+  @include max-width($desktop-sm) {
+    max-width: none;
+    margin-right: 0;
+  }
 }
 
 .modal-product__right {
@@ -181,4 +223,8 @@
   width: 100%;
   max-width: 438px;
   text-align: left;
+
+  @include max-width($desktop-sm) {
+    display: none;
+  }
 }
