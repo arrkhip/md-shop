@@ -124,3 +124,10 @@
 .modal-player {
   position: relative;
 }
+
+// zoom
+.modal-wrapper--zoom {
+  .product-preview__zoom {
+    display: none;
+  }
+}

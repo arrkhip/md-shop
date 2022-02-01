@@ -53,6 +53,8 @@ const config = {
     index: './src/js/_index.js',
     'order-steps': './src/js/_order-steps.js',
     'all-steps': './src/js/_order-steps.js',
+    card: './src/js/_card.js',
+    'about-company': './src/js/_about.js',
   },
   output: {
     filename: (chunkData) => {

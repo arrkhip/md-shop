@@ -1,0 +1,239 @@
+.person-section {
+  margin-bottom: 152px;
+  background-color: $beige;
+
+  @include max-width(1024px) {
+    margin-bottom: 40px;
+  }
+}
+
+.person-wrap {
+  display: flex;
+
+  @include max-width(1024px) {
+    flex-direction: column;
+  }
+}
+
+.person__left {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 85%;
+    height: 100%;
+    content: '';
+    background-color: #a87f45;
+  }
+
+  @include max-width(1024px) {
+    width: 100%;
+  }
+
+  @include max-width(540px) {
+    flex-direction: column;
+  }
+}
+
+.person__img {
+  position: relative;
+  z-index: 1;
+  max-width: 552px;
+  max-height: 752px;
+  margin-top: 36px;
+
+  @include max-width(1500px) {
+    max-height: 700px;
+    margin-top: 0;
+  }
+
+  @include max-width(540px) {
+    max-height: 435px;
+  }
+}
+
+.person__pict {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  object-fit: cover;
+  &.active {
+    position: relative;
+    opacity: 1;
+  }
+}
+.person__text {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 812px;
+  background-color: #fff;
+
+  @include max-width(540px) {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.person__text-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 64px 148px 20px 148px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  &.active {
+    position: relative;
+    opacity: 1;
+  }
+
+  @include max-width(1500px) {
+    padding: 50px 75px 20px 75px;
+  }
+
+  @include max-width($desktop-sm) {
+    padding: 20px 16px;
+  }
+}
+
+.person__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  color: $primary-active;
+}
+
+.person__subtitle {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  color: $gray-dark;
+}
+
+.person__descr {
+  max-width: 512px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray;
+}
+
+.person__right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+
+  @include max-width(1024px) {
+    width: 100%;
+  }
+}
+
+.person-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.person-slide {
+  padding: 75px;
+
+  @include max-width(1500px) {
+    padding: 35px;
+  }
+
+  @include max-width(1024px) {
+    padding-top: 130px;
+  }
+
+  @include max-width(540px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.person__descr-right {
+  position: relative;
+  max-width: 664px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 36px;
+  color: $gray-extra-dark;
+
+  @include max-width(1024px) {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.descr__img {
+  position: absolute;
+  top: -10px;
+  left: -60px;
+  z-index: 3;
+  opacity: 0.2;
+
+  @include max-width(1500px) {
+    left: -30px;
+  }
+}
+
+.person__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @include max-width(1024px) {
+    position: relative;
+  }
+}
+
+.person__navigation {
+  display: inline-flex;
+  width: 100%;
+  max-width: 146px;
+}
+
+.person-button {
+  width: 73px;
+  height: 73px;
+  padding: 0;
+  background-color: $white;
+  border: transparent;
+  transition: 0.3s;
+  &:hover {
+    border: 1px solid $black;
+  }
+  svg {
+    width: 100%;
+    max-width: 30px;
+    height: 100%;
+    max-height: 30px;
+  }
+
+  @include max-width(540px) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.person-button-icon--prev {
+  svg {
+    transform: rotate(180deg);
+  }
+}
