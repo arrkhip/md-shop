@@ -461,13 +461,26 @@
 }
 
 .product-preview-slide {
+  display: flex;
+
   .product {
+    width: 100%;
+
     &--video {
       cursor: pointer;
 
       &::after {
         font-size: 4rem;
       }
+    }
+  }
+
+  .plyr {
+    width: 100%;
+    margin-top: auto;
+
+    + .product {
+      visibility: hidden;
     }
   }
 }
@@ -498,6 +511,12 @@
   }
 
   &--video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
     &::after {
       position: absolute;
       top: 50%;

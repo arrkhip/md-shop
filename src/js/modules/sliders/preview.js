@@ -60,7 +60,7 @@ if ($containers.length) {
         spaceBetween: 20,
         watchOverflow: true,
         loop: isLoop,
-        loopAdditionalSlides: 5,
+        // loopAdditionalSlides: 5,
 
         followFinger: false,
         shortSwipes: false,
@@ -69,6 +69,73 @@ if ($containers.length) {
 
         thumbs: {
           swiper: thumbsSlider,
+        },
+
+        on: {
+          afterInit(swiper) {
+            const $modal = document.querySelector('#modal-zoom');
+
+            if ($modal) {
+              $modal.modal.openCallback = ($target) => {
+                if ($target.closest('.product--video')) {
+                  const $modalSlider = $modal.querySelector('.product-preview-slider');
+
+                  if ($modalSlider && $modalSlider.swiper) {
+                    const $player = $modalSlider.swiper.slides[swiper.activeIndex].querySelector('.plyr');
+                    const $play = $modalSlider.swiper.slides[swiper.activeIndex].querySelector('.j_player-play');
+
+                    if ($player && $player.player) {
+                      $player.player.play();
+                    } else {
+                      $play && $play.click();
+                    }
+                  }
+                }
+              };
+
+              $modal.modal.closeCallback = ($target) => {
+                const $player = document.querySelector('.plyr');
+
+                if ($player && $player.player) {
+                  if (!$player.player.paused) {
+                    $player.player.pause();
+                  }
+                }
+              };
+            }
+          },
+
+          slideChange(swiper) {
+            [...swiper.slides].forEach(($slide) => {
+              const $player = document.querySelector('.plyr');
+
+              if ($player && $player.player) {
+                if (!$player.player.paused) {
+                  $player.player.pause();
+                }
+              }
+            });
+
+            const $modal = document.querySelector('#modal-zoom');
+
+            if ($modal) {
+              const $modalSlider = $modal.querySelector('.product-preview-slider');
+
+              if ($modalSlider && $modalSlider.swiper) {
+                $modalSlider.swiper.slideTo(swiper.activeIndex, 0, true);
+              }
+            }
+          },
+
+          click(swiper, e) {
+            const $videoBtn = swiper.clickedSlide.querySelector('.product--video');
+
+            if ($videoBtn) {
+              const $modal = document.querySelector('#modal-zoom');
+
+              $modal && $modal.modal.open(e);
+            }
+          },
         },
       });
 
