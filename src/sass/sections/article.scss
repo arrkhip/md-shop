@@ -1,4 +1,6 @@
 .article {
+  overflow: hidden;
+
   &__bg {
     z-index: 1;
     position: relative;
