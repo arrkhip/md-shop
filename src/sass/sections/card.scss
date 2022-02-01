@@ -204,6 +204,10 @@
   @include max-width($touch) {
     padding: 20px 0;
   }
+
+  &--yellow {
+    background-color: #fdf8ef;
+  }
 }
 
 .#{$prefix}card {
@@ -325,5 +329,26 @@
       max-width: 242px;
       margin: 16px auto 0;
     }
+  }
+}
+
+.#{$prefix}card--new {
+  padding: 45px 155px;
+  background-color: $white;
+
+  @include max-width($desktop-sm) {
+    padding: 40px 100px;
+  }
+
+  @include max-width($touch) {
+    padding: 30px 50px;
+  }
+
+  @include max-width($phone) {
+    padding: 24px 20px;
+  }
+
+  .pre_card-input {
+    background-color: #fdf8ef;
   }
 }
