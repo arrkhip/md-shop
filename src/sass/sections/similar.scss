@@ -1,0 +1,35 @@
+.similar {
+  padding: 96px 0;
+  overflow: hidden;
+  background-color: $beige;
+
+  @include max-width($tablet) {
+    padding: 40px 0;
+  }
+
+  &__headline {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include max-width($tablet) {
+      text-align: left;
+    }
+
+    .h2 {
+      font: 700 40px / 140% $corm-garamond;
+
+      @include max-width($tablet) {
+        font-size: 28px;
+        line-height: 114%;
+      }
+
+      span {
+        color: #a87f45;
+      }
+    }
+  }
+
+  @include min-width($tablet) {
+    padding: 40px 0;
+  }
+}

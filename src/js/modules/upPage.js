@@ -8,8 +8,7 @@
     }
   }
 
-  const goTopBtn = document.querySelector('.button__up');
-
+  var goTopBtn = document.querySelector('.button__up');
   if (goTopBtn) {
     goTopBtn.addEventListener('click', backToTop);
   }

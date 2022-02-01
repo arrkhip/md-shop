@@ -1,12 +1,18 @@
 .article {
+  overflow: hidden;
+
   &__bg {
-    z-index: 1;
     position: relative;
+    z-index: 1;
     background-color: $white;
   }
 
   &__content {
+    max-width: 895px;
     padding-top: 80px;
+    padding-bottom: 64px;
+    margin-right: auto;
+    margin-left: auto;
 
     h2 {
       margin-bottom: 20px;
@@ -16,21 +22,21 @@
 
     h5 {
       margin: 0 0 24px 0;
-      font-weight: 700;
       font-size: 24px;
+      font-weight: 700;
       line-height: 100%;
       color: #4f4f4f;
     }
 
     h6 {
       margin: 0 0 40px 0;
-      font-weight: 400;
       font-size: 24px;
+      font-weight: 400;
       line-height: 133%;
       color: #4f4f4f;
     }
 
-    & > p {
+    > p {
       margin-bottom: 40px;
       font-size: 18px;
       line-height: 133%;
@@ -38,8 +44,8 @@
     }
 
     p + p {
-      margin-bottom: 0;
       margin-top: 15px;
+      margin-bottom: 0;
     }
 
     ul {
@@ -57,14 +63,14 @@
         }
 
         &::before {
-          content: '';
           position: absolute;
           top: 10px;
           left: 0;
           width: 6px;
           height: 6px;
-          border-radius: 50%;
+          content: '';
           background-color: #a87f45;
+          border-radius: 50%;
         }
       }
     }
@@ -76,9 +82,9 @@
     }
 
     ol {
-      counter-reset: ol-item;
       padding-left: 0;
       margin: 0;
+      counter-reset: ol-item;
 
       li {
         position: relative;
@@ -88,8 +94,6 @@
         color: #4f4f4f;
 
         &::before {
-          content: counter(ol-item);
-          counter-increment: ol-item;
           position: absolute;
           top: 0;
           left: 0;
@@ -98,13 +102,15 @@
           justify-content: center;
           width: 40px;
           height: 40px;
-          border-radius: 50%;
-          font-weight: 700;
           font-size: 18px;
+          font-weight: 700;
           line-height: 133%;
           color: #a87f45;
+          content: counter(ol-item);
+          counter-increment: ol-item;
           background-color: #fff;
-          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+          border-radius: 50%;
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
         }
 
         &:not(:last-child) {
@@ -114,13 +120,6 @@
     }
   }
 
-  &__content,
-  &__controls {
-    max-width: 895px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   &__goods {
     display: flex;
     align-items: center;
@@ -128,11 +127,11 @@
   }
 
   &__goods-banner {
-    line-height: 0;
-    margin-right: 40px;
     width: 100%;
     max-width: 528px;
     max-height: 337px;
+    margin-right: 40px;
+    line-height: 0;
   }
 
   &__goods-info {
@@ -141,8 +140,8 @@
 
     p {
       margin-bottom: 36px;
-      font-style: italic;
       font-size: 18px;
+      font-style: italic;
       line-height: 133%;
       color: #4f4f4f;
     }
@@ -207,8 +206,8 @@
     }
 
     &__goods-banner {
-      margin-bottom: 16px;
       margin-right: 0;
+      margin-bottom: 16px;
     }
 
     &__goods-info {
@@ -234,16 +233,16 @@
   &__banner {
     max-width: 894px;
     max-height: 626px;
+    overflow: hidden;
     line-height: 0;
     border-radius: 4px;
-    overflow: hidden;
   }
 
   &__info {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 48px 0;
   }
 
@@ -262,8 +261,8 @@
     span {
       font-size: 14px;
       line-height: 1;
-      text-transform: uppercase;
       color: $white;
+      text-transform: uppercase;
     }
   }
 
@@ -277,8 +276,8 @@
     padding: 0 8px 8px;
     font-size: 14px;
     line-height: 140%;
-    text-transform: uppercase;
     color: $white;
+    text-transform: uppercase;
   }
 
   &__title {
