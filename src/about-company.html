@@ -160,9 +160,6 @@
           <div class="container">
             <div class="professionals">
               <div class="professionals__wrap">
-                <div class="professionals__left">
-                  <h2 class="professionals__left-title">c <span>2012</span></h2>
-                </div>
                 <div class="professionals__right">
                   <h3 class="professionals__right-title">Профессионалы своего дела</h3>
                   <div class="professionals__right-text">
@@ -198,14 +195,9 @@
                     <h2 class="person__title">Александр Анатольевич Шепелев</h2>
                     <div class="person__subtitle"><p>Вице-президент «Императорского монетного двора» </p></div>
                     <div class="person__descr"
-                      >С момента основания «Императорский Монетный Двор» утвердился в качестве ведущего дистрибьютора
-                      ценных монет и памятных медалей из драгоценных металлов на территории Российской Федерации. Более
-                      сотни наших тематических коллекций с воодушевлением встречены коллекционерами и нумизматами. Наш
-                      безупречный сервис смогли оценить за эти годы уже более миллиона человек. Мы продолжаем работу над
-                      новыми собраниями, расширяем сотрудничество с историками и музеями, а также готовим к запуску
-                      виртуальные выставки. Следите за новостями на нашем сайте и в наших социальных сетях! С наилучшими
-                      пожеланиями! Александр Анатольевич Шепелев, Вице-президент «Императорского монетного двора</div
-                    >
+                      >Александр Анатольевич – кандидат технических наук по диплому и исторических наук по призванию,
+                      коллекционер и нумизмат. Входит в общественные советы исторических сообществ.
+                    </div>
                   </div>
 
                   <div class="person__text-wrap">
@@ -294,7 +286,7 @@
                     <div class="pre_certificate-slider swiper-container">
                       <div class="swiper-wrapper">
                         <div class="pre_certificate-slide swiper-slide">
-                          <div class="pre_certificate-img">
+                          <div data-modal-target="#modal-gallery" class="pre_certificate-img">
                             <img
                               src="https://via.placeholder.com/288x406.png/0000FF/"
                               alt=""
@@ -304,7 +296,7 @@
                         </div>
 
                         <div class="pre_certificate-slide swiper-slide">
-                          <div class="pre_certificate-img">
+                          <div data-modal-target="#modal-gallery" class="pre_certificate-img">
                             <img
                               src="https://via.placeholder.com/288x406.png/FF0000/"
                               alt=""
@@ -314,7 +306,7 @@
                         </div>
 
                         <div class="pre_certificate-slide swiper-slide">
-                          <div class="pre_certificate-img">
+                          <div data-modal-target="#modal-gallery" class="pre_certificate-img">
                             <img
                               src="https://via.placeholder.com/288x406.png/000/"
                               alt=""
@@ -324,7 +316,7 @@
                         </div>
 
                         <div class="pre_certificate-slide swiper-slide">
-                          <div class="pre_certificate-img">
+                          <div data-modal-target="#modal-gallery" class="pre_certificate-img">
                             <img
                               src="https://via.placeholder.com/288x406/FF0000.png"
                               alt=""
@@ -365,6 +357,51 @@
           <!-- container end -->
         </section>
         <!-- certificate end -->
+
+        <!-- partners -->
+        <section class="partners-section">
+          <div class="partners">
+            <div class="partners__header">
+              <h2 class="partners__title">Наши партнеры</h2>
+            </div>
+            <div class="partners__items">
+              <div class="partner__item">
+                <img src="./img/partner-1.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-2.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-3.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-1.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-2.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-3.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-1.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-2.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-3.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-1.png" alt="" class="partner__img" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/partner-2.png" alt="" class="partner__img" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ./ End of partners -->
 
         <!-- advantages start -->
         <section class="advantages-section">
@@ -417,5 +454,7 @@
     ${require('./templates/modals/search.html')}
     <!--  -->
     ${require('./templates/modals/player.html')}
+    <!--  -->
+    ${require('./templates/modals/certificate.html')}
   </body>
 </html>

@@ -174,3 +174,221 @@
   max-width: 438px;
   text-align: left;
 }
+
+// gallery
+.modal-wrapper--gallery {
+  @include min-width($touch + 1px) {
+    padding: calc(40px + 2rem);
+  }
+
+  @include max-width($touch) {
+    padding-top: calc(40px + 1rem);
+  }
+  .modal {
+    width: 100%;
+    max-width: 1350px;
+    max-height: 822px;
+    padding: 32px 40px 22px 40px;
+  }
+}
+.gallery-slider-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 617px;
+
+  @include max-width($phone) {
+    padding-bottom: 100%;
+  }
+}
+.gallery-slider-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .gallery-slider {
+    height: 100%;
+  }
+}
+.gallery-slider {
+  height: 490px;
+
+  @include max-width($phone) {
+    height: 400px;
+  }
+}
+.gallery-item {
+  max-width: 438px;
+  height: 100%;
+  max-height: 617px;
+  margin: 0 auto 32px auto;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  &__img {
+    height: 100%;
+    object-fit: contain;
+  }
+  .how__video {
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .how__img {
+    border-radius: 0;
+  }
+  .how__play {
+    top: 50%;
+    left: 50%;
+  }
+}
+.gallery-slider-navigation {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  .button {
+    background-color: $white;
+    border-color: $gray-super-light;
+    &:hover {
+      border-color: $black;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &:disabled {
+      background-color: $white;
+      border-color: $black;
+    }
+  }
+  &__button {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((100vw - 900px) / 2);
+    min-width: calc(40px + 2rem);
+    height: 100%;
+    &--prev {
+      right: auto;
+      left: 40px;
+      justify-content: flex-start;
+
+      @include max-width(768px) {
+        left: 20px;
+      }
+
+      @include max-width(500px) {
+        left: 10px;
+      }
+    }
+    &--next {
+      right: 40px;
+      left: auto;
+      justify-content: flex-end;
+
+      @include max-width(768px) {
+        right: 20px;
+      }
+
+      @include max-width(500px) {
+        right: 10px;
+      }
+    }
+    .button-icon {
+      --size: 40px;
+      --padding: 5px;
+      --border-color: #e0e0e0;
+
+      width: var(--size);
+      min-width: var(--size);
+      height: var(--size);
+      min-height: var(--size);
+      pointer-events: all;
+      border-radius: 4px;
+      .svg {
+        font-size: 24px;
+      }
+
+      @include max-width(768px) {
+        --size: 30px;
+        .svg {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.gallery-thumbs-container {
+  position: relative;
+  padding: 0 26px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: $gray-extra-dark;
+  &::after {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.swiper-button-prev {
+  left: -20px;
+}
+.swiper-button-next {
+  right: -20px;
+}
+.gallery-thumbs-slider-wrapper {
+  margin-top: 32px;
+  overflow: hidden;
+
+  @include max-width($touch) {
+    padding: 16px;
+  }
+}
+.gallery-thumbs-slider {
+  overflow: visible;
+}
+.gallery-thumbs-slide {
+  @include max-width($touch) {
+    width: 100%;
+    max-width: 48px;
+  }
+  &:hover {
+    .chat-sender-imgs__img {
+      border-color: var(--primary-hover);
+    }
+  }
+  &.swiper-slide-thumb-active {
+    .chat-sender-imgs__img {
+      border-color: var(--primary-default);
+      box-shadow: 0 0 0 1px var(--primary-default);
+    }
+  }
+  .chat-sender-imgs__item {
+    width: 100%;
+    max-width: 84px;
+    height: 100%;
+    max-height: 120px;
+    margin: 0;
+  }
+  .chat-sender-imgs__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+  }
+}
