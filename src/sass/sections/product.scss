@@ -804,6 +804,26 @@
     border-radius: 50%;
   }
 
+  // .tooltip__wrapper {
+  //   position: relative;
+
+  //   &:hover {
+  //     .tooltip__content {
+  //       transform: translate(-50%, 0);
+  //     }
+  //   }
+  // }
+
+  // .tooltip__content {
+  //   left: 50%;
+  //   z-index: 2;
+  //   width: auto;
+  //   min-width: 280px;
+  //   transform: translate(-50%, 20px);
+  // }
+
+  // .svg,
+  // .tooltip__icon {
   .svg {
     width: 1em;
     height: 1em;
@@ -812,6 +832,7 @@
     color: $main;
     vertical-align: middle;
     cursor: pointer;
+    outline: none;
     transition: color 0.2s ease;
 
     &:hover {

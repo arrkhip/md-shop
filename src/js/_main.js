@@ -11,6 +11,7 @@ import './modules/polyfills/closest';
 import './modules/onLoad';
 import './modules/Menu';
 import './modules/MenuSlider';
+import './modules/tippy';
 import './modules/Mask';
 import './modules/Swap';
 // import './modules/FormHiding';

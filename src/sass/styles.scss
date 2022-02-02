@@ -4,6 +4,7 @@
 // Libs - Библиотеки
 @import '~swiper/swiper-bundle.css';
 @import '~plyr/dist/plyr.css';
+@import '~tippy.js/dist/tippy.css';
 
 // Variables - Переменные
 @import 'variables/fonts';
@@ -34,6 +35,7 @@
 @import 'components/aside-blog';
 @import 'components/article-controls';
 @import 'components/tooltip';
+@import 'components/tippy';
 @import 'components/bar';
 
 // Sections - Разделы сайта
