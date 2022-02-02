@@ -124,7 +124,7 @@
 }
 
 .#{$prefix}certificate-section {
-  padding: 80px 0;
+  padding: 80px 0 140px 0;
   overflow: hidden;
 
   @include max-width($desktop-sm) {
@@ -231,6 +231,15 @@
 .#{$prefix}certificate-slide {
   &:not(.swiper-slide-visible) {
     filter: grayscale(1);
+  }
+}
+
+.#{$prefix}certificate-img {
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  &:hover {
+    filter: grayscale(0%);
   }
 }
 

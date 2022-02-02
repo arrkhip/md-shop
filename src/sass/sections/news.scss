@@ -36,34 +36,35 @@
 
   &__tabs {
     display: flex;
-    margin-bottom: 32px;
-    border-bottom: 1px solid #e0e0e0;
     flex-wrap: nowrap;
+    margin-bottom: 32px;
     overflow-x: auto;
+    border-bottom: 1px solid #e0e0e0;
     -webkit-overflow-scrolling: touch;
   }
 
   &__tab {
     flex-shrink: 0;
     padding: 0 20px 16px 20px;
-    border: none;
-    border-bottom: 4px solid transparent;
     font-size: 16px;
     line-height: 140%;
+    color: $gray-extra-dark;
     text-transform: uppercase;
     white-space: nowrap;
-    color: $gray-extra-dark;
     background-color: transparent;
+    border: none;
+    border-bottom: 4px solid transparent;
+
     @include trs();
 
     &.active {
-      border-bottom-color: $main-light;
       color: $main-light;
+      border-bottom-color: $main-light;
     }
 
     &:not(.news__tab.active):hover {
-      opacity: 0.8;
       text-decoration: none;
+      opacity: 0.8;
     }
   }
 
@@ -92,8 +93,8 @@
       flex: 0 0 100%;
       order: -1;
       padding: 0;
-      margin-left: 0;
       margin-bottom: 24px;
+      margin-left: 0;
     }
   }
 

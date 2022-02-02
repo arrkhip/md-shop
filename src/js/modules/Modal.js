@@ -26,11 +26,12 @@ export default class Modal extends ClassToggler {
       }
     });
 
+    this.$el.modal = this;
     _instances[this.id] = this;
   }
 
   open(e) {
-    super.open();
+    super.open(e);
 
     if (this.openOnFocus) {
       setTimeout(() => this.$el.querySelector('.input').focus(), 100);

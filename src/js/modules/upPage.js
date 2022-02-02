@@ -9,7 +9,7 @@
   }
 
   var goTopBtn = document.querySelector('.button__up');
-  if(goTopBtn) {
+  if (goTopBtn) {
     goTopBtn.addEventListener('click', backToTop);
   }
 })();
