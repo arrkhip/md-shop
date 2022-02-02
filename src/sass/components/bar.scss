@@ -1,0 +1,43 @@
+.bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 6;
+  width: 100%;
+  padding: 8px 16px;
+  background-color: $white;
+  box-shadow: 0 0 20px rgba($black, 0.15);
+
+  @include min-width($touch + 1px) {
+    display: none;
+  }
+}
+
+.bar__product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .product__price {
+    em {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    &--prev {
+      margin-bottom: 0;
+
+      em {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .button {
+    flex-grow: 1;
+    min-width: auto;
+    padding: 12px 24px;
+    margin: 0 0 0 32px;
+    font-size: 12px;
+  }
+}

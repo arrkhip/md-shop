@@ -17,6 +17,8 @@
       ${require('./templates/header.html')}
       <!--  -->
       ${require('./templates/menu.html')}
+      <!--  -->
+      ${require('./templates/blocks/bar.html')}
 
       <main>
         <!-- product -->
@@ -246,6 +248,8 @@
                               </div>
                             </div>
                           </div>
+
+                          <div class="product-preview-slider-pagination swiper-pagination"> </div>
                         </div>
                       </div>
                     </div>
@@ -433,104 +437,231 @@
 
                 <div class="product-info__body">
                   <div class="product-info__inner">
+                    <div class="product-info__mobile">
+                      <div class="product-info-articles">
+                        <span class="product-info-articles__title">
+                          Статьи
+                        </span>
+
+                        <div class="product-info-articles__wrap">
+                          <div class="card-news card-news--row">
+                            <a href="#" class="card-news__banner">
+                              <img src="./img/news/news-img-3.jpg" alt="" />
+                            </a>
+                            <div class="card-news__content">
+                              <div class="card-news__date">
+                                <svg>
+                                  <use xlink:href="#icon-calendar"></use>
+                                </svg>
+                                <span>1 июля, 2021</span>
+                              </div>
+                              <a href="#" class="card-news__title">
+                                «Святой Георгий» – монета с самым высоким в мире рельефом
+                              </a>
+                              <div class="card-news__tag-list">
+                                <div class="card-news__tag">#музеи</div>
+                                <div class="card-news__tag">#выставки</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-news card-news--row">
+                            <a href="#" class="card-news__banner">
+                              <img src="./img/news/news-img-3.jpg" alt="" />
+                            </a>
+                            <div class="card-news__content">
+                              <div class="card-news__date">
+                                <svg>
+                                  <use xlink:href="#icon-calendar"></use>
+                                </svg>
+                                <span>1 июля, 2021</span>
+                              </div>
+                              <a href="#" class="card-news__title">
+                                Драгоценная медаль в память об удивительном спасении Руси
+                              </a>
+                              <div class="card-news__tag-list">
+                                <div class="card-news__tag">#музеи</div>
+                                <div class="card-news__tag">#выставки</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-news card-news--row">
+                            <a href="#" class="card-news__banner">
+                              <img src="./img/news/news-img-3.jpg" alt="" />
+                            </a>
+                            <div class="card-news__content">
+                              <div class="card-news__date">
+                                <svg>
+                                  <use xlink:href="#icon-calendar"></use>
+                                </svg>
+                                <span>1 июля, 2021</span>
+                              </div>
+                              <a href="#" class="card-news__title">
+                                Серебряная медаль в дар Свято-Троицкой Александро-Невской Лавре
+                              </a>
+                              <div class="card-news__tag-list">
+                                <div class="card-news__tag">#музеи</div>
+                                <div class="card-news__tag">#выставки</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <div class="product-info__left">
                       <div data-tabs-contents="product-info" class="product-info__contents">
                         <div data-tab-content="product-info_1" class="product-info__content">
-                          <div class="product-info-content">
-                            <h3 class="product-info__title">
-                              «Святая Матрона Московская» - медаль из чистого серебра, в&#160;честь 140-летия
-                              со&#160;дня рождения святой!
-                            </h3>
+                          <div data-accordion="product-accordion_1" class="product-info-accordion">
+                            <div role="button" class="product-info-accordion__button accordion-button">
+                              <span class="product-info-accordion__title">
+                                описание
+                              </span>
 
-                            <blockquote class="article__blockquote-simple blockquote-simple">
-                              В 2021 году исполнилось 140 лет со дня рождения Матроны Московской. Святая при жизни
-                              помогала всем, кто обращался к ней. И она продолжает делать это сейчас. Не иссякает
-                              очередь к святым мощам Матронушки, тысячи людей обращаются к ней со своими бедами и
-                              просьбами. И она помогает всем.
-                            </blockquote>
+                              <svg class="product-info-accordion__arrow">
+                                <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                            </div>
 
-                            <p class="product-info__text">
-                              Православные праздники – важные события нашей духовной жизни; они оживляют наши сердца,
-                              объединяют людей в вере и радости.
-                            </p>
+                            <div class="product-info-accordion__content accordion-content">
+                              <div class="product-info-content">
+                                <h3 class="product-info__title">
+                                  «Святая Матрона Московская» - медаль из чистого серебра, в&#160;честь 140-летия
+                                  со&#160;дня рождения святой!
+                                </h3>
 
-                            <p class="product-info__text">
-                              Это подлинные ценности, не подвластные времени, достойны, чтобы быть увековеченными.
-                            </p>
+                                <blockquote class="article__blockquote-simple blockquote-simple">
+                                  В 2021 году исполнилось 140 лет со дня рождения Матроны Московской. Святая при жизни
+                                  помогала всем, кто обращался к ней. И она продолжает делать это сейчас. Не иссякает
+                                  очередь к святым мощам Матронушки, тысячи людей обращаются к ней со своими бедами и
+                                  просьбами. И она помогает всем.
+                                </blockquote>
 
-                            <p class="product-info__text">
-                              Первый выпуск – посвящен одному из самых главных христианских праздников, установленному в
-                              честь рождения у девы Марии Иисуса Христа во плоти.
-                            </p>
+                                <p class="product-info__text">
+                                  Православные праздники – важные события нашей духовной жизни; они оживляют наши
+                                  сердца, объединяют людей в вере и радости.
+                                </p>
 
-                            <p class="product-info__text">
-                              Рождество Спасителя мира, явившегося не в богатстве и блеске, а в глухой провинции, во
-                              мраке ночи, в хлеву, – самое радостное и важное событие всей человеческой истории наряду с
-                              Воскресением Христовым.
-                            </p>
+                                <p class="product-info__text">
+                                  Это подлинные ценности, не подвластные времени, достойны, чтобы быть увековеченными.
+                                </p>
 
-                            <p class="product-info__text">
-                              Этот праздник стал главным в истории человечества, в 525 г. было введено летоисчисление от
-                              Рождества Христова!
-                            </p>
+                                <p class="product-info__text">
+                                  Первый выпуск – посвящен одному из самых главных христианских праздников,
+                                  установленному в честь рождения у девы Марии Иисуса Христа во плоти.
+                                </p>
 
-                            <p class="product-info__text">
-                              Все медали серии «Православные праздники» изготовлены из серебра 999 пробы в коллекционном
-                              качестве чеканки с зеркальной поверхностью «пруф-лайк».
-                            </p>
+                                <p class="product-info__text">
+                                  Рождество Спасителя мира, явившегося не в богатстве и блеске, а в глухой провинции, во
+                                  мраке ночи, в хлеву, – самое радостное и важное событие всей человеческой истории
+                                  наряду с Воскресением Христовым.
+                                </p>
 
-                            <img src="./img/product-card_img1.jpg" alt="" class="product-info__img" />
+                                <p class="product-info__text">
+                                  Этот праздник стал главным в истории человечества, в 525 г. было введено
+                                  летоисчисление от Рождества Христова!
+                                </p>
+
+                                <p class="product-info__text">
+                                  Все медали серии «Православные праздники» изготовлены из серебра 999 пробы в
+                                  коллекционном качестве чеканки с зеркальной поверхностью «пруф-лайк».
+                                </p>
+
+                                <img src="./img/product-card_img1.jpg" alt="" class="product-info__img" />
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div data-tab-content="product-info_2" class="product-info__content">
-                          <div class="product-info-content">
-                            <h3 class="product-info__title">
-                              Коллекция
-                            </h3>
+                          <div data-accordion="product-accordion_2" class="product-info-accordion">
+                            <div role="button" class="product-info-accordion__button accordion-button">
+                              <span class="product-info-accordion__title">
+                                Коллекция
+                              </span>
 
-                            <blockquote class="article__blockquote-simple blockquote-simple">
-                              Коллекция
-                            </blockquote>
+                              <svg class="product-info-accordion__arrow">
+                                <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                            </div>
 
-                            <p class="product-info__text">
-                              Коллекция
-                            </p>
+                            <div class="product-info-accordion__content accordion-content">
+                              <div class="product-info-content">
+                                <h3 class="product-info__title">
+                                  Коллекция
+                                </h3>
 
-                            <img src="./img/product-card_img1.jpg" alt="" class="product-info__img" />
+                                <blockquote class="article__blockquote-simple blockquote-simple">
+                                  Коллекция
+                                </blockquote>
+
+                                <p class="product-info__text">
+                                  Коллекция
+                                </p>
+
+                                <img src="./img/product-card_img1.jpg" alt="" class="product-info__img" />
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div data-tab-content="product-info_3" class="product-info__content">
-                          <div class="product-info-content">
-                            <h3 class="product-info__title">
-                              Доставка и оплата
-                            </h3>
+                          <div data-accordion="product-accordion_2" class="product-info-accordion">
+                            <div role="button" class="product-info-accordion__button accordion-button">
+                              <span class="product-info-accordion__title">
+                                Доставка и оплата
+                              </span>
 
-                            <blockquote class="article__blockquote-simple blockquote-simple">
-                              Доставка и оплата
-                            </blockquote>
+                              <svg class="product-info-accordion__arrow">
+                                <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                            </div>
 
-                            <p class="product-info__text">
-                              Доставка и оплата
-                            </p>
+                            <div class="product-info-accordion__content accordion-content">
+                              <div class="product-info-content">
+                                <h3 class="product-info__title">
+                                  Доставка и оплата
+                                </h3>
 
-                            <img src="./img/product-card_img1.jpg" alt="" class="product-info__img" />
+                                <blockquote class="article__blockquote-simple blockquote-simple">
+                                  Доставка и оплата
+                                </blockquote>
+
+                                <p class="product-info__text">
+                                  Доставка и оплата
+                                </p>
+
+                                <img src="./img/product-card_img1.jpg" alt="" class="product-info__img" />
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div data-tab-content="product-info_4" class="product-info__content">
-                          <div class="product-info-content">
-                            <h3 class="product-info__title">
-                              Условия
-                            </h3>
+                          <div data-accordion="product-accordion_2" class="product-info-accordion">
+                            <div role="button" class="product-info-accordion__button accordion-button">
+                              <span class="product-info-accordion__title">
+                                Условия
+                              </span>
 
-                            <blockquote class="article__blockquote-simple blockquote-simple">
-                              Условия
-                            </blockquote>
+                              <svg class="product-info-accordion__arrow">
+                                <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                            </div>
 
-                            <p class="product-info__text">
-                              Условия
-                            </p>
+                            <div class="product-info-accordion__content accordion-content">
+                              <div class="product-info-content">
+                                <h3 class="product-info__title">
+                                  Условия
+                                </h3>
 
-                            <img src="./img/product-card_img1.jpg" alt="" class="product-info__img" />
+                                <blockquote class="article__blockquote-simple blockquote-simple">
+                                  Условия
+                                </blockquote>
+
+                                <p class="product-info__text">
+                                  Условия
+                                </p>
+
+                                <img src="./img/product-card_img1.jpg" alt="" class="product-info__img" />
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>

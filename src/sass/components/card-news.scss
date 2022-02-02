@@ -173,6 +173,11 @@
       width: 100%;
       max-width: 122px;
       max-height: 86px;
+
+      @include max-width($touch) {
+        max-width: 96px;
+        max-height: 67px;
+      }
     }
 
     .card-news__content {
@@ -180,9 +185,17 @@
       padding-top: 0;
       padding-left: 16px;
 
+      @include max-width($touch) {
+        padding-left: 12px;
+      }
+
       .card-news__date {
         width: 1px;
         min-width: 100%;
+
+        @include max-width($touch) {
+          margin-bottom: 4px;
+        }
 
         span {
           font-size: 12px;
