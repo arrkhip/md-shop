@@ -1,5 +1,6 @@
 .header {
   line-height: 1;
+  background-color: $white;
   border-bottom: 1px solid #e0e0e0;
 
   svg {
@@ -346,7 +347,10 @@
     }
   }
 
-  .svg {
+  > .svg,
+  > div > .svg,
+  > a .svg,
+  .js-basket-block .svg {
     margin: 0 auto;
     font-size: 28px;
 

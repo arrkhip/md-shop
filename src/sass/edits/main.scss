@@ -1,1 +1,81 @@
-//
+/* Header */
+#header {
+  padding: 0;
+  margin: 0;
+}
+
+.header__control {
+  a {
+    display: block;
+    text-align: center;
+  }
+
+  .js-basket-block {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+  }
+}
+
+.auth_wr_inner.with_dropdown {
+  padding-right: 0 !important;
+
+  &.header__control {
+    > .svg.inline {
+      display: none;
+    }
+  }
+}
+
+.header__list {
+  &:not([id*='bx_']) {
+    > li {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  > .header__item {
+    margin: 0;
+  }
+}
+
+.header__item {
+  &:last-child {
+    .header__dropdown {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  .basket_hover_block {
+    text-align: left;
+  }
+}
+
+.header__dropdown {
+  margin-left: 0;
+}
+
+body #header {
+  @include max-width(600px) {
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+// aspro native mobile header
+#mobileheader.visible-xs.visible-sm {
+  @include max-width(767px) {
+    display: none !important;
+  }
+}
+
+/* Menu */
+.menu-slider__sublist {
+  margin-left: 0;
+}
+
+.menu-slider__item {
+  position: static;
+}

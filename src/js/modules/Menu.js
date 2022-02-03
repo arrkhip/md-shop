@@ -7,7 +7,7 @@ export default class Menu extends ClassToggler {
 }
 
 const menu = new Menu({
-  $el: document.querySelector('.menu'),
+  $el: document.querySelector('.j_menu'),
   $additionalElements: [document.querySelector('.header')],
   $closeBtns: document.querySelectorAll('.j_closeMenu'),
   $openBtns: document.querySelectorAll('.j_openMenu'),
