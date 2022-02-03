@@ -1,10 +1,51 @@
+/* UI */
+.button {
+  &--gold {
+    $linear: linear-gradient(
+      244deg,
+      #ebba75 -0.66%,
+      #c58f44 18.49%,
+      #ebba75 29.71%,
+      #fff 45.22%,
+      #ffe0b6 55.11%,
+      #b78f58 72.25%,
+      #f7d4a4 94.41%
+    );
+
+    $radial: radial-gradient(
+      417.69% 2246.21% at 49.05% 50%,
+      #ebba75 0%,
+      #c58f44 10.5%,
+      #fff 19.08%,
+      #ffe0b6 23.53%,
+      #b78f58 30.78%,
+      #f7d4a4 41.63%,
+      #ebba75 100%
+    );
+
+    color: $black;
+    background: $linear, $radial;
+  }
+}
+
 /* Main */
 main {
   overflow: visible;
 }
 
+.wraps {
+  &#content {
+    z-index: auto;
+  }
+
+  > .wrapper_inner {
+    z-index: auto;
+  }
+}
+
 /* Header */
 #header {
+  z-index: 9;
   padding: 0;
   margin: 0;
 }
@@ -57,15 +98,21 @@ main {
   .basket_hover_block {
     text-align: left;
   }
-}
 
-.header__dropdown {
-  margin-left: 0;
+  .header__dropdown {
+    margin-left: 0;
+
+    > li {
+      &::before {
+        content: none;
+      }
+    }
+  }
 }
 
 body #header {
   @include max-width(600px) {
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0 !important;
   }
 }
 
@@ -74,6 +121,10 @@ body #header {
   @include max-width(767px) {
     display: none !important;
   }
+}
+
+body .wrapper1.mfixed_Y > div#mobileheader.fixed {
+  display: none !important;
 }
 
 /* Menu */

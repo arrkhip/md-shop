@@ -1,3 +1,12 @@
+/* Banner */
+.banner__item {
+  margin: 0;
+
+  &::before {
+    content: none !important;
+  }
+}
+
 /* Catalog */
 .catalog_block {
   .counter_wrapp {
@@ -22,10 +31,12 @@
           height: 1em;
           margin-right: 12px;
           font-size: 20px;
+          background: none !important;
 
           svg {
             display: block !important;
-            fill: $white;
+            color: $white;
+            fill: currentColor;
 
             * {
               fill: currentColor !important;
@@ -41,10 +52,44 @@
   }
 }
 
+body .wrapper1.front_page .top_block a {
+  @include max-width(550px) {
+    position: relative;
+    top: 0 !important;
+    width: auto;
+    max-width: none;
+    height: auto;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.tab_slider_wrapp .top_block .right_block_wrapper {
+  @include max-width(550px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.wrapper_inner .specials_slider_wrapp ul.tabs > li span,
+.wrapper_inner .tab_slider_wrapp ul.tabs > li span {
+  @include max-width(450px) {
+    padding-bottom: 2px;
+    font-size: 14px;
+  }
+}
+
 .compact-catalog .ajax_load.block .catalog_item {
   .footer_button {
     @include max-width(600px) {
-      display: none;
+      display: none !important;
     }
   }
 
