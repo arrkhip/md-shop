@@ -224,7 +224,8 @@ button.button {
   }
 }
 
-.button--close {
+.button--close,
+button.button--close {
   min-width: initial;
   padding: 0;
   font-size: 28px;

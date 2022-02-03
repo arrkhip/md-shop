@@ -97,7 +97,8 @@
   align-items: center;
   justify-content: space-between;
 
-  .button--close {
+  .button--close,
+  button.button--close {
     position: static;
     margin: 0 0 0 auto;
   }
@@ -257,7 +258,8 @@
     }
   }
 
-  .button--close {
+  .button--close,
+  button.button--close {
     width: 56px;
     height: 56px;
     padding: 16px;

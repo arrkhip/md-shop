@@ -6,8 +6,8 @@ function initGallerySliders() {
   const isMobile = window.matchMedia('(max-width: 900px)');
   const $sliders = document.querySelectorAll('.gallery-slider');
   const $navigationDown = document.querySelector('.galleryDown-slider-navigation') || null;
-  const $prevDown = $navigationDown.querySelector('.swiper-button-prev') || null;
-  const $nextDown = $navigationDown.querySelector('.swiper-button-next') || null;
+  const $prevDown = ($navigationDown && $navigationDown.querySelector('.swiper-button-prev')) || null;
+  const $nextDown = ($navigationDown && $navigationDown.querySelector('.swiper-button-next')) || null;
   if ($sliders.length) {
     $sliders.forEach(($slider) => {
       const $modal = $slider.closest('.j_modal') || null;
