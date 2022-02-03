@@ -6,6 +6,7 @@ import './modules/_svg';
 import 'babel-polyfill';
 import './modules/polyfills/forEach';
 import './modules/polyfills/closest';
+import './modules/polyfills/stickyfill';
 
 // modules
 import './modules/onLoad';
