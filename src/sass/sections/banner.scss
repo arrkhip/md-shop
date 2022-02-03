@@ -61,6 +61,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     top: calc(100% - 38px);
+    color: $white;
 
     @include max-width($touch) {
       display: none;
@@ -136,6 +137,7 @@
     width: 100%;
     height: 100%;
     border-radius: 4px;
+    object-fit: cover;
 
     @include max-width(700px) {
       border-radius: 0;
@@ -144,8 +146,10 @@
 
   &__wrap {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     max-width: 1090px;
+    min-height: 100%;
     margin: 0 auto;
 
     @include max-width(700px) {

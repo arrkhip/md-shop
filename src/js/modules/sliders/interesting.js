@@ -2,6 +2,8 @@ import Swiper from 'swiper/swiper-bundle.min';
 
 const $sliders = document.querySelectorAll('.pre_interesting-slider');
 
+const isMobile = window.matchMedia('(max-width: 900px)');
+
 if ($sliders.length) {
   $sliders.forEach(($slider) => {
     const $navigation = document.querySelector('.pre_interesting__navigation') || null;
@@ -13,7 +15,7 @@ if ($sliders.length) {
       speed: 600,
       spaceBetween: 20,
       loop: true,
-      autoHeight: true,
+      autoHeight: isMobile,
 
       resizeObserver: true,
 

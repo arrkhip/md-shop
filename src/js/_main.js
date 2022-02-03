@@ -6,11 +6,13 @@ import './modules/_svg';
 import 'babel-polyfill';
 import './modules/polyfills/forEach';
 import './modules/polyfills/closest';
+import './modules/polyfills/stickyfill';
 
 // modules
 import './modules/onLoad';
 import './modules/Menu';
 import './modules/MenuSlider';
+import './modules/tippy';
 import './modules/Mask';
 import './modules/Swap';
 // import './modules/FormHiding';
@@ -23,7 +25,6 @@ import './modules/Scroll';
 import './modules/upPage';
 
 // sliders
-import './modules/sliders/banner';
 import './modules/sliders/promo';
 import './modules/sliders/certificate';
 import './modules/sliders/aside-blog';

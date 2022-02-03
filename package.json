@@ -70,7 +70,9 @@
     "plyr": "^3.6.8",
     "scroll-lock": "^2.1.4",
     "serialize-javascript": "^5.0.1",
-    "swiper": "^7.0.6"
+    "stickyfilljs": "^2.1.0",
+    "swiper": "^7.0.6",
+    "tippy.js": "^6.3.7"
   },
   "husky": {
     "hooks": {

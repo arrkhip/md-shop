@@ -1,0 +1,80 @@
+/* Catalog */
+.catalog_block {
+  .counter_wrapp {
+    padding: 0 36px 36px;
+
+    > .counter_block {
+      display: none;
+    }
+
+    > div {
+      width: 100%;
+
+      .btn {
+        padding: 11px 22px;
+        font-size: 18px;
+        text-transform: none;
+        border-radius: 2px;
+
+        .svg {
+          top: 0;
+          width: 1em;
+          height: 1em;
+          margin-right: 12px;
+          font-size: 20px;
+
+          svg {
+            display: block !important;
+            fill: $white;
+
+            * {
+              fill: currentColor !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .catalog_item > div {
+    box-shadow: inset 0 0 0 1px #e0e0e0;
+  }
+}
+
+.compact-catalog .ajax_load.block .catalog_item {
+  .footer_button {
+    @include max-width(600px) {
+      display: none;
+    }
+  }
+
+  > div {
+    @include max-width(600px) {
+      padding: 8px 12px 16px;
+    }
+
+    @include max-width(400px) {
+      padding: 8px 12px 16px;
+    }
+
+    .item_info {
+      @include max-width(600px) {
+        padding-bottom: 0;
+      }
+
+      .cost.prices .price {
+        &:not(.discount) {
+          @include max-width(600px) {
+            font-size: 16px;
+          }
+        }
+
+        &.discount {
+          @include max-width(600px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

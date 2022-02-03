@@ -1,6 +1,13 @@
 .header {
+  z-index: 9;
   line-height: 1;
+  background-color: $white;
   border-bottom: 1px solid #e0e0e0;
+
+  @include max-width($touch) {
+    position: sticky;
+    top: 0;
+  }
 
   svg {
     display: block;
@@ -346,7 +353,10 @@
     }
   }
 
-  .svg {
+  > .svg,
+  > div > .svg,
+  > a .svg,
+  .js-basket-block .svg {
     margin: 0 auto;
     font-size: 28px;
 
