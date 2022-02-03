@@ -25,7 +25,6 @@ import './modules/Scroll';
 import './modules/upPage';
 
 // sliders
-import './modules/sliders/banner';
 import './modules/sliders/promo';
 import './modules/sliders/certificate';
 import './modules/sliders/aside-blog';
