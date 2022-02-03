@@ -242,7 +242,56 @@
     width: 100%;
     max-width: 1350px;
     max-height: 822px;
-    padding: 32px 40px 22px 40px;
+    padding: 32px 30px 22px;
+  }
+
+  .modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .button {
+    &:hover {
+      color: $certificate-close;
+    }
+  }
+
+  .button--close {
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    background: $white;
+    border-radius: 0;
+
+    @include max-width(1024px) {
+      width: 36px;
+      height: 35px;
+      padding: 8px;
+      background: $white;
+      border-radius: 0;
+    }
+    svg {
+      width: 24px;
+      width: 100%;
+      min-width: auto;
+      height: 24px;
+      height: 100%;
+      min-height: auto;
+      fill: $certificate-close;
+    }
+    &:hover {
+      svg {
+        fill: $certificate-close;
+        stroke: $certificate-close;
+      }
+    }
+    &:focus {
+      svg {
+        border: none;
+        box-shadow: none;
+      }
+    }
   }
 }
 .gallery-slider-wrap {
@@ -370,11 +419,14 @@
       pointer-events: all;
       border-radius: 4px;
       .svg {
+        height: 100%;
         font-size: 24px;
       }
 
       @include max-width(768px) {
         --size: 30px;
+
+        padding: 5px;
         .svg {
           font-size: 15px;
         }
@@ -386,6 +438,10 @@
 .gallery-thumbs-container {
   position: relative;
   padding: 0 26px;
+
+  @include max-width(768px) {
+    padding: 0 16px;
+  }
 }
 
 .swiper-button-prev,
@@ -445,4 +501,8 @@
     cursor: pointer;
     transition: border 0.2s ease, box-shadow 0.2s ease;
   }
+}
+
+.swiper-lazy-preloader {
+  --swiper-preloader-color: #ffce59;
 }

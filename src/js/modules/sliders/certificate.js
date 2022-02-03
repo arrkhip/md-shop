@@ -34,12 +34,16 @@ if ($sliders.length) {
           slidesPerView: 2,
           spaceBetween: 16,
         },
+        769: {
+          slidesPerView: 4.5,
+          spaceBetween: 16,
+        },
         640: {
-          slidesPerView: 2,
+          slidesPerView: 2.5,
           spaceBetween: 16,
         },
         320: {
-          slidesPerView: 1,
+          slidesPerView: 1.5,
           spaceBetween: 16,
         },
       },
