@@ -43,6 +43,21 @@ main {
   }
 }
 
+body {
+  &[data-scroll-lock-locked='true'] {
+    #headerfixed.fixed {
+      z-index: 9;
+    }
+
+    .wrapper,
+    .wrapper_inner,
+    .wrapp,
+    .wrapper1 > div {
+      z-index: auto;
+    }
+  }
+}
+
 .drag-block.container {
   overflow: visible;
 }

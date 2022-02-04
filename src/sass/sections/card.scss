@@ -208,6 +208,18 @@
   &--yellow {
     background-color: #fdf8ef;
   }
+
+  &--last {
+    padding-bottom: 80px;
+
+    @include max-width($desktop-sm) {
+      padding-bottom: 40px;
+    }
+
+    @include max-width($touch) {
+      padding-bottom: 40px;
+    }
+  }
 }
 
 .#{$prefix}card {
@@ -227,6 +239,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    max-width: 1120px;
     height: 100%;
     margin: 0 auto;
 
@@ -291,6 +304,7 @@
     .#{$prefix}card-input {
       flex-grow: 1;
       margin: 0;
+      background-color: transparent;
       border: none;
 
       @include placeholder() {
