@@ -43,6 +43,10 @@ main {
   }
 }
 
+.drag-block.container {
+  overflow: visible;
+}
+
 /* Header */
 #header {
   z-index: 9;
@@ -103,6 +107,8 @@ main {
     margin-left: 0;
 
     > li {
+      margin-left: 0;
+
       &::before {
         content: none;
       }
