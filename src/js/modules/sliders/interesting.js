@@ -15,7 +15,7 @@ if ($sliders.length) {
       speed: 600,
       spaceBetween: 20,
       loop: true,
-      autoHeight: isMobile,
+      autoHeight: isMobile.matches,
 
       resizeObserver: true,
 
