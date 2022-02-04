@@ -362,7 +362,16 @@
     padding: 24px 20px;
   }
 
-  .pre_card-input {
+  .pre_card__row {
     background-color: #fdf8ef;
+  }
+
+  .pre_card-input {
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      background-color: transparent;
+    }
   }
 }

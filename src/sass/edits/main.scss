@@ -40,6 +40,7 @@ main {
 
   > .wrapper_inner {
     z-index: auto;
+    padding-bottom: 0;
   }
 }
 
@@ -79,10 +80,15 @@ body {
     text-align: center;
   }
 
-  .js-basket-block {
+  .js-basket-block,
+  > a > div {
     position: relative;
     display: inline-block;
     margin: auto;
+
+    .svg {
+      top: 0;
+    }
   }
 }
 

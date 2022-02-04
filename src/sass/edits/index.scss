@@ -123,3 +123,54 @@ body .wrapper1.front_page .top_block a {
     }
   }
 }
+
+/* previously watched */
+.block-item__myfooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+
+  .block-item__cost.cost.prices {
+    .price.only_price {
+      margin-top: 0;
+    }
+  }
+
+  .font_sm {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .button {
+    min-width: auto;
+    padding: 7px 15px;
+    margin: 0 0 0 10px;
+    font-size: 24px;
+    color: $white;
+    cursor: pointer;
+    background-color: $black-2;
+    border-radius: 2px;
+
+    @include max-width(901px) {
+      opacity: 0;
+    }
+
+    &:hover {
+      color: $black-2;
+      background-color: transparent;
+    }
+
+    .item_wrap:hover & {
+      opacity: 1;
+    }
+
+    .svg {
+      top: 0;
+      display: block;
+      width: 1em;
+      height: 1em;
+      fill: currentColor;
+    }
+  }
+}
