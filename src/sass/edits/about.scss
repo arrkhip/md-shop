@@ -1,1 +1,48 @@
-//
+body .about__left-title {
+  margin-top: 117px;
+}
+
+.about__img-left {
+  padding: 0 50px 65px;
+  margin-top: -50px;
+}
+
+.about__bg {
+  max-height: 431px;
+}
+
+@media (max-width: 1200px) {
+  body .about__left-title {
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .professionals__wrap {
+    min-height: auto;
+  }
+
+  .about__bg {
+    max-height: 431px;
+  }
+
+  .advantages-section {
+    height: auto;
+    max-height: none;
+    padding: 20px 0;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__img-left {
+    padding: 0 35px 35px;
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about__img-left {
+    margin-top: -15px;
+  }
+}
