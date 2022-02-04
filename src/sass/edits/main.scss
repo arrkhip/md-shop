@@ -62,6 +62,10 @@ body {
   overflow: visible;
 }
 
+.viewed_product_block.fill > .wrapper_inner {
+  border-bottom: none;
+}
+
 /* Header */
 #header {
   z-index: 9;
