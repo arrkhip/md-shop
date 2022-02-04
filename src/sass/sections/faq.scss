@@ -8,6 +8,10 @@
     margin-right: 40px;
   }
 
+  &__inner {
+    overflow: hidden;
+  }
+
   &__headline {
     margin-bottom: 48px;
 
@@ -72,7 +76,7 @@
       }
 
       .faq__accordion-svg {
-        transform: rotate(180deg);
+        transform: rotate(-90deg);
       }
     }
   }
@@ -102,13 +106,17 @@
 
   &__accordion-icon {
     flex-shrink: 0;
-    padding: 10px;
+    padding: 0;
+    font-size: 28px;
+    color: $black-2;
   }
 
   &__accordion-svg {
-    width: 15px;
-    height: 15px;
-    fill: $black-2;
+    display: block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    transform: rotate(90deg);
 
     @include trs(transform, 0.3s, ease);
   }
@@ -124,7 +132,7 @@
     }
   }
 
-  @include max-width($tablet) {
+  @include max-width($touch) {
     &__wrapper {
       display: block;
     }
