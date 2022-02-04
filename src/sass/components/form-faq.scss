@@ -4,8 +4,10 @@
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 35px;
+    justify-content: space-between;
+    padding: 34px 36px;
   }
 
   &__icon {
@@ -13,6 +15,10 @@
     height: 80px;
     margin-right: 24px;
     line-height: 0;
+  }
+
+  &__info {
+    margin-right: auto;
   }
 
   &__title {
@@ -30,31 +36,42 @@
     line-height: 156%;
   }
 
-  &__button {
+  &__button,
+  button.form-faq__button {
     align-self: flex-end;
     height: 40px;
     padding: 0;
-    margin-left: auto;
+    margin-top: 20px;
+    margin-left: 20px;
     font-weight: 400;
-    background: #a87f45;
+    background-color: #a87f45;
     border-color: $primary-active;
     border-radius: 4px;
 
+    @include max-width(768px) {
+      margin-left: auto;
+    }
+
     &:hover {
       color: $primary-active;
+      background-color: transparent;
+    }
+
+    &:focus {
+      box-shadow: 0 0 2px 2px rgba($primary-active, 0.5);
     }
   }
 
-  @include max-width($desktop-sm) {
-    &__wrapper {
-      flex-wrap: wrap;
-    }
+  // @include max-width($desktop-sm) {
+  //   &__wrapper {
+  //     flex-wrap: wrap;
+  //   }
 
-    &__button {
-      margin-top: 15px;
-      margin-left: 104px;
-    }
-  }
+  //   &__button {
+  //     margin-top: 15px;
+  //     margin-left: 104px;
+  //   }
+  // }
 
   @include max-width(768px) {
     &__wrapper {

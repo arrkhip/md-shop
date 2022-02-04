@@ -2,6 +2,39 @@
   position: relative;
   max-width: 245px;
 
+  @include max-width($touch) {
+    max-width: none;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__slider-wrapper {
+    .swiper-pagination {
+      --swiper-pagination-color: #000;
+
+      position: static;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        margin: 0 8px;
+      }
+    }
+  }
+
   &__slider {
     padding: 15px;
     border: 1px solid #e0e0e0;
@@ -9,5 +42,15 @@
 
   .swiper-pagination {
     bottom: -20px;
+  }
+
+  .card-news__banner {
+    @include max-width(768px) {
+      max-width: 310px;
+    }
+
+    @include max-width($phone) {
+      max-width: none;
+    }
   }
 }
