@@ -183,6 +183,10 @@ body .wrapper1.front_page .top_block a {
   }
 }
 
+.viewed_product_block {
+  border-bottom: none;
+}
+
 .owl-theme .owl-nav {
   .owl-prev,
   .owl-next {
@@ -203,6 +207,21 @@ body .wrapper1.front_page .top_block a {
     svg {
       * {
         fill: currentColor !important;
+      }
+    }
+  }
+}
+
+/* Brands */
+.drag-block.BRANDS {
+  .maxwidth-theme {
+    padding-bottom: 0 !important;
+
+    .with-text-block-wrapper {
+      .row {
+        .col-md-12 {
+          padding-bottom: 0 !important;
+        }
       }
     }
   }
