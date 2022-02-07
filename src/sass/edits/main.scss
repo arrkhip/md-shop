@@ -166,3 +166,20 @@ body .wrapper1.mfixed_Y > div#mobileheader.fixed {
 .menu-slider__item {
   position: static;
 }
+
+.section-title {
+  display: block;
+  margin: 0 0 1em;
+  font-family: $corm-garamond;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+
+  b {
+    color: $primary-active;
+  }
+
+  &--tac {
+    text-align: center;
+  }
+}

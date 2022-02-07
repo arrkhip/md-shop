@@ -189,7 +189,7 @@ body .wrapper1.front_page .top_block a {
     box-shadow: 0 0 12px rgba($black, 0.15);
 
     svg {
-      color: $black;
+      color: currentColor;
 
       * {
         fill: currentColor !important;
@@ -201,8 +201,6 @@ body .wrapper1.front_page .top_block a {
     opacity: 1;
 
     svg {
-      color: $gray;
-
       * {
         fill: currentColor !important;
       }
