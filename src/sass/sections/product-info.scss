@@ -8,6 +8,8 @@
 }
 
 .product-info__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -16,6 +18,25 @@
     flex-direction: column-reverse;
     align-items: unset;
     justify-content: unset;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: -44px;
+    z-index: -1;
+    width: 100%;
+    max-width: 746px;
+    height: 532px;
+    content: '';
+    background-image: url(../img/gerb.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include max-width($touch) {
+      content: none;
+    }
   }
 }
 
@@ -63,7 +84,7 @@
   }
 
   &__title,
-  > h3 {
+  h3 {
     margin: 0 0 32px;
     font-size: 24px;
     line-height: 1.5;
@@ -76,7 +97,7 @@
   }
 
   .blockquote-simple,
-  > blockquote {
+  blockquote {
     margin: 0 0 32px;
 
     @include max-width($touch) {
@@ -87,7 +108,7 @@
   }
 
   &__text,
-  > p {
+  p {
     font-size: 18px;
     line-height: 1.3;
     color: $gray-dark;
@@ -116,13 +137,51 @@
   }
 
   &__img,
-  > img {
+  img {
     display: block;
     width: 100%;
     margin: 20px 0;
 
     @include max-width($touch) {
       margin: 16px 0;
+    }
+  }
+
+  ul {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 18px;
+      line-height: 133%;
+      color: #4f4f4f;
+
+      @include max-width($touch) {
+        font-size: 14px;
+        line-height: 1.2857;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+
+      &::before {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        content: '';
+        background-color: $primary-active;
+        border-radius: 50%;
+
+        @include max-width($touch) {
+          top: 6px;
+        }
+      }
     }
   }
 }

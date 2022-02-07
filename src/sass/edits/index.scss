@@ -150,19 +150,17 @@ body .wrapper1.front_page .top_block a {
     color: $white;
     cursor: pointer;
     background-color: $black-2;
+    border-color: $black-2;
     border-radius: 2px;
 
-    @include max-width(901px) {
+    @include min-width(901px) {
       opacity: 0;
     }
 
     &:hover {
       color: $black-2;
       background-color: transparent;
-    }
-
-    .item_wrap:hover & {
-      opacity: 1;
+      border-color: $black-2;
     }
 
     .svg {
@@ -171,6 +169,43 @@ body .wrapper1.front_page .top_block a {
       width: 1em;
       height: 1em;
       fill: currentColor;
+    }
+  }
+}
+
+.item_wrap {
+  &:hover {
+    .block-item__myfooter {
+      .button {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.owl-theme .owl-nav {
+  .owl-prev,
+  .owl-next {
+    box-shadow: 0 0 12px rgba($black, 0.15);
+
+    svg {
+      color: $black;
+
+      * {
+        fill: currentColor !important;
+      }
+    }
+  }
+
+  .disabled {
+    opacity: 1;
+
+    svg {
+      color: $gray;
+
+      * {
+        fill: currentColor !important;
+      }
     }
   }
 }
