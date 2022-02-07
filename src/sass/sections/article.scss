@@ -1,5 +1,7 @@
 .article {
-  overflow: hidden;
+  @include max-width(1160px) {
+    overflow: hidden;
+  }
 
   &__bg {
     position: relative;
@@ -14,10 +16,22 @@
     margin-right: auto;
     margin-left: auto;
 
+    @include max-width($phone) {
+      padding-top: 40px;
+      padding-bottom: 24px;
+    }
+
     h2 {
       margin-bottom: 20px;
       font: 700 40px / 140% $garamond;
       color: $gray-extra-dark;
+
+      @include max-width($phone) {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 28px;
+        line-height: 32px;
+      }
     }
 
     h5 {
@@ -26,6 +40,12 @@
       font-weight: 700;
       line-height: 100%;
       color: #4f4f4f;
+
+      @include max-width($phone) {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
 
     h6 {
@@ -34,6 +54,12 @@
       font-weight: 400;
       line-height: 133%;
       color: #4f4f4f;
+
+      @include max-width($phone) {
+        margin-bottom: 24px;
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
 
     > p {
@@ -41,6 +67,10 @@
       font-size: 18px;
       line-height: 133%;
       color: #4f4f4f;
+
+      @include max-width($phone) {
+        margin-bottom: 24px;
+      }
     }
 
     p + p {
@@ -48,9 +78,19 @@
       margin-bottom: 0;
     }
 
+    p {
+      @include max-width($phone) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
     ul {
       margin-bottom: 40px;
 
+      @include max-width($phone) {
+        margin-bottom: 24px;
+      }
       li {
         position: relative;
         padding-left: 18px;
@@ -71,6 +111,11 @@
           content: '';
           background-color: #a87f45;
           border-radius: 50%;
+        }
+
+        @include max-width($phone) {
+          font-size: 16px;
+          line-height: 20px;
         }
       }
     }
@@ -93,6 +138,12 @@
         line-height: 133%;
         color: #4f4f4f;
 
+        @include max-width($phone) {
+          padding-left: 45px;
+          font-size: 16px;
+          line-height: 20px;
+        }
+
         &::before {
           position: absolute;
           top: 0;
@@ -111,10 +162,21 @@
           background-color: #fff;
           border-radius: 50%;
           box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+
+          @include max-width($phone) {
+            width: 32px;
+            height: 32px;
+            font-size: 14px;
+            line-height: 24px;
+          }
         }
 
         &:not(:last-child) {
           margin-bottom: 24px;
+
+          @include max-width($phone) {
+            margin-bottom: 15px;
+          }
         }
       }
     }
@@ -144,25 +206,73 @@
       font-style: italic;
       line-height: 133%;
       color: #4f4f4f;
+
+      @include max-width($phone) {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  @include max-width($phone) {
+    .blockquote {
+      &__wrapper {
+        padding: 20px;
+      }
+      &__icon {
+        flex: 0 0 32px;
+        height: 32px;
+        margin-right: 16px;
+      }
+      &__info {
+        b {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
     }
   }
 
   &__blockquote {
     margin-bottom: 40px;
+
+    @include max-width($phone) {
+      margin-bottom: 24px;
+    }
   }
 
   &__blockquote-simple {
     margin: 40px 0;
+
+    @include max-width($phone) {
+      margin: 24px 0;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__gallery--50 {
     .article__gallery-list {
       margin: 0 -20px -20px;
+
+      @include max-width($phone) {
+        flex-direction: column;
+        margin: 0;
+      }
     }
 
     .article__gallery-item {
       width: 50%;
       padding: 0 20px 20px;
+
+      @include max-width($phone) {
+        width: 100%;
+        padding: 0 0 24px 0;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
     }
   }
 
@@ -179,6 +289,13 @@
 
   &__gallery {
     margin-bottom: 40px;
+    img {
+      border-radius: 4px;
+    }
+
+    @include max-width($phone) {
+      margin-bottom: 24px;
+    }
   }
 
   &__gallery-list {
@@ -199,9 +316,11 @@
   @include max-width($phone) {
     &__goods {
       display: block;
+      margin-bottom: 24px;
 
       .button {
         width: 100%;
+        font-weight: bold;
       }
     }
 
@@ -212,7 +331,7 @@
 
     &__goods-info {
       max-width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 0;
       font-size: 16px;
       line-height: 125%;
     }
@@ -321,6 +440,7 @@
 
       span {
         font-size: 12px;
+        line-height: 24px;
       }
     }
 
@@ -331,19 +451,20 @@
     }
 
     &__tag {
-      padding: 0 6px 6px;
+      padding: 0 12px 8px;
       font-size: 12px;
       line-height: 150%;
+      line-height: 18px;
     }
 
     &__title {
       margin-top: 8px;
-      font-size: 20px;
-      line-height: 114%;
+      font-size: 28px;
+      line-height: 32px;
     }
 
     &__substrate {
-      bottom: -40px;
+      bottom: 0;
       height: 210px;
     }
   }

@@ -21,8 +21,8 @@ if ($sliders.length) {
           spaceBetween: 16,
         },
         320: {
-          slidesPerView: 1.2,
-          spaceBetween: 16,
+          slidesPerView: 1.05,
+          spaceBetween: 12,
         },
       },
     });
