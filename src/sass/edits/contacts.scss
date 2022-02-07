@@ -149,6 +149,10 @@ body .form-question__input:-ms-input-placeholder {
   overflow: auto;
 }
 
+.licenses_inline {
+  cursor: pointer;
+}
+
 @media (max-width: 1024px) {
   .contacts .contacts__item {
     width: calc(100% / 2 - 18px);
