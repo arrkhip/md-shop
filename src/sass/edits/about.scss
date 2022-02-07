@@ -11,6 +11,11 @@ body .about__left-title {
   max-height: 431px;
 }
 
+.about__breadcrumbs span {
+  color: #828282;
+  opacity: 1;
+}
+
 @media (max-width: 1200px) {
   body .about__left-title {
     margin-top: 55px;
