@@ -1,9 +1,6 @@
 .advantages-section {
   position: relative;
-  height: 100%;
-  max-height: 211px;
   padding-bottom: 48px;
-  margin-top: 160px;
   background-color: $main-light;
 
   @include max-width(1024px) {
@@ -14,26 +11,41 @@
     padding-bottom: 0;
     margin-top: 40px;
   }
-}
+  &::before {
+    display: block;
+    width: 100%;
+    height: 48px;
+    content: '';
+    background-color: $white;
 
-.cards {
-  display: flex;
-  justify-content: center;
-
-  @include max-width(1024px) {
-    flex-direction: column;
-    align-items: center;
+    @include max-width(1024px) {
+      content: none;
+    }
   }
 }
 
+.advantages-slider {
+  width: calc(100% + 36px);
+  padding: 0 18px;
+  padding-top: 24px;
+  margin-top: -72px;
+  margin-left: -18px;
+  overflow: hidden;
+
+  @include max-width(1024px) {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+.advantages-slide {
+  height: auto;
+}
+
 .advantages__card {
-  width: calc(100% / 3 - 8px);
-  max-width: 438px;
   height: 100%;
-  max-height: 220px;
+  min-height: 220px;
   padding: 32px 57px;
-  margin: 8px;
-  margin-top: -48px;
   text-align: center;
   background-color: $white;
   border-radius: 4px;

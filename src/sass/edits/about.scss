@@ -11,9 +11,20 @@ body .about__left-title {
   max-height: 431px;
 }
 
-.about__breadcrumbs span {
+body .about__breadcrumbs span {
   color: #828282;
   opacity: 1;
+}
+
+.modal__close {
+  svg {
+    fill: #fff;
+  }
+}
+
+body .modal-wrapper--gallery .button--close:hover svg,
+.modal-wrapper--gallery button.button--close:hover svg {
+  fill: #fff;
 }
 
 @media (max-width: 1200px) {
