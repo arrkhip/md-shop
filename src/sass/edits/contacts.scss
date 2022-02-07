@@ -45,7 +45,7 @@ body .class_page_contacts .navigation {
 .contacts .contacts__item {
   width: calc(100% / 3 - 18px);
   max-width: 438px;
-  max-height: 457px;
+  max-height: 100%;
   padding: 0;
   margin: 9px;
   margin-bottom: 18px;
@@ -53,6 +53,12 @@ body .class_page_contacts .navigation {
 .form-question {
   padding: 0 18px;
 }
+
+.form-question__wrapper {
+  padding-top: 93px;
+  padding-bottom: 93px;
+}
+
 .form-question__headline {
   max-width: 358px;
   margin-right: 51px;
@@ -61,10 +67,17 @@ body .class_page_contacts .navigation {
   flex-grow: 1;
   max-width: 781px;
 }
+
+body .form-question__label {
+  margin-bottom: 0;
+  pointer-events: none;
+}
 body .form-question__input {
   width: 100%;
-  padding-bottom: 14px;
-  font-size: 16px;
+  min-height: 52px;
+  padding-bottom: 0;
+  font-size: 24px;
+  line-height: 32px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #333;
@@ -95,15 +108,16 @@ body .form-question__input:-ms-input-placeholder {
   visibility: hidden;
 }
 
-.form-question__textarea {
-  font-size: 16px;
+body .form-question__textarea {
+  font-size: 24px;
+  line-height: 32px;
 }
-
 .form-question__textarea:focus {
   background-color: transparent;
 }
 
 .form-question__controls {
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .container__contact {
@@ -111,7 +125,10 @@ body .form-question__input:-ms-input-placeholder {
   margin: 0 auto;
 }
 .social {
-  padding: 176px 0 56px 0;
+  background-image: url(/images/contact_bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
 }
 .social__title {
   margin: 0 0 36px 0;
@@ -149,19 +166,30 @@ body .form-question__input:-ms-input-placeholder {
   overflow: auto;
 }
 
-.licenses_inline {
+.form-question__policy input[type='checkbox'] + label {
   cursor: pointer;
+}
+
+.form-question__policy {
+  margin-bottom: 20px;
+}
+
+.button--black,
+button.button--black {
+  padding: 20px;
 }
 
 @media (max-width: 1024px) {
   .contacts .contacts__item {
     width: calc(100% / 2 - 18px);
+    max-width: 100%;
+    margin: 6px;
   }
-}
 
-@media (max-width: 1024px) {
   .social {
     padding: 40px 0;
+    background-color: #fff;
+    background-image: none;
   }
   .social__list {
     grid-template-columns: repeat(3, 1fr);
@@ -176,18 +204,29 @@ body .form-question__input:-ms-input-placeholder {
     max-height: 100%;
     margin: 0 auto;
   }
+
+  .form-question__wrapper {
+    padding: 70px;
+  }
 }
 
 @media (max-width: 768px) {
   .contacts {
-    padding-top: 40px;
+    padding-top: 25px;
   }
   .contacts .container {
-    padding: 0 0 40px 0;
+    padding: 0 0 0 0;
   }
+
+  .social {
+    padding-bottom: 34px;
+  }
+
   .social__title {
+    margin-bottom: 32px;
     font-size: 28px;
-    line-height: 120%;
+    line-height: 32px;
+    text-align: left;
   }
 
   .social__list {
@@ -195,11 +234,16 @@ body .form-question__input:-ms-input-placeholder {
   }
 
   .class_page_contacts .page-top > div:last-of-type {
-    padding-top: 15px;
+    padding-top: 12px;
   }
 
   .class_page_contacts .page-top > div:first-child {
-    padding-top: 19px;
+    padding-top: 7px;
+  }
+
+  .breadcrumbs__item-name {
+    font-size: 12px;
+    line-height: 20px;
   }
 }
 
@@ -209,17 +253,46 @@ body .form-question__input:-ms-input-placeholder {
     margin-right: auto;
     margin-left: auto;
   }
+
+  .card-contact {
+    min-height: 324px;
+  }
 }
 
 @media (max-width: 600px) {
   .button--black,
   button.button--black {
     max-width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+
+  .card-contact__descr {
+    line-height: 24px;
   }
 
   .class_page_contacts .topic h1 {
-    font-size: 35px;
-    line-height: 120%;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  body .form-question__input {
+    min-height: 32px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  body .form-question__textarea {
+    padding: 12px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .form-question__wrapper {
+    padding: 40px 0;
   }
 }
 
