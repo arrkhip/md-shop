@@ -124,6 +124,27 @@ body .wrapper1.front_page .top_block a {
   }
 }
 
+.cost.prices {
+  position: static;
+
+  .value {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 8px;
+    margin: 0;
+    font-size: 16px;
+    border-radius: 2px;
+
+    @include max-width($phone) {
+      top: 8px;
+      left: 12px;
+      padding: 4px 3px;
+      font-size: 12px;
+    }
+  }
+}
+
 /* previously watched */
 .block-item__myfooter {
   display: flex;
@@ -185,6 +206,16 @@ body .wrapper1.front_page .top_block a {
 
 .viewed_product_block {
   border-bottom: none;
+}
+
+.block-items.flexbox.block-items--margined {
+  .block-item__wrapper {
+    padding: 12px;
+
+    .flexbox--row {
+      justify-content: space-between;
+    }
+  }
 }
 
 .owl-theme .owl-nav {
