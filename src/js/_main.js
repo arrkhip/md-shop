@@ -30,6 +30,7 @@ import './modules/sliders/certificate';
 import './modules/sliders/aside-blog';
 import './modules/sliders/similar';
 import './modules/sliders/advantages';
+import './modules/sliders/article';
 
 // Перенести в отдельный файл.
 // Перемещение формы на главной.
