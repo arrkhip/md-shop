@@ -1,4 +1,7 @@
 /* Banner */
+.banners {
+  padding: 24px 0 30px;
+}
 .banner__item {
   margin: 0;
 
@@ -71,11 +74,19 @@ body .wrapper1.front_page .top_block a {
   }
 }
 
+.tab_slider_wrapp .top_block {
+  margin-bottom: 48px;
+}
+
 .tab_slider_wrapp .top_block .right_block_wrapper {
   @include max-width(550px) {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+.wrapper1:not(.with_left_block) .wrapper_inner.front .drag-block.container .tab_slider_wrapp {
+  padding-bottom: 80px;
 }
 
 .wrapper_inner .specials_slider_wrapp ul.tabs > li span,

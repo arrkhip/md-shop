@@ -33,7 +33,6 @@ body .class_page_contacts .navigation {
 }
 .contacts .container {
   max-width: 1350px;
-  padding: 0 0 80px 0;
 }
 
 .contacts .card-contact__sub-title {
@@ -126,10 +125,11 @@ body .form-question__textarea {
   margin: 0 auto;
 }
 .social {
+  padding: 176px 0 96px 0;
   background-image: url(/images/contact_bg.png);
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: contain;
+  background-size: cover;
 }
 .social__title {
   margin: 0 0 36px 0;

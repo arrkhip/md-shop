@@ -21,6 +21,10 @@ body .about__breadcrumbs span {
     fill: #fff;
   }
 }
+body .modal-wrapper--gallery .button--close svg,
+.modal-wrapper--gallery button.button--close svg {
+  fill: #fff;
+}
 
 body .modal-wrapper--gallery .button--close:hover svg,
 .modal-wrapper--gallery button.button--close:hover svg {
