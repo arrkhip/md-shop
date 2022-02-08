@@ -75,10 +75,14 @@ body .wrapper1.front_page .top_block a {
 }
 
 .tab_slider_wrapp .top_block {
+  align-items: center;
   margin-bottom: 48px;
 }
 
 .tab_slider_wrapp .top_block .right_block_wrapper {
+  display: flex;
+  align-items: flex-start;
+
   @include max-width(550px) {
     flex-direction: column;
     align-items: flex-start;
@@ -267,4 +271,115 @@ body .wrapper1.front_page .top_block a {
       }
     }
   }
+}
+
+/* basket */
+#main .basket_hover_block .cart-empty .cart-empty__info .btn {
+  margin: 23px 0 0;
+}
+
+body #basket-root *,
+#content #bx-soa-order-form * {
+  font-family: $sans !important;
+}
+
+/* Aspro popup */
+@include max-width(600px) {
+  .popup .form .form_head {
+    padding: 20px;
+  }
+
+  .popup .form .form_body {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  .pk-page .form-control {
+    margin: 0 auto 20px;
+  }
+
+  .popup .form .form_footer {
+    padding: 20px;
+  }
+  .popup .pk-page .form .form_footer {
+    margin: 0;
+  }
+  .auth_frame {
+    min-width: 320px;
+    max-width: 100%;
+  }
+
+  .auth-page .buttons {
+    margin-top: 15px;
+  }
+
+  .popup {
+    min-width: 320px;
+    max-width: 100%;
+  }
+}
+
+body .rounded3 {
+  border-radius: 0;
+}
+
+/* PageTitle */
+#pagetitle {
+  font-family: $corm-garamond;
+}
+
+/* Block earlier */
+.block-item__title a {
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray-dark;
+}
+
+.dark-color:not(.active) {
+  color: $gray-dark;
+}
+
+/* owl */
+.viewed_product_block .viewed-wrapper {
+  padding: 96px 0 56px 0;
+  overflow: hidden;
+
+  @include max-width(1200px) {
+    padding: 40px 0 0 0;
+  }
+}
+
+/* faq */
+.faq {
+  .container {
+    padding: 0;
+  }
+}
+
+.form-faq {
+  @include max-width(768px) {
+    margin-bottom: 40px;
+  }
+}
+
+/* catalog */
+.wraps > .wrapper_inner {
+  padding-bottom: 40px;
+}
+
+.element-count-wrapper {
+  display: none;
+}
+
+.aside-menu .aside-menu__item {
+  &::before {
+    content: none;
+  }
+}
+
+.aside-menu ul li {
+  margin: 0;
+}
+
+.bx_filter:not(.compact) .bx_filter_parameters_box.set .title-wrapper::before {
+  content: none;
 }
