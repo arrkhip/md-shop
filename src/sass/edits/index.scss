@@ -273,9 +273,27 @@ body .wrapper1.front_page .top_block a {
   }
 }
 
+/* auth */
+.auth_wr_inner .dropdown-menu li a {
+  font-size: 16px;
+  line-height: 20px;
+}
+
 /* basket */
 #main .basket_hover_block .cart-empty .cart-empty__info .btn {
   margin: 23px 0 0;
+  font-size: 16px;
+  line-height: 20ex;
+}
+
+#main .basket_hover_block .cart-empty .cart-empty__info .title {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#main .basket_hover_block .cart-empty .cart-empty__info p {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 body #basket-root *,
@@ -384,4 +402,32 @@ body .rounded3 {
 
 .bx_filter:not(.compact) .bx_filter_parameters_box.set .title-wrapper::before {
   content: none;
+}
+
+.font_upper_md {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.bx_filter .bx_filter_parameters_box_title {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.bx_filter .bx_ui_slider_part span {
+  font-size: 14px;
+}
+
+.bx_filter_vertical .bx_filter_block label span {
+  font-size: 14px;
+}
+
+.font_xs {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#filter-helper .filterHelperItem .title-wrapper {
+  font-size: 14px;
+  line-height: 20px;
 }

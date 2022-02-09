@@ -1,15 +1,15 @@
 .class_page_contacts .page-top {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .class_page_contacts .page-top > div:last-of-type {
-  padding-top: 24px;
+  padding-top: 36px;
   padding-bottom: 0;
 }
 
 .class_page_contacts .page-top > div:first-child {
-  padding-top: 36px;
+  padding-top: 24px;
 }
 
 body .class_page_contacts .navigation {
