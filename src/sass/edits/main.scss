@@ -198,8 +198,12 @@ body #footer .copyright {
   height: 23px;
 }
 
-.block-items.flexbox.block-items--margined .block-item__wrapper .flexbox--row {
+body .block-items.flexbox.block-items--margined .block-item__wrapper .flexbox--row {
   justify-content: flex-start;
+}
+
+body .block-items.flexbox.block-items--margined .block-item__info {
+  width: 100%;
 }
 
 /* slider */
