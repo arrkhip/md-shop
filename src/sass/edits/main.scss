@@ -330,3 +330,13 @@ body .block-items.flexbox.block-items--margined .block-item__info {
 .class_page_info .page-top > div:last-of-type {
   padding: 36px 0 36px;
 }
+
+.detail_page_catalog .page-top > div:last-of-type {
+  padding: 24px 0 5px;
+}
+
+body .detail_page_catalog .maxwidth-theme {
+  width: 100%;
+  max-width: 1386px;
+  padding: 0 18px;
+}
