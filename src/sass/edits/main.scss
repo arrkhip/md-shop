@@ -345,3 +345,37 @@ body .detail_page_catalog .maxwidth-theme {
 .page_company .with-text-block-wrapper > .row > div:first-of-type {
   padding-bottom: 144px;
 }
+
+.page_company .maxwidth-theme {
+  max-width: 100%;
+  padding: 0 18px;
+}
+
+@media (max-width: 1650px) {
+  .item-views.brands .row.flexbox {
+    flex-wrap: wrap;
+  }
+}
+
+.company_innerPage {
+  margin-top: 40px;
+}
+
+/* .catalog_card */
+.catalog_item:hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .wrapper1.with_left_block .col-lg-20 {
+    width: calc(100% / 3);
+  }
+}
+
+.catalog_item:hover .inner_wrap {
+  position: absolute;
+  width: 100%;
+  height: auto !important;
+}

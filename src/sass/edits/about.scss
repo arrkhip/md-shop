@@ -31,6 +31,11 @@ body .modal-wrapper--gallery .button--close:hover svg,
   fill: #fff;
 }
 
+.advantages-section::before {
+  height: 50px;
+  margin-top: -2px;
+}
+
 @media (max-width: 1200px) {
   body .about__left-title {
     margin-top: 55px;
@@ -51,6 +56,13 @@ body .modal-wrapper--gallery .button--close:hover svg,
   .about__img-left {
     padding: 0 35px 35px;
     margin-top: -40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pre_certificate__pagination {
+    margin-left: 15px;
+    text-align: left;
   }
 }
 
