@@ -308,15 +308,15 @@
 }
 
 .header__control {
-  position: relative;
-  padding: 0;
-  font-size: 12px;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: transparent;
-  border: none;
-  transition: color 0.2s ease;
-  appearance: none;
+  // position: relative;
+  // padding: 0;
+  // font-size: 12px;
+  // text-align: center;
+  // text-transform: uppercase;
+  // background-color: transparent;
+  // border: none;
+  // transition: color 0.2s ease;
+  // appearance: none;
 
   &--mobile {
     @include min-width($touch + 1px) {

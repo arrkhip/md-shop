@@ -522,7 +522,8 @@ button.button:hover {
 }
 
 .footer-cards {
-  padding-right: 86px;
+  width: 100%;
+  max-width: 310px;
 }
 
 .product-subcard__img {
@@ -558,4 +559,13 @@ button.button:hover {
 
 .product__title b {
   display: inline-block;
+}
+
+.ext-widget-group {
+  display: block;
+  margin-top: 15px;
+}
+
+.ext-widget-group::after {
+  content: none;
 }

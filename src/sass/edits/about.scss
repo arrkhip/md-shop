@@ -70,6 +70,13 @@ body .modal-wrapper--gallery .button--close:hover svg,
   }
 }
 
+@media (max-width: 540px) {
+  .person__pict {
+    max-height: 450px;
+    object-position: top;
+  }
+}
+
 @media (max-width: 500px) {
   .about__img-left {
     margin-top: -15px;
