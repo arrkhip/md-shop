@@ -57,6 +57,10 @@ body .modal-wrapper--gallery .button--close:hover svg,
     padding: 0 35px 35px;
     margin-top: -40px;
   }
+
+  .person__text-wrap {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 600px) {
