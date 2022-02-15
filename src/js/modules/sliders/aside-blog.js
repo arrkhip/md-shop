@@ -9,6 +9,7 @@ if (asideSlider) {
     speed: 500,
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
   });
 }
