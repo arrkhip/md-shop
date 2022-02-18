@@ -1,10 +1,11 @@
 import Swiper from 'swiper/swiper-bundle.min';
 
+window.Swiper = Swiper;
 const sliderWrapper = document.querySelector('.promo__slider');
 let slider;
 
 if (sliderWrapper) {
-  slider = new Swiper('.swiper', {
+  slider = new Swiper('.promo__slider', {
     effect: 'fade',
     speed: 800,
     watchOverflow: true,

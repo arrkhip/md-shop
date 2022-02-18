@@ -41,6 +41,9 @@
   @include max-width($desktop-sm) {
     flex-direction: column-reverse;
   }
+  .about__left {
+    pointer-events: none;
+  }
 }
 
 .about__left {

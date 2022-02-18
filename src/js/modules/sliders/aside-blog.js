@@ -4,7 +4,7 @@ const asideSlider = document.querySelector('.aside-blog');
 let slider;
 
 if (asideSlider) {
-  slider = new Swiper('.swiper', {
+  slider = new Swiper('.aside-blog .swiper', {
     spaceBetween: 20,
     speed: 500,
     pagination: {

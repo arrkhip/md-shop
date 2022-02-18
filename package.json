@@ -67,8 +67,11 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "blowup": "^1.0.2",
+    "gsap": "^3.9.1",
     "plyr": "^3.6.8",
     "scroll-lock": "^2.1.4",
+    "scrollmagic": "^2.0.8",
+    "scrollmagic-plugin-gsap": "^1.0.4",
     "serialize-javascript": "^5.0.1",
     "stickyfilljs": "^2.1.0",
     "swiper": "^7.0.6",
