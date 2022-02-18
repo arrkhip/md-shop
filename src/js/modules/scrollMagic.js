@@ -14,7 +14,7 @@ if (document.body.clientWidth >= 900) {
     const sceneTitle = new ScrollMagic.Scene({
       triggerElement: triggerTitle,
       triggerHook: 1,
-      duration: '100%',
+      duration: '175%',
     });
     const tlTitle = gsap.timeline();
     triggerTitle.style.transform = 'translateY(350px)';
@@ -29,7 +29,7 @@ if (document.body.clientWidth >= 900) {
     const sceneImgBlock = new ScrollMagic.Scene({
       triggerElement: triggerImgBlock,
       triggerHook: 1,
-      duration: '80%',
+      duration: '155%',
     });
     const tlImgBlock = gsap.timeline();
     triggerImgBlock.style.transform = 'translateY(275px)';
@@ -44,7 +44,7 @@ if (document.body.clientWidth >= 900) {
     const sceneBlock = new ScrollMagic.Scene({
       triggerElement: triggerBlock,
       triggerHook: 1,
-      duration: '125%',
+      duration: '200%',
     });
     const tlBlock = gsap.timeline();
     triggerBlock.style.transform = 'translateY(275px)';
@@ -59,7 +59,7 @@ if (document.body.clientWidth >= 900) {
     const sceneBalck = new ScrollMagic.Scene({
       triggerElement: triggerback,
       triggerHook: 1,
-      duration: '200%',
+      duration: '275%',
     });
     const tlBack = gsap.timeline();
     triggerback.style.transform = 'translateY(200px)';
