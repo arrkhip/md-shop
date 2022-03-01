@@ -124,3 +124,11 @@
     color: $gray-dark;
   }
 }
+
+body .terms__accordion-svg {
+  stroke: $main;
+}
+
+.terms__accordion-button:hover {
+  color: $main;
+}
