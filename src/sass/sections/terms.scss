@@ -85,7 +85,7 @@
     transition-property: color;
 
     &:hover {
-      color: $second;
+      color: $main;
     }
   }
 
@@ -127,8 +127,4 @@
 
 body .terms__accordion-svg {
   stroke: $main;
-}
-
-.terms__accordion-button:hover {
-  color: $main;
 }
