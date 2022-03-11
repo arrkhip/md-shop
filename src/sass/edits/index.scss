@@ -432,6 +432,14 @@ body .rounded3 {
   line-height: 20px;
 }
 
-.pre_interesting__left {
-  max-width: 321px;
+.pre_interesting-section .pre_interesting-slide {
+  margin-left: -1px;
+}
+
+.pre_post--large .pre_post__wrap {
+  left: -5px;
+}
+
+.pre_post--large {
+  overflow: visible;
 }
