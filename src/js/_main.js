@@ -23,6 +23,7 @@ import './modules/Modal';
 import './modules/Accordion';
 import './modules/Scroll';
 import './modules/upPage';
+import './modules/timer';
 
 // sliders
 import './modules/sliders/promo';

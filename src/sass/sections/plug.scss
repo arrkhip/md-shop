@@ -1,0 +1,277 @@
+.header__plug {
+  z-index: 2;
+  padding-top: 80px;
+
+  @include max-width(1100px) {
+    padding-top: 20px;
+    padding-bottom: 56px;
+  }
+  &-logo {
+    width: 100%;
+    max-width: 262px;
+    height: 100%;
+    max-height: 72px;
+
+    @include max-width(640px) {
+      max-width: 204px;
+      max-height: 56px;
+    }
+  }
+}
+
+.main__plug {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plug {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @include max-width(1100px) {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 666px;
+
+    @include max-width(1100px) {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 12px;
+    font-family: $garamond;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 64px;
+    color: $gray-extra-dark;
+    text-transform: uppercase;
+
+    @include max-width(1100px) {
+      margin-bottom: 16px;
+    }
+
+    @include max-width(640px) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $gray-dark;
+
+    @include max-width(1100px) {
+      margin-bottom: 32px;
+    }
+
+    @include max-width(640px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &__right {
+    width: 100%;
+    max-width: 438px;
+
+    @include max-width(1100px) {
+      max-width: 512px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include max-width(640px) {
+      max-width: 360px;
+    }
+  }
+  &__timer {
+    z-index: 2;
+  }
+
+  .timer {
+    &__text {
+      margin-bottom: 24px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $gray-dark;
+
+      @include max-width(640px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      max-width: 552px;
+
+      @include max-width(1100px) {
+        max-width: 512px;
+        margin-right: auto;
+        margin-bottom: 48px;
+        margin-left: auto;
+      }
+
+      @include max-width(640px) {
+        max-width: 360px;
+      }
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 160px;
+      padding: 20px;
+      background-color: $gray-extra-light;
+      border-radius: 4px;
+
+      @include max-width(640px) {
+        max-width: 95px;
+        padding: 8px 12px;
+      }
+      &-img {
+        margin: auto 8px;
+      }
+    }
+    &__time {
+      font-family: $montserrat, sans-serif;
+      font-size: 56px;
+      font-weight: 300;
+      line-height: 84px;
+      color: $black-2;
+
+      @include max-width(640px) {
+        font-size: 36px;
+        line-height: 56px;
+      }
+      &-text {
+        font-family: $montserrat, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $black;
+      }
+    }
+  }
+  &__card {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    @include max-width(1100px) {
+      margin-bottom: 48px;
+    }
+    .card-contact {
+      z-index: 2;
+
+      @include max-width(640px) {
+        padding: 32px 24px;
+      }
+    }
+    .card-contact__header {
+      &::before {
+        @include max-width(640px) {
+          left: -24px;
+        }
+      }
+    }
+    .card-contact__title {
+      @include max-width(640px) {
+        font-size: 20px;
+        line-height: 32px;
+      }
+    }
+    .card-contact__body {
+      @include max-width(640px) {
+        margin-top: 24px;
+      }
+    }
+    .card-contact__row {
+      @include max-width(640px) {
+        &:not(:last-child) {
+          margin-bottom: 21px;
+        }
+      }
+    }
+    &::before {
+      position: absolute;
+      top: -37px;
+      left: -341px;
+      z-index: 1;
+      width: 100%;
+      max-width: 341px;
+      height: 486px;
+      max-height: 486px;
+      content: '';
+      background-image: url(./../img/eagle-half.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include max-width(1100px) {
+        content: none;
+      }
+    }
+  }
+  &-social__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -6px;
+    .footer-social__link {
+      border-radius: 0;
+    }
+  }
+}
+
+.footer__plug {
+  &-top {
+    max-width: 780px;
+    margin-bottom: 21px;
+
+    @include max-width(1100px) {
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+  &-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $gray;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+
+    @include max-width(1100px) {
+      margin-bottom: 20px;
+    }
+
+    @include max-width(640px) {
+      flex-direction: column;
+    }
+  }
+  &-copyright,
+  &-info {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $gray-extra-dark;
+  }
+  &-copyright {
+    @include max-width(640px) {
+      margin-bottom: 12px;
+    }
+  }
+}
