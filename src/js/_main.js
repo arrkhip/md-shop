@@ -24,6 +24,7 @@ import './modules/Accordion';
 import './modules/Scroll';
 import './modules/upPage';
 import './modules/timer';
+import './modules/preloader';
 
 // sliders
 import './modules/sliders/promo';

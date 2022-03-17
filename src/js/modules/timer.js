@@ -1,5 +1,9 @@
 // Timer
-const deadline = document.querySelector('.timer__items').getAttribute('data-deadline');
+if (document.querySelector('.timer__items')) {
+  const deadline = document.querySelector('.timer__items').getAttribute('data-deadline');
+
+  setClock('.timer__items', deadline);
+}
 
 function getTimeRemaining(endtime) {
   const t = Date.parse(endtime) - Date.parse(new Date().toLocaleString('en-US', { timeZone: 'Europe/Moscow' }));
@@ -50,5 +54,3 @@ function setClock(selector, endtime) {
     }
   }
 }
-
-setClock('.timer__items', deadline);

@@ -1073,17 +1073,18 @@ body .catalog-slider .catalog_block .catalog_item {
 
 .basket-checkout-block-share {
   position: relative;
-  &::before {
-    position: absolute;
-    top: 4px;
-    left: -24px;
-    width: 24px;
-    height: 24px;
-    content: '';
-    background: url(/local/templates/aspro_max/images/svg/share.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+}
+
+.basket-checkout-block-share > ::before {
+  position: absolute;
+  top: 4px;
+  left: -24px;
+  width: 24px;
+  height: 24px;
+  content: '';
+  background: url(/local/templates/aspro_max/images/svg/share.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .btn_basket_heading--download {

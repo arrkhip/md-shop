@@ -134,13 +134,16 @@ body .social {
   background-position: bottom;
   background-size: contain;
 }
-.social__title {
+body .social__title {
   margin: 0 0 36px 0;
   font-size: 40px;
   font-weight: bold;
   line-height: 140%;
   color: #333;
   text-align: center;
+  b {
+    color: $primary-hover;
+  }
 }
 .social__list {
   display: grid;
@@ -216,7 +219,7 @@ button.button--black {
     padding-bottom: 34px;
   }
 
-  .social__title {
+  body .social__title {
     margin-bottom: 32px;
     font-size: 28px;
     line-height: 32px;
