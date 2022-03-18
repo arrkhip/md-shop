@@ -2070,6 +2070,15 @@ body .inst-widget__list-item:nth-child(6) {
   }
 }
 
+.wr-section {
+  text-align: center;
+  h6 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
 .wr-section .section-title {
   font-family: $sans;
   font-size: 26px;
