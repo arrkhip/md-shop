@@ -148,6 +148,10 @@ if ($containers.length) {
         },
       });
 
+      swiper.slideNext();
+      swiper.slidePrev();
+      swiper.update();
+
       thumbsSlider.update();
     }
   });
