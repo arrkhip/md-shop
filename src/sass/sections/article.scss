@@ -1,7 +1,7 @@
 .article {
-  @include max-width(1160px) {
-    overflow: hidden;
-  }
+  // @include max-width(1160px) {
+  //   overflow: hidden;
+  // }
 
   &__bg {
     position: relative;
