@@ -2723,3 +2723,14 @@ div.item-title {
     }
   }
 }
+
+.modal-wrapper--search {
+  .input__clear {
+    visibility: hidden !important;
+  }
+  &.active {
+    .input__clear {
+      visibility: visible !important;
+    }
+  }
+}

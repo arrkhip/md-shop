@@ -86,17 +86,19 @@ if ($containers.length) {
 
             if ($modal) {
               $modal.modal.openCallback = ($target) => {
-                if ($target.closest('.product--video')) {
-                  const $modalSlider = $modal.querySelector('.product-preview-slider');
+                if ($target) {
+                  if ($target.closest('.product--video')) {
+                    const $modalSlider = $modal.querySelector('.product-preview-slider');
 
-                  if ($modalSlider && $modalSlider.swiper) {
-                    const $player = $modalSlider.swiper.slides[swiper.activeIndex].querySelector('.plyr');
-                    const $play = $modalSlider.swiper.slides[swiper.activeIndex].querySelector('.j_player-play');
+                    if ($modalSlider && $modalSlider.swiper) {
+                      const $player = $modalSlider.swiper.slides[swiper.activeIndex].querySelector('.plyr');
+                      const $play = $modalSlider.swiper.slides[swiper.activeIndex].querySelector('.j_player-play');
 
-                    if ($player && $player.player) {
-                      $player.player.play();
-                    } else {
-                      $play && $play.click();
+                      if ($player && $player.player) {
+                        $player.player.play();
+                      } else {
+                        $play && $play.click();
+                      }
                     }
                   }
                 }

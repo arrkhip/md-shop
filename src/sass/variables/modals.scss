@@ -107,8 +107,10 @@
 
 // search
 .modal-wrapper--search {
-  .header__search {
-    display: block;
+  &.active {
+    .header__search {
+      display: block;
+    }
   }
 }
 
