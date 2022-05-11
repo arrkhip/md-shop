@@ -6,7 +6,6 @@ if ($topicSlider) {
     slidesPerView: 1.2,
     spaceBetween: 20,
     watchOverflow: true,
-
     breakpoints: {
       480: {
         slidesPerView: 2.3,

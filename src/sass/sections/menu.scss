@@ -15,7 +15,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
   transition-delay: 0s;
 
-  @include min-width($touch + 1px) {
+  @include min-width(940px + 1px) {
     display: none;
   }
 

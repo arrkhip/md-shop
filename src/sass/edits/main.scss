@@ -86,7 +86,7 @@ body {
 .header__body {
   padding: 13px 0 29px;
 
-  @include max-width(900px) {
+  @include max-width(940px) {
     padding: 8px 0 11px;
   }
 }
@@ -95,7 +95,7 @@ body {
   max-width: 208px;
   height: 56px;
 
-  @include max-width(900px) {
+  @include max-width(940px) {
     max-width: 140px;
     height: 35px;
   }
