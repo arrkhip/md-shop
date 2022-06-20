@@ -1,4 +1,4 @@
-import Swiper from 'swiper/swiper-bundle.min';
+import Swiper from 'swiper/swiper-bundle.min.js';
 
 const $slider = document.querySelector('.banners__slider');
 let slider;
@@ -18,12 +18,12 @@ if ($slider) {
       crossFade: true,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.banners__slider .swiper-pagination',
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.banners__slider .swiper-button-next',
+      prevEl: '.banners__slider .swiper-button-prev',
     },
   });
 }

@@ -1,0 +1,167 @@
+.working-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @include max-width(1200px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include max-width(900px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.working {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-family: $corm-garamond;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 140%;
+    color: $black-2;
+    text-align: center;
+
+    @include max-width(900px) {
+      margin-bottom: 30px;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    b {
+      color: $second;
+    }
+  }
+  .card {
+    padding: 56px 114px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    @include max-width(1200px) {
+      padding: 40px 60px;
+    }
+
+    @include max-width(900px) {
+      padding: 30px 45px;
+    }
+
+    @include max-width(768px) {
+      padding: 24px 12px;
+      margin-bottom: 16px;
+    }
+    &:last-child {
+      margin-bottom: 64px;
+    }
+    &__wrap {
+      display: flex;
+    }
+
+    &__left {
+      width: 100%;
+      max-width: 96px;
+      margin-right: 56px;
+
+      @include max-width(900px) {
+        max-width: 70px;
+        margin-right: 30px;
+      }
+
+      @include max-width(768px) {
+        max-width: 56px;
+        margin-right: 17px;
+      }
+    }
+
+    &__icon {
+      svg {
+        width: 96px;
+        height: 96px;
+
+        @include max-width(900px) {
+          width: 70px;
+          height: 70px;
+        }
+
+        @include max-width(768px) {
+          width: 56px;
+          height: 56px;
+        }
+      }
+    }
+
+    &__right {
+      width: 100%;
+      max-width: 970px;
+    }
+
+    &__title {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-family: $corm-garamond;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 48px;
+      color: $black-2;
+
+      @include max-width(900px) {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    &__text {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 36px;
+      color: $gray-dark;
+
+      @include max-width(900px) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      @include max-width(768px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+  &__refuse {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $gray-dark;
+    text-align: center;
+
+    @include max-width(900px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include max-width(768px) {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &__subrefuse {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    color: $gray-dark;
+    text-align: center;
+
+    @include max-width(900px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include max-width(768px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

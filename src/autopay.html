@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html data-blowup-scale="1">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Автоплатежи</title>
+  </head>
+
+  <body>
+    <div class="content">
+      ${require('./templates/header.html')}
+      <!--  -->
+      ${require('./templates/menu.html')}
+
+      <main>
+        <!-- autopay -->
+        <section class="autopay-section">
+          <div class="container">
+            <h2 class="autopay__head">Автоплатеж</h2>
+            <div class="autopay">
+              <div class="autopay__wrap">
+                <div class="autopay__left">
+                  <div class="autopay__img">
+                    <img src="./img/autopay-head.png" alt="" />
+                  </div>
+                </div>
+                <div class="autopay__right">
+                  <h2 class="autopay__title">Почему <b>автоплатеж — лучший способ оплаты</b> для коллекционера?</h2>
+                  <div class="autopay__descr">
+                    Автоплатеж – удобный и выгодный способ оплаты серий. При выборе этой услуги вы оплачиваете стоимость
+                    первой медали или монеты онлайн. В среднем 1 раз в месяц с вашей карты будет списываться оплата
+                    следующей медали выбранной серии. Отказаться от услуги «Автоплатеж» можно в любой момент.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of autopay -->
+
+        <!-- methods -->
+        <section class="methods-section">
+          <div class="container">
+            <div class="methods">
+              <div class="methods__wrap">
+                <h2 class="methods__title"> Какие <b>способы оплаты</b> бывают </h2>
+                <div class="methods__card">
+                  <div class="card">
+                    <div class="card__wrap">
+                      <div class="card__img">
+                        <img src="./img/method-1.png" alt="" />
+                      </div>
+                      <h3 class="card__title">Оплата картой онлайн</h3>
+                      <div class="card__text">
+                        <p>
+                          Вы оплачиваете онлайн только первую медаль серии.
+                        </p>
+                        <p>
+                          Все последующие отправления будут уходить наложенным платежом.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card card-big">
+                    <div class="card__wrap">
+                      <div class="card__img">
+                        <img src="./img/method-2.png" alt="" />
+                      </div>
+                      <h3 class="card__title">Автоплатеж</h3>
+                      <div class="card__text">
+                        <p>
+                          Вы оплачиваете онлайн первую и последующие медали серии. После оплаты 1й медали платежи за
+                          последующие медали серии будут списываться автоматически с указанной Вами карты.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__wrap">
+                      <div class="card__img">
+                        <img src="./img/method-3.png" alt="" />
+                      </div>
+                      <h3 class="card__title">Оплата при получении</h3>
+                      <div class="card__text">
+                        <p>
+                          Вы оплачиваете первую и последующие медали наложенным платежом при получении на Почте.
+                        </p>
+                        <p>
+                          ⚠️ Вы дополнительно оплачиваете сервисный сбор на почтовые переводы – 2% от суммы наложенного
+                          платежа.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of methods -->
+
+        <!-- services -->
+        <section class="services-section">
+          <div class="container">
+            <div class="services">
+              <h2 class="services__title"><b>Преимущества</b> услуги «автоплатеж»</h2>
+              <div class="services__wrap">
+                <div class="services__items">
+                  <div class="services__item">
+                    <div class="item">
+                      <div class="item__wrap">
+                        <div class="item__icon">
+                          <svg>
+                            <use xlink:href="#icon-wallet"></use>
+                          </svg>
+                        </div>
+                        <div class="item__inner">
+                          <h3 class="item__title">Выгодно</h3>
+                          <div class="item__text">
+                            Бесплатная доставка 1-ой медали и отсутствие комиссии за перевод
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="item__wrap">
+                        <div class="item__icon">
+                          <svg>
+                            <use xlink:href="#icon-time"></use>
+                          </svg>
+                        </div>
+                        <div class="item__inner">
+                          <h3 class="item__title">Удобно</h3>
+                          <div class="item__text">
+                            Не тратьте время на заполнение документов при получении посылки
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="item__wrap">
+                        <div class="item__icon">
+                          <svg>
+                            <use xlink:href="#icon-unlock"></use>
+                          </svg>
+                        </div>
+                        <div class="item__inner">
+                          <h3 class="item__title">Надежно</h3>
+                          <div class="item__text">
+                            Вы получаете медали в приоритетном порядке и гарантию безопасной оплаты
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of services -->
+
+        <!-- working -->
+        <section class="working-section">
+          <div class="container">
+            <div class="working">
+              <div class="working__wrap">
+                <h2 class="working__title"><b>Как работает</b> автоплатеж</h2>
+                <div class="working__card">
+                  <div class="card">
+                    <div class="card__wrap">
+                      <div class="card__left">
+                        <div class="card__icon">
+                          <svg>
+                            <use xlink:href="#icon-card"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="card__right">
+                        <h3 class="card__title">
+                          Шаг 1
+                        </h3>
+                        <div class="card__text">
+                          При оформлении заказа на сайте в Интернете или по телефону вы выбираете способ оплаты
+                          «Автоплатеж: подписка с выгодой» и получаете моментальное преимущество: бесплатную упаковку и
+                          пересылку первой медали.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__wrap">
+                      <div class="card__left">
+                        <div class="card__icon">
+                          <svg>
+                            <use xlink:href="#icon-message"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="card__right">
+                        <h3 class="card__title">
+                          Шаг 2
+                        </h3>
+                        <div class="card__text">
+                          Оплата каждой посылки будет происходить автоматически – деньги списываются с указанной Вами
+                          карты. За 24 часа до списания мы отправим вам уведомление по смс, чтобы вы успели проверить
+                          наличие средств на карте.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__wrap">
+                      <div class="card__left">
+                        <div class="card__icon">
+                          <svg>
+                            <use xlink:href="#icon-delivery"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="card__right">
+                        <h3 class="card__title">
+                          Шаг 3
+                        </h3>
+                        <div class="card__text">
+                          Вы приходите в почтовое отделение и забираете посылку.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="working__refuse">Отказаться от услуги «Автоплатеж» можно в любой момент</div>
+                <div class="working__subrefuse">
+                  Просто позвоните в Отдел персонального обслуживания клиентов по номеру 8 (495) 974-29-47 с 9:00 до
+                  21:00 (по московскому времени) без выходных.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of working -->
+
+        <!-- question -->
+        <section class="question-section">
+          <div class="container">
+            <div class="question">
+              <h2 class="question__title"> <b>Остались вопросы?</b> Мы собрали самые популярные </h2>
+              <div class="question__wrap">
+                <div class="faq__accordion question__accordion" data-accordion="question1">
+                  <button class="faq__accordion-button accordion-button">
+                    <p class="faq__accordion-title">Насколько будут сохранны данные моей банковской карты? </p>
+                    <div class="faq__accordion-icon">
+                      <svg class="faq__accordion-svg">
+                        <use xlink:href="#icon-arrow-right2"></use>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq__accordion-hidden accordion-content">
+                    <div class="faq__accordion-content">
+                      <span>
+                        Все данные, введенные на странице оплаты, полностью защищены в соответствии с требованиями
+                        стандарта безопасности; конфиденциальность персональной информации обеспечивается ПАО СБЕРБАНК.
+                        После оплаты на адрес указанной электронной почты будет отправлен электронный чек.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="faq__accordion question__accordion" data-accordion="question2">
+                  <button class="faq__accordion-button accordion-button">
+                    <p class="faq__accordion-title">Как отменить автоплатеж? </p>
+                    <div class="faq__accordion-icon">
+                      <svg class="faq__accordion-svg">
+                        <use xlink:href="#icon-arrow-right2"></use>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq__accordion-hidden accordion-content">
+                    <div class="faq__accordion-content">
+                      <span>
+                        Все данные, введенные на странице оплаты, полностью защищены в соответствии с требованиями
+                        стандарта безопасности; конфиденциальность персональной информации обеспечивается ПАО СБЕРБАНК.
+                        После оплаты на адрес указанной электронной почты будет отправлен электронный чек.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="faq__accordion question__accordion" data-accordion="question3">
+                  <button class="faq__accordion-button accordion-button">
+                    <p class="faq__accordion-title">Какую карточку я могу использовать для автоплатежей?</p>
+                    <div class="faq__accordion-icon">
+                      <svg class="faq__accordion-svg">
+                        <use xlink:href="#icon-arrow-right2"></use>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq__accordion-hidden accordion-content">
+                    <div class="faq__accordion-content">
+                      <span>
+                        Все данные, введенные на странице оплаты, полностью защищены в соответствии с требованиями
+                        стандарта безопасности; конфиденциальность персональной информации обеспечивается ПАО СБЕРБАНК.
+                        После оплаты на адрес указанной электронной почты будет отправлен электронный чек.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="faq__accordion question__accordion" data-accordion="question4">
+                  <button class="faq__accordion-button accordion-button">
+                    <p class="faq__accordion-title">Карты каких платежных систем принимаются к оплате? </p>
+                    <div class="faq__accordion-icon">
+                      <svg class="faq__accordion-svg">
+                        <use xlink:href="#icon-arrow-right2"></use>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq__accordion-hidden accordion-content">
+                    <div class="faq__accordion-content">
+                      <span>
+                        Все данные, введенные на странице оплаты, полностью защищены в соответствии с требованиями
+                        стандарта безопасности; конфиденциальность персональной информации обеспечивается ПАО СБЕРБАНК.
+                        После оплаты на адрес указанной электронной почты будет отправлен электронный чек.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="faq__accordion question__accordion" data-accordion="question5">
+                  <button class="faq__accordion-button accordion-button">
+                    <p class="faq__accordion-title">
+                      Я могу перейти на способ оплаты «автоплатеж» по серии, на которую я уже подписан?
+                    </p>
+                    <div class="faq__accordion-icon">
+                      <svg class="faq__accordion-svg">
+                        <use xlink:href="#icon-arrow-right2"></use>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq__accordion-hidden accordion-content">
+                    <div class="faq__accordion-content">
+                      <span>
+                        Все данные, введенные на странице оплаты, полностью защищены в соответствии с требованиями
+                        стандарта безопасности; конфиденциальность персональной информации обеспечивается ПАО СБЕРБАНК.
+                        После оплаты на адрес указанной электронной почты будет отправлен электронный чек.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of question -->
+
+        <!-- hotline -->
+        <section class="hotline-section">
+          <div class="container">
+            <div class="hotline">
+              <div class="hotline__wrap">
+                <div class="hotline__card">
+                  <div class="card">
+                    <div class="card__text">
+                      Серии медалей выпускаются ограниченным тиражом.
+                      <span>Максимальную ценность имеют именно полные серии.</span>
+                      Благодаря услуге «Автоплатеж» вы соберете медали серии на самых выгодных условиях. Подключайте
+                      услугу «Автоплатеж»— и коллекционирование монет и медалей станет для вас чудесным путешествием в
+                      мир нумизматики!
+                    </div>
+                    <div class="card__subtitle">Горячая линия поддержки услуги «АВТОПЛАТЕЖ»:</div>
+                    <div class="card__tel">
+                      <a href="tel: +84959742947" class="card__link">
+                        <svg class="svg">
+                          <use xlink:href="#icon-header-phone"></use>
+                        </svg>
+
+                        <span>8 (495) 974-29-47</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of hotline -->
+
+        <!-- popular -->
+        <section class="popular-section">
+          <div class="container">
+            <div class="popular">
+              <h2 class="popular__title"> <b>Популярные</b> товары</h2>
+              <div class="popular__wrap">
+                <img src="./img/popular-img.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of popular -->
+      </main>
+
+      ${require('./templates/footer.html')}
+    </div>
+  </body>
+</html>

@@ -14,6 +14,7 @@ import './modules/Menu';
 import './modules/MenuSlider';
 import './modules/tippy';
 import './modules/Mask';
+import './modules/mask-date';
 import './modules/Swap';
 // import './modules/FormHiding';
 import './modules/Player';

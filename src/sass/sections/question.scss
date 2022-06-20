@@ -1,0 +1,134 @@
+.question-section {
+  padding: 144px 0;
+  margin-top: 72px;
+  background-color: $beige;
+
+  @include max-width(1200px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 40px;
+  }
+
+  @include max-width(900px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+  }
+}
+
+.question {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-family: $corm-garamond;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 140%;
+    color: $black-2;
+    text-align: center;
+
+    @include max-width(900px) {
+      margin-bottom: 24px;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    b {
+      color: $second;
+    }
+  }
+  &__wrap {
+    padding: 104px 114px;
+    background-color: $white;
+    border-radius: 4px;
+
+    @include max-width(1200px) {
+      padding: 60px;
+    }
+
+    @include max-width(900px) {
+      padding: 32px;
+    }
+
+    @include max-width(768px) {
+      padding: 32px 16px;
+    }
+    .faq__accordion {
+      padding: 28px 0 27px 0;
+
+      @include max-width(768px) {
+        padding: 14px 0 13px 0;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    .faq__accordion-title {
+      margin-right: 20px;
+      font-family: $corm-garamond;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 48px;
+      color: $black-2;
+
+      @include max-width(900px) {
+        font-size: 25px;
+        line-height: 30px;
+      }
+
+      @include max-width(768px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .faq__accordion-icon {
+      padding-top: 10px;
+
+      @include max-width(900px) {
+        padding-top: 3px;
+      }
+
+      @include max-width(768px) {
+        padding: 0;
+      }
+    }
+    .faq__accordion-svg {
+      color: $main;
+
+      @include max-width(900px) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .faq__accordion-content {
+      max-width: 894px;
+      padding-top: 24px;
+
+      @include max-width(768px) {
+        padding-top: 12px;
+      }
+      span {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 36px;
+        color: $black-2;
+
+        @include max-width(900px) {
+          display: block;
+          padding-right: 32px;
+          font-size: 18px;
+          line-height: 20px;
+        }
+
+        @include max-width(768px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  &__header {
+    padding: 28px 144px;
+    border-bottom: 1px solid $gray-light;
+    transition: 0.3s;
+  }
+}

@@ -1,0 +1,43 @@
+.popular-section {
+  padding-top: 72px;
+  padding-bottom: 144px;
+
+  @include max-width(1200px) {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  @include max-width(900px) {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+.popular {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 41px;
+    font-family: $corm-garamond;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 140%;
+    color: $black-2;
+    text-align: center;
+
+    @include max-width(900px) {
+      margin-bottom: 20px;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    b {
+      color: $second;
+    }
+  }
+
+  &__wrap {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
