@@ -6,15 +6,12 @@ let slider;
 const controls = $slider.querySelector('.banners-navigation');
 const controlsNumber = $slider.querySelector('.banners-pagination');
 
-let effect = 'fade';
-let crossFade = true;
-
-const countSlides = $slider.querySelectorAll('.swiper-slide');
-if (countSlides.length <= 1) {
-  controls.style.display = 'none';
-  controlsNumber.style.display = 'none';
-  effect = '';
-  crossFade = false;
+if (controls && controlsNumber) {
+  const countSlides = document.querySelectorAll('.swiper-slide');
+  if (countSlides.length <= 1) {
+    controls.style.display = 'none';
+    controlsNumber.style.display = 'none';
+  }
 }
 
 if ($slider) {
@@ -23,13 +20,13 @@ if ($slider) {
 
   slider = new Swiper($slider, {
     loop: false,
-    effect: effect,
+    effect: 'fade',
     speed: speed,
     autoplay: {
       delay: delay,
     },
     fadeEffect: {
-      crossFade: crossFade,
+      crossFade: true,
     },
     pagination: {
       el: '.banners__slider .swiper-pagination',
